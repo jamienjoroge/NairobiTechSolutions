@@ -22,8 +22,14 @@ A modern, SEO-optimized single-page website for SaharaNova, a Nairobi-based tech
 
 1. Clone the repository
 2. Install dependencies: `npm install`
-3. Set up PostgreSQL database and update connection details
-4. Start the application: `npm run dev`
+3. Set up environment variables:
+   - Copy `.env.example` to `.env` and update the values as needed.
+4. Set up PostgreSQL database and update connection details in `.env`
+5. Run database migrations: `npm run db:push`
+6. Start the application:
+   - For development, run the backend: `npm run dev`
+   - If the frontend is served separately, run it with: `npm run client:dev` (add this script if needed)
+7. For production, build and start: `npm run build && npm start`
 
 ## Project Structure
 
