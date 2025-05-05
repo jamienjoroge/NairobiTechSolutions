@@ -1,0 +1,77 @@
+"Create a single-page, modern, mobile-responsive website for a Nairobi-based tech consultancy specializing in software solutions, ERP implementations, custom development, and web design. Prioritize clean UI, SEO best practices, and lead generation."
+
+Content Structure:
+
+Header/Hero Section
+
+Title: "SaharaNova – Digital Transformation for Africa’s Businesses"
+
+Subtitle: "ERP Solutions | Custom Software | Web & Mobile Development"
+
+CTA Button: "Get a Free Consultation" (links to contact form)
+
+Background: Abstract tech wave (dark blue/orange gradient).
+
+Services Section (Cards with icons)
+
+ERP Implementation: "SAP, Odoo, Microsoft Dynamics tailored for SMEs."
+
+Custom Software: "Bespoke solutions for logistics, healthcare, and finance."
+
+Web/Mobile Dev: "React, Flutter, Next.js apps with SEO optimization."
+
+IT Support: "24/7 maintenance, cloud migration, cybersecurity."
+
+About Us
+
+Tagline: "Founded in Nairobi, serving Africa’s tech needs since 2024."
+
+Mission: "Bridging gaps with scalable, future-proof software."
+
+Contact Section
+
+Address: "Waiyaki Way, Nairobi, Kenya" (embed Google Maps).
+
+Phone: +254 794 122747 (click-to-call button).
+
+Email: hello@saharanova.com (mailto: link).
+
+Form: Name, Email, "How Can We Help?" dropdown.
+
+Footer
+
+Social Icons: LinkedIn, Twitter, GitHub.
+
+Copyright: "© 2024 SaharaNova. All rights reserved."
+
+Technical Requirements:
+
+Framework: Next.js (for SEO) or Astro (if simpler).
+
+Styling: Tailwind CSS (clean, responsive).
+
+SEO:
+
+Meta tags: "Tech consulting Nairobi | ERP experts | Custom software Kenya".
+
+Schema markup for local business (address, phone).
+
+OpenGraph tags for social sharing.
+
+Performance:
+
+Lazy-load images.
+
+Score >90 on Lighthouse.
+
+Design Notes:
+
+Color Palette: #1E3A8A (navy), #F97316 (orange), white.
+
+Fonts: Inter (sans-serif) + IBM Plex Mono (for tech vibe).
+
+Animation: Subtle hover effects on buttons/cards.
+
+Deployment:
+
+"Auto-deploy to Vercel/Netlify via GitHub link."
