@@ -5,19 +5,19 @@ const teamMembers: TeamMember[] = [
     name: "James",
     position: "Chief Technology Officer",
     bio: "Leading our technical vision and innovation strategy with 15+ years of experience in enterprise architecture and digital transformation.",
-    image: "https://raw.githubusercontent.com/Storyset/illustration/main/african-team/african-cto.svg"
+    image: "/illustrations/cto.svg"
   },
   {
     name: "Grace",
     position: "Business Development Manager",
     bio: "Driving growth and partnerships across Africa with expertise in market expansion and strategic business development.",
-    image: "https://raw.githubusercontent.com/Storyset/illustration/main/african-team/african-business-manager.svg"
+    image: "/illustrations/business-manager.svg"
   },
   {
     name: "John",
     position: "Support Manager",
     bio: "Ensuring exceptional client support and service delivery with a focus on building long-term relationships and customer success.",
-    image: "https://raw.githubusercontent.com/Storyset/illustration/main/african-team/african-support-manager.svg"
+    image: "/illustrations/support-manager.svg"
   }
 ];
 
