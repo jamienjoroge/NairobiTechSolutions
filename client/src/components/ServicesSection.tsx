@@ -1,4 +1,4 @@
-import { CommandLineIcon, ShieldCheckIcon, DevicePhoneMobileIcon, ServerIcon } from '@heroicons/react/24/outline';
+import { CommandLineIcon, ShieldCheckIcon, DevicePhoneMobileIcon, ServerIcon, ClipboardDocumentListIcon } from '@heroicons/react/24/outline';
 import { ServiceCard } from '@/lib/types';
 
 const services: ServiceCard[] = [
@@ -21,6 +21,11 @@ const services: ServiceCard[] = [
     icon: <ServerIcon className="h-8 w-8 text-[#1E3A8A]" />,
     title: "IT Support",
     description: "24/7 maintenance, cloud migration, cybersecurity."
+  },
+  {
+    icon: <ClipboardDocumentListIcon className="h-8 w-8 text-[#1E3A8A]" />,
+    title: "IT Project Management",
+    description: "Agile methodologies, risk management, and stakeholder coordination."
   }
 ];
 
