@@ -38,7 +38,7 @@ const ServicesSection = () => {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">Comprehensive technology solutions tailored for African businesses</p>
         </div>
         
-        <div className="grid grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-md p-6 card-hover">
               <div className="h-14 w-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
