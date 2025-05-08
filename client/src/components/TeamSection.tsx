@@ -4,7 +4,7 @@ const teamMembers: TeamMember[] = [
   {
     name: "James",
     position: "Chief Technology Officer",
-    bio: "Leading our technical vision and innovation strategy with 15+ years of experience in enterprise architecture and digital transformation.",
+    bio: "Leading our technical vision and innovation strategy with 8 years of experience in enterprise architecture and digital transformation.",
     image: "/illustrations/cto.svg"
   },
   {
