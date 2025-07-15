@@ -19,8 +19,8 @@ const contactDetails: ContactInfo[] = [
   {
     icon: <EnvelopeIcon className="h-5 w-5 text-[#1E3A8A]" />,
     title: "Email",
-    value: "hello@saharanova.com",
-    link: "mailto:hello@saharanova.com"
+    value: "james@saharanova.co.ke",
+    link: "mailto:james@saharanova.co.ke"
   }
 ];
 
