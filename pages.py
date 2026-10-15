@@ -6,7 +6,7 @@ SITE = {
     "url": "https://saharanova.co.ke",           # live domain (no trailing slash)
     "email": "james@saharanova.co.ke",           # switch to hello@ once that mailbox exists
     "description": "Sahara Nova is a Nairobi-based digital agency building websites, custom software, SEO and AI automation for small and mid-sized businesses in Kenya, East Africa and worldwide.",
-    "ga4_id": "",                                # Google Analytics 4 measurement ID, e.g. "G-ABC123XYZ"; empty = no analytics, no cookie bar
+    "ga4_id": "G-3BW6LDSBG4",                                # Google Analytics 4 measurement ID, e.g. "G-ABC123XYZ"; empty = no analytics, no cookie bar
     "gsc_verification": "",                      # Search Console HTML-tag code (only if not verifying by DNS)
     "same_as": [],                               # e.g. ["https://www.linkedin.com/company/saharanova", "https://clutch.co/profile/sahara-nova"]
 }
@@ -531,7 +531,7 @@ ANALYTICS_GA = ("only if you click Accept on the cookie bar, we use Google Analy
                 "We use no advertising cookies.")
 
 PRIVACY_BODY = """<section class="band"><div class="wrap"><div class="prose">
-<p><em>Last updated: 23 September 2026</em></p>
+<p><em>Last updated: 15 October 2026</em></p>
 <h2>Who we are</h2><p>Sahara Nova ("we", "us") is a digital agency based in Nairobi, Kenya. This policy explains how we handle personal data collected through this website. Contact: """ + SITE["email"] + """.</p>
 <h2>What we collect</h2><ul><li><strong>Contact form:</strong> name, email, company, country, budget and project details you choose to send.</li><li><strong>Analytics:</strong> """ + (ANALYTICS_GA if SITE["ga4_id"] else ANALYTICS_NONE) + """</li></ul>
 <h2>Why we use it</h2><p>To reply to your enquiry, prepare proposals and improve our website. Our lawful bases are your consent and our legitimate interest in responding to business enquiries.</p>

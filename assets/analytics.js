@@ -11,6 +11,7 @@
     window.gtag=function(){window.dataLayer.push(arguments);};
     window.gtag('js',new Date());
     window.gtag('config',id);
+    if(/^\/thanks\/?$/.test(location.pathname))window.gtag('event','generate_lead',{form_name:'contact'});
     var g=document.createElement('script');
     g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(id);
     document.head.appendChild(g);
