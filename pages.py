@@ -6,6 +6,8 @@ SITE = {
     "url": "https://saharanova.co.ke",           # live domain (no trailing slash)
     "email": "james@saharanova.co.ke",           # switch to hello@ once that mailbox exists
     "description": "Sahara Nova is a Nairobi-based digital agency building websites, custom software, SEO and AI automation for small and mid-sized businesses in Kenya, East Africa and worldwide.",
+    "phone": "+254 794 122 747",                 # shown on the site; also the WhatsApp Business number
+    "whatsapp": "254794122747",                  # wa.me number, digits only
     "ga4_id": "G-3BW6LDSBG4",                                # Google Analytics 4 measurement ID, e.g. "G-ABC123XYZ"; empty = no analytics, no cookie bar
     "gsc_verification": "",                      # Search Console HTML-tag code (only if not verifying by DNS)
     "same_as": [],                               # e.g. ["https://www.linkedin.com/company/saharanova", "https://clutch.co/profile/sahara-nova"]
@@ -518,6 +520,7 @@ CONTACT_BODY = """<section class="band"><div class="wrap"><div class="grid g2" s
 <div><b>Within 1 working day</b>We reply to confirm we've read your brief and book a 30-minute call.</div>
 <div><b>Within 2 working days of the call</b>You receive a written proposal with scope, timeline and a fixed price.</div>
 <div><b>Email</b><span style="user-select:all">""" + SITE["email"] + """</span></div>
+<div><b>WhatsApp</b><a href="https://wa.me/""" + SITE["whatsapp"] + """?text=Hi%20Sahara%20Nova%2C%20I%27d%20like%20to%20ask%20about%20a%20project">""" + SITE["phone"] + """</a> · quickest for a short question</div>
 <div><b>Location</b>Nairobi, Kenya · East Africa Time (UTC+3). In-person meetings available in Nairobi.</div>
 <div><b>Payment</b>USD, GBP, EUR by bank, Wise or card · KES by M-Pesa or bank transfer</div>
 <div><b>Hours</b>Mon–Fri, 08:00–18:00 EAT</div>
@@ -632,7 +635,7 @@ EAST_AFRICA_BODY = """<section class="band"><div class="wrap"><div class="grid g
 <tr><td>Run operations</td><td>Inventory, orders, bookings, eTIMS-ready invoicing</td></tr>
 <tr><td>Grow a startup</td><td>MVPs, mobile apps and mobile money payment flows</td></tr>
 </tbody></table></div>
-<div class="plan"><h3>Paying us locally</h3><ul><li>Same published prices as all our clients</li><li>Pay in KES by M-Pesa or bank transfer, at the day's exchange rate</li><li>Meetings at your office or ours in Nairobi</li></ul><a class="btn" href="{{/contact/}}">Book a meeting</a></div>
+<div class="plan"><h3>Paying us locally</h3><ul><li>Same published prices as all our clients</li><li>Pay in KES by M-Pesa or bank transfer, at the day's exchange rate</li><li>Meetings at your office in Nairobi, or by video call</li></ul><div class="btn-row" style="margin-top:8px"><a class="btn" href="{{/contact/}}">Book a meeting</a><a class="btn ghost" href="https://wa.me/""" + SITE["whatsapp"] + """?text=Hi%20Sahara%20Nova%2C%20I%27d%20like%20to%20ask%20about%20a%20project">Chat on WhatsApp</a></div></div>
 </div>
 </div></div></section>"""
 
