@@ -6,6 +6,8 @@ SITE = {
     "url": "https://saharanova.co.ke",           # live domain (no trailing slash)
     "email": "james@saharanova.co.ke",           # switch to hello@ once that mailbox exists
     "description": "Sahara Nova is a Nairobi-based digital agency building websites, custom software, SEO and AI automation for small and mid-sized businesses in Kenya, East Africa and worldwide.",
+    "ga4_id": "G-3BW6LDSBG4",                                # Google Analytics 4 measurement ID, e.g. "G-ABC123XYZ"; empty = no analytics, no cookie bar
+    "gsc_verification": "",                      # Search Console HTML-tag code (only if not verifying by DNS)
     "same_as": [],                               # e.g. ["https://www.linkedin.com/company/saharanova", "https://clutch.co/profile/sahara-nova"]
 }
 
@@ -522,12 +524,18 @@ CONTACT_BODY = """<section class="band"><div class="wrap"><div class="grid g2" s
 </div>
 </div></div></section>"""
 
+ANALYTICS_NONE = "this website currently runs no analytics and sets no advertising or tracking cookies."
+ANALYTICS_GA = ("only if you click Accept on the cookie bar, we use Google Analytics 4, which sets cookies (_ga, _ga_*) to count visits and see which pages people use: "
+                "pages visited, referrer, approximate location (country/city), device and browser. Google does not log or store IP addresses for Analytics 4. "
+                "If you decline, no analytics code loads. You can change your choice at any time with the Cookie settings link at the bottom of every page. "
+                "We use no advertising cookies.")
+
 PRIVACY_BODY = """<section class="band"><div class="wrap"><div class="prose">
-<p><em>Last updated: 23 September 2026</em></p>
+<p><em>Last updated: 15 October 2026</em></p>
 <h2>Who we are</h2><p>Sahara Nova ("we", "us") is a digital agency based in Nairobi, Kenya. This policy explains how we handle personal data collected through this website. Contact: """ + SITE["email"] + """.</p>
-<h2>What we collect</h2><ul><li><strong>Contact form:</strong> name, email, company, country, budget and project details you choose to send.</li><li><strong>Analytics:</strong> if enabled, cookie-free, privacy-friendly statistics only (pages visited, referrer, device type), which cannot identify you. This website sets no advertising or tracking cookies.</li></ul>
+<h2>What we collect</h2><ul><li><strong>Contact form:</strong> name, email, company, country, budget and project details you choose to send.</li><li><strong>Analytics:</strong> """ + (ANALYTICS_GA if SITE["ga4_id"] else ANALYTICS_NONE) + """</li></ul>
 <h2>Why we use it</h2><p>To reply to your enquiry, prepare proposals and improve our website. Our lawful bases are your consent and our legitimate interest in responding to business enquiries.</p>
-<h2>Sharing and transfers</h2><p>We use trusted processors to run this website and our business, for example website hosting and form handling (Netlify, Inc., USA) and email. Some of these providers process data outside Kenya and the EU/UK under appropriate safeguards. We never sell your data.</p>
+<h2>Sharing and transfers</h2><p>We use trusted processors to run this website and our business, for example website hosting and form handling (Netlify, Inc., USA), email""" + (", and website analytics (Google LLC, USA, only if you accept analytics cookies)" if SITE["ga4_id"] else "") + """. Some of these providers process data outside Kenya and the EU/UK under appropriate safeguards. We never sell your data.</p>
 <h2>Retention</h2><p>Enquiries that don't become projects are deleted after 24 months. Client records are kept as long as required by law.</p>
 <h2>Your rights</h2><p>Under Kenya's Data Protection Act 2019 and, where applicable, the EU/UK GDPR, you can request access to, correction of or deletion of your personal data, or object to its processing. Email us and we will respond within 30 days.</p>
 </div></div></section>"""
@@ -695,7 +703,7 @@ PAGES = [
       article={"date": "2026-09-23"}, body=ARTICLE_BODY),
  dict(path="privacy/", title="Privacy Policy | Sahara Nova",
       description="How Sahara Nova collects, uses and protects personal data submitted through this website.",
-      eyebrow="Legal", h1="Privacy policy", lede="Short, plain-English, and no advertising cookies.",
+      eyebrow="Legal", h1="Privacy policy", lede="Short, plain English, and no advertising cookies.",
       crumbs=[("/privacy/", "Privacy")], body=PRIVACY_BODY),
  dict(path="thanks/", title="Thank you | Sahara Nova", description="Thanks for your enquiry. Sahara Nova will reply within one working day.",
       eyebrow="Message received", h1="Thanks, your brief is in", noindex=True, no_cta=True,

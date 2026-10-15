@@ -157,7 +157,7 @@ def render(p):
 <link rel="stylesheet" href="{css}">
 <script type="application/ld+json">
 {schema_for(p)}
-</script>"""
+</script>""" + (f'\n<meta name="google-site-verification" content="{SITE["gsc_verification"]}">' if SITE.get("gsc_verification") else "")
 
     body = f"""<a class="skip" href="#main">Skip to content</a>
 <header class="site-head"><div class="wrap">
@@ -173,9 +173,10 @@ def render(p):
 </main>
 {FOOTER}
 <script src="{js}" defer></script>
-<script src="{fx}" defer></script>"""
+<script src="{fx}" defer></script>""" + (f'\n<script src="{rel(path, "/assets/analytics.js")}" data-ga="{SITE["ga4_id"]}" defer></script>' if SITE.get("ga4_id") else "")
 
     body = links(body, path).replace("__YEAR__", str(datetime.date.today().year))
+    body = body.replace("__COOKIE__", ' · <button type="button" class="link-btn" data-cookie-settings>Cookie settings</button>' if SITE.get("ga4_id") else "")
     def _tw(m):
         rest = body[m.end():m.end() + 800]
         ths = re.findall(r"<th>(.*?)</th>", rest)[:2]
@@ -211,7 +212,7 @@ FOOTER = """<footer class="site-foot"><div class="wrap">
 <div><h2>Contact</h2><ul>
 <li>""" + SITE["email"] + """</li><li>Nairobi, Kenya · EAT (UTC+3)</li><li>M-Pesa accepted</li><li>Mon–Fri, 08:00–18:00 EAT</li></ul></div>
 </div>
-<div class="foot-base"><span>© __YEAR__ Sahara Nova. All rights reserved.</span><a href="{{/privacy/}}">Privacy policy</a></div>
+<div class="foot-base"><span>© __YEAR__ Sahara Nova. All rights reserved.</span><span><a href="{{/privacy/}}">Privacy policy</a>__COOKIE__</span></div>
 </div></footer>"""
 
 
@@ -259,7 +260,7 @@ NETLIFY = """[build]
     X-Frame-Options = "DENY"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo=' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; font-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
 
 [[headers]]
   for = "/assets/*"
