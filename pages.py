@@ -4,7 +4,7 @@
 SITE = {
     "name": "Sahara Nova",
     "url": "https://saharanova.co.ke",           # live domain (no trailing slash)
-    "email": "hello@saharanova.co.ke",           # <- create this mailbox
+    "email": "james@saharanova.co.ke",           # switch to hello@ once that mailbox exists
     "description": "Sahara Nova is a Nairobi-based digital agency building websites, custom software, SEO and AI automation for small and mid-sized businesses in Kenya, East Africa and worldwide.",
     "same_as": [],                               # e.g. ["https://www.linkedin.com/company/saharanova", "https://clutch.co/profile/sahara-nova"]
 }
