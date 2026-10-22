@@ -251,3 +251,6 @@ form.contact{display:grid;gap:16px;background:var(--surface);border:1px solid va
 .consent .btn{margin:0;padding:10px 18px}
 .consent .btn.ghost{color:var(--ink)}
 .link-btn{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;cursor:pointer}
+.prose pre{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:14px 16px;overflow-x:auto;font:.82rem/1.55 var(--f-mono)}
+.prose code{font:.88em var(--f-mono)}
+.prose pre code{font:inherit;white-space:pre}

@@ -10,7 +10,23 @@ SITE = {
     "whatsapp": "254794122747",                  # wa.me number, digits only
     "ga4_id": "G-3BW6LDSBG4",                                # Google Analytics 4 measurement ID, e.g. "G-ABC123XYZ"; empty = no analytics, no cookie bar
     "gsc_verification": "",                      # Search Console HTML-tag code (only if not verifying by DNS)
-    "same_as": [],                               # e.g. ["https://www.linkedin.com/company/saharanova", "https://clutch.co/profile/sahara-nova"]
+    # Official profiles (structured data sameAs). Add the Google Business Profile, Clutch, GoodFirms links as they go live.
+    "same_as": ["https://www.linkedin.com/company/saharanova/"],
+}
+
+# Founder: shown on About, credited on blog posts, and published as Person structured data.
+# Add his personal LinkedIn URL to "same_as" and a photo path to "photo" when ready.
+FOUNDER = {
+    "name": "James Njoroge",
+    "role": "Founder & Lead Engineer",
+    "bio": ("James started out as an SAP-certified implementation consultant, rolling out ERP systems for businesses, "
+            "then moved into designing and building AI agents for lending, CRM and ERP teams, including the "
+            "loan top-up agent that took in KES 5.4M in applications in its first week. He holds a B.Tech in "
+            "Communication and Computer Networks from the Technical University of Kenya and leads every Sahara Nova project."),
+    "knows": ["AI agents", "Business process automation", "ERP implementation", "SAP", "Odoo", "HubSpot",
+              "Web development", "Technical SEO"],
+    "same_as": [],
+    "photo": "",
 }
 
 ICON = {
@@ -246,7 +262,7 @@ WEB = service_page(
 <li><strong>Redesigns and migrations</strong> that keep your existing Google rankings through proper redirects</li>
 </ul>
 <h3>Built for your market</h3>
-<p>Selling in Kenya or East Africa? We build M-Pesa checkouts and WhatsApp ordering into your site. See <a href="{{/east-africa/}}">web design for East African businesses</a>. Want your site to answer questions and capture leads around the clock? See the <a href="{{/work/#support-and-lead-intake-agents}}">support and lead-intake agents</a> we've built.</p>
+<p>Selling in Kenya or East Africa? We build M-Pesa checkouts and WhatsApp ordering into your site. See <a href="{{/east-africa/}}">web design for East African businesses</a> and our <a href="{{/blog/mpesa-stk-push-integration-guide/}}">M-Pesa STK Push guide</a>. Want your site to answer questions and capture leads around the clock? See the <a href="{{/work/#support-and-lead-intake-agents}}">support and lead-intake agents</a> we've built.</p>
 <h3>Technology</h3>
 <p>We choose the stack that fits your team, not our favourite. That might be WordPress if you want to edit content yourself, Shopify for commerce, Webflow for marketing teams, or custom Next.js and static builds when speed and flexibility matter most.</p>
 </div>
@@ -457,6 +473,23 @@ PRICING_FAQ = [
  ("Which currencies and payment methods do you accept?", "We invoice in USD, GBP or EUR and accept bank transfer, Wise and card payments. Clients in Kenya and East Africa can also pay in KES by M-Pesa or bank transfer."),
 ]
 
+TEAM_SECTION = """<section class="band alt" id="team"><div class="wrap">
+<div class="sec-head"><p class="label">The team</p><h2>Who you'll work with</h2>
+<p class="lede">We're a small team on purpose. The person on your first call is the person accountable for your project.</p></div>
+<div class="grid g2" style="gap:48px;align-items:start">
+<div class="plan"><p class="label">""" + FOUNDER["role"] + """</p><h3 style="font-size:1.5rem">""" + FOUNDER["name"] + """</h3>
+<p>""" + FOUNDER["bio"] + """</p>
+<p class="meta">Based in Nairobi · English and Swahili</p></div>
+<div class="prose"><h3 style="margin-top:0">What that means for your project</h3>
+<ul>
+<li><strong>Business systems first.</strong> An ERP implementation background means we start from how your business actually runs, not from a template.</li>
+<li><strong>AI that has shipped.</strong> Our agents run in real lending, ERP and CRM workflows. See <a href="{{/work/}}">our case studies</a>.</li>
+<li><strong>One accountable lead.</strong> Specialists join for design, engineering and SEO, and one person owns the result.</li>
+</ul>
+<p>Follow Sahara Nova on <a href="https://www.linkedin.com/company/saharanova/" rel="noopener">LinkedIn</a>.</p></div>
+</div></div></section>
+"""
+
 ABOUT_BODY = """<section class="band"><div class="wrap"><div class="grid g2" style="gap:48px">
 <div class="prose">
 <h2 style="margin-top:0">Why we started Sahara Nova</h2>
@@ -477,7 +510,7 @@ ABOUT_BODY = """<section class="band"><div class="wrap"><div class="grid g2" sty
 <div class="edge"><span class="fig">USD · GBP · EUR</span><p>Invoiced in your currency.</p></div>
 </div>
 </div></div></section>
-<section class="band alt" id="how-we-work"><div class="wrap">
+""" + TEAM_SECTION + """<section class="band" id="how-we-work"><div class="wrap">
 <div class="sec-head"><p class="label">How a typical website project runs</p><h2>From first call to launch in about four weeks</h2><p class="lede">Software and AI projects follow the same rhythm: a short discovery, a fixed plan, then weekly demos until launch.</p></div>
 <div class="steps">
 <div class="step" data-w="Day 1"><h3>Discovery call</h3><p>30 minutes on goals, audience and budget. You get a fixed quote within two working days.</p></div>
@@ -544,11 +577,13 @@ PRIVACY_BODY = """<section class="band"><div class="wrap"><div class="prose">
 </div></div></section>"""
 
 BLOG_BODY = """<section class="band"><div class="wrap"><div class="sec-head"><p class="label">Latest</p><h2>Latest guides</h2></div><div class="grid g2">
+<a class="post-card" href="{{/blog/website-cost-in-kenya/}}"><span class="meta">Guide · 22 Oct 2026 · 7 min read</span><h3>How much does a website cost in Kenya in 2026?</h3><p>What you get at each price level, from KES 15,000 template sites to custom builds, plus the yearly costs after launch.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
+<a class="post-card" href="{{/blog/mpesa-stk-push-integration-guide/}}"><span class="meta">Guide · 22 Oct 2026 · 9 min read</span><h3>M-Pesa STK Push integration: a step-by-step guide</h3><p>How Daraja STK Push works, what you need before you start, and the mistakes behind most failed integrations.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/outsourcing-web-development-to-kenya/}}"><span class="meta">Guide · 23 Sep 2026 · 8 min read</span><h3>What it costs to outsource web development to Kenya in 2026, and how to do it well</h3><p>Rates by region, how the EAT time zone overlaps with yours, and a checklist for vetting a Kenyan agency.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 </div></div></section>"""
 
 ARTICLE_BODY = """<section class="band"><div class="wrap"><article class="prose">
-<p class="meta">Published 23 September 2026 · By the Sahara Nova team · 8 min read</p>
+<p class="meta">Published 23 September 2026 · By <a href="{{/about/#team}}">James Njoroge</a>, founder · 8 min read</p>
 <p>If you run a small or mid-sized business in the UK, Europe or the US, you have probably noticed that agency quotes for a new website or app have climbed steadily. More businesses are looking further afield, and Kenya, Nairobi in particular, has become one of the most talked-about destinations for outsourcing web and software development.</p>
 <p>This guide covers what it costs, how the time zones work, where Kenya fits against other outsourcing regions, and how to pick a partner without getting burned.</p>
 
@@ -610,6 +645,145 @@ ARTICLE_BODY = """<section class="band"><div class="wrap"><article class="prose"
 </article></div></section>"""
 
 
+BYLINE = '<p class="meta">Published {date} · By <a href="{{{{/about/#team}}}}">James Njoroge</a>, founder · {mins} min read</p>'
+
+WEBSITE_COST_KENYA_BODY = """<section class="band"><div class="wrap"><article class="prose">
+""" + BYLINE.format(date="22 October 2026", mins=7) + """
+<p>Ask five web designers in Nairobi what a website costs and you'll get five answers between KES 5,000 and KES 1 million. They're not all wrong. They're quoting for very different things. This guide breaks down what each price level gets you in 2026, what you'll pay every year after launch, and how to tell which one your business needs.</p>
+
+<h2>The short answer</h2>
+<div class="table-wrap"><table><thead><tr><th>Type of website</th><th>Typical cost (KES)</th><th>Good for</th></tr></thead><tbody>
+<tr><td>Do it yourself (WordPress or a site builder)</td><td class="num">About 3,000–5,000 in year one</td><td>Testing an idea, a simple online presence</td></tr>
+<tr><td>Template site from a freelancer (about 5 pages)</td><td class="num">15,000–80,000</td><td>A brochure site that mainly needs to look credible</td></tr>
+<tr><td>Custom business website with SEO</td><td class="num">From about 195,000</td><td>Businesses that want Google enquiries</td></tr>
+<tr><td>Online shop with M-Pesa checkout</td><td class="num">From about 585,000</td><td>Selling products online</td></tr>
+<tr><td>Web app or customer portal</td><td class="num">From about 1,000,000</td><td>Bookings, accounts, dashboards, SaaS</td></tr>
+</tbody></table></div>
+<p class="meta">DIY and freelancer ranges: Hostiko, "How much does a website cost in Kenya", 2026. Custom, shop and web app figures are Sahara Nova's published starting prices ($1,500, $4,500 and $8,000), converted at about KES 130 to the dollar (October 2026).</p>
+
+<h2>Why the prices are so far apart</h2>
+<p>The gap isn't mostly about design. A KES 30,000 site and a KES 200,000 site can look similar on the day they launch. The difference is in the work you can't see:</p>
+<ul>
+<li><strong>Research before design.</strong> A cheaper site starts from a template. A custom site starts from what your customers search for and what they need to see before they call you.</li>
+<li><strong>Speed on real phones.</strong> Most Kenyan visitors arrive on mobile data and mid-range Android phones. Heavy themes and plugins can take ten seconds or more to load, and people leave.</li>
+<li><strong>SEO foundations.</strong> Page titles, structured data, a sitemap, internal links and Google Business Profile setup decide whether anyone finds the site at all.</li>
+<li><strong>Content.</strong> Writing that answers real questions takes time. Many cheap quotes assume you'll supply all the text.</li>
+<li><strong>Integrations.</strong> M-Pesa checkout, WhatsApp ordering, a CRM or eTIMS-ready invoicing each add real engineering work.</li>
+</ul>
+
+<h2>Costs after launch</h2>
+<p>A website keeps costing money after it goes live. Budget for these every year:</p>
+<ul>
+<li><strong>A .co.ke domain:</strong> around KES 1,200 a year from Kenyan registrars.</li>
+<li><strong>Hosting:</strong> shared hosting can cost under KES 1,000 a year. A busy shop or web app needs more, often a few thousand shillings a month.</li>
+<li><strong>Email:</strong> business email on your domain, free or a few hundred shillings per mailbox each month depending on the provider.</li>
+<li><strong>Maintenance:</strong> updates, backups, security fixes and small changes. Ours is the Website Care Plan from $150 a month (about KES 19,500).</li>
+<li><strong>Marketing:</strong> SEO content or ads if you want the site to keep bringing in enquiries.</li>
+</ul>
+<div class="callout"><p><strong>Make sure you own your domain.</strong> The most common problem we see is a business whose domain was registered in a former designer's name or account. When it lapses, the website and email go down. Ask for the domain to be registered to your business, with login details you keep.</p></div>
+
+<h2>Which one do you need?</h2>
+<p><strong>A template or freelancer site is fine</strong> if most customers find you through referrals or social media, and the website is mainly somewhere to check you're legitimate.</p>
+<p><strong>A custom site with SEO pays for itself</strong> if your customers search Google before they buy, for example "plumber in Kilimani", "accounting firm Westlands" or "school management system Kenya", and one new client is worth more than the site costs.</p>
+<p><strong>An online shop or web app</strong> makes sense when the site needs to take payments, bookings or logins. Budget for proper M-Pesa integration. We explain how it works in our <a href="{{/blog/mpesa-stk-push-integration-guide/}}">M-Pesa STK Push integration guide</a>.</p>
+
+<h2>Questions to ask before you pay a deposit</h2>
+<ol>
+<li>Will the domain, hosting and code be registered in my name?</li>
+<li>Who writes the content, and is it included in the price?</li>
+<li>How fast does the site load on a phone over mobile data? Can I see a recent example?</li>
+<li>What SEO work is included: page titles, Google Business Profile, Search Console, a sitemap?</li>
+<li>What does it cost each year after launch, and what happens if I want to move to another developer?</li>
+</ol>
+
+<h2>The bottom line</h2>
+<p>Expect to pay KES 15,000–80,000 for a simple template site and about KES 195,000 upwards for a custom business site built to win enquiries from Google. Online shops and web apps cost more because of payments and custom features. Whatever you choose, keep your domain in your own name. If you'd like a fixed price for your project, see <a href="{{/pricing/}}">our pricing</a> or <a href="{{/contact/}}">send us a short brief</a>. You can pay in KES by M-Pesa or bank transfer. More on how we work with local businesses is on our <a href="{{/east-africa/}}">Kenya and East Africa page</a>.</p>
+</article></div></section>"""
+
+MPESA_GUIDE_BODY = """<section class="band"><div class="wrap"><article class="prose">
+""" + BYLINE.format(date="22 October 2026", mins=9) + """
+<p>STK Push, also called Lipa na M-Pesa Online or M-Pesa Express, is the checkout most Kenyan customers now expect. They enter their phone number on your site, a prompt appears on their phone, they type their M-Pesa PIN, and the payment is done. No copying Paybill numbers, no mistyped account references.</p>
+<p>This guide explains how an STK Push integration works through Safaricom's Daraja API, what you need before you start, and the mistakes that cause most failed integrations. It's written for business owners who want to understand the process and for developers doing it for the first time.</p>
+
+<h2>What you need first</h2>
+<ul>
+<li><strong>A Paybill or Till number</strong> registered to your business. You can build and test without one in the sandbox, but you need one to go live.</li>
+<li><strong>A Daraja account</strong> on Safaricom's developer portal, with an app created to get a Consumer Key and Consumer Secret.</li>
+<li><strong>A server you control.</strong> The payment request must come from your backend, never from the browser, because it uses your secret credentials.</li>
+<li><strong>A public HTTPS callback URL</strong> where Safaricom sends the payment result.</li>
+</ul>
+
+<h2>How the flow works</h2>
+<ol>
+<li>The customer enters their phone number at checkout.</li>
+<li>Your server gets an access token from Daraja using your Consumer Key and Secret.</li>
+<li>Your server sends the STK Push request: amount, phone number, your shortcode and a callback URL.</li>
+<li>Safaricom shows the PIN prompt on the customer's phone.</li>
+<li>The customer enters their PIN, cancels, or ignores it.</li>
+<li>Safaricom posts the result to your callback URL, and your server marks the order paid or failed.</li>
+</ol>
+
+<h2>Step 1: get an access token</h2>
+<p>Daraja uses OAuth. Send your Consumer Key and Secret as HTTP Basic authentication to the token endpoint. The token is valid for about an hour, so cache it and reuse it instead of requesting a new one for every payment.</p>
+<pre><code>GET https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials
+Authorization: Basic base64(CONSUMER_KEY:CONSUMER_SECRET)</code></pre>
+
+<h2>Step 2: send the STK Push request</h2>
+<p>The request needs a password, which is your shortcode, your passkey and a timestamp joined together and Base64-encoded. The timestamp uses the format <code>yyyyMMddHHmmss</code>, and you build a new password for every request.</p>
+<pre><code>POST https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest
+Authorization: Bearer ACCESS_TOKEN
+
+{
+  "BusinessShortCode": "174379",
+  "Password": "base64(ShortCode + Passkey + Timestamp)",
+  "Timestamp": "20261022143000",
+  "TransactionType": "CustomerPayBillOnline",
+  "Amount": 1500,
+  "PartyA": "2547XXXXXXXX",
+  "PartyB": "174379",
+  "PhoneNumber": "2547XXXXXXXX",
+  "CallBackURL": "https://yourdomain.co.ke/api/mpesa/callback/long-random-string",
+  "AccountReference": "ORDER1042",
+  "TransactionDesc": "Order 1042"
+}</code></pre>
+<ul>
+<li><strong>TransactionType</strong> is <code>CustomerPayBillOnline</code> for a Paybill and <code>CustomerBuyGoodsOnline</code> for a Till.</li>
+<li><strong>Amount</strong> is a whole number of shillings. No decimals.</li>
+<li><strong>Phone numbers</strong> use the 2547… or 2541… format: no plus sign, no leading zero, no spaces. Normalise whatever the customer types.</li>
+<li><strong>AccountReference and TransactionDesc</strong> are short. Keep them to an order number.</li>
+</ul>
+<p>A successful response includes a <code>CheckoutRequestID</code>. Save it against the order. A response code of 0 here only means Safaricom accepted the request. <strong>It does not mean the customer paid.</strong></p>
+
+<h2>Step 3: handle the callback</h2>
+<p>When the customer finishes, Safaricom posts a JSON result to your callback URL. Inside <code>Body.stkCallback</code> you'll find the <code>CheckoutRequestID</code>, a <code>ResultCode</code> and, only for successful payments, <code>CallbackMetadata</code> with the amount, the M-Pesa receipt number, the transaction time and the phone number.</p>
+<div class="table-wrap"><table><thead><tr><th>ResultCode</th><th>What it means</th><th>What to do</th></tr></thead><tbody>
+<tr><td class="num">0</td><td>Paid</td><td>Check the amount, save the receipt number, mark the order paid</td></tr>
+<tr><td class="num">1032</td><td>Customer cancelled</td><td>Let them try again</td></tr>
+<tr><td class="num">1037</td><td>Phone unreachable or no response</td><td>Offer a retry or a manual Paybill option</td></tr>
+<tr><td class="num">1</td><td>Insufficient balance</td><td>Tell the customer clearly</td></tr>
+</tbody></table></div>
+<p>Reply to every callback quickly with an HTTP 200, and do any slow work, such as sending emails, after you respond.</p>
+
+<h2>Step 4: check when no callback arrives</h2>
+<p>Callbacks sometimes arrive late or not at all. Use the STK Push query endpoint (<code>/mpesa/stkpushquery/v1/query</code>) with the <code>CheckoutRequestID</code> to check the status of any order that's still pending after a minute or two. Show the customer a "waiting for payment" screen that polls your own server rather than leaving them guessing.</p>
+
+<h2>Mistakes that cause most failed integrations</h2>
+<ul>
+<li><strong>Trusting the callback blindly.</strong> Anyone who finds your callback URL could post a fake success. Use a long, unguessable callback path, confirm the <code>CheckoutRequestID</code> matches an order you created, check the amount, and use the query endpoint to confirm high-value payments.</li>
+<li><strong>Processing the same payment twice.</strong> Callbacks can be retried. Make the handler idempotent: if the order is already paid, do nothing.</li>
+<li><strong>Calling Daraja from the browser.</strong> This exposes your Consumer Secret and passkey. Keep every Daraja call on the server.</li>
+<li><strong>Using a local or HTTP callback URL.</strong> Safaricom needs to reach a public HTTPS address.</li>
+<li><strong>Forgetting go-live differences.</strong> Production uses <code>api.safaricom.co.ke</code>, your own shortcode and a production passkey, not the sandbox values.</li>
+<li><strong>No reconciliation.</strong> Match M-Pesa receipt numbers against your Paybill or Till statement regularly, so missed callbacks don't turn into unhappy customers.</li>
+</ul>
+
+<h2>Going live</h2>
+<p>When everything works in the sandbox, request go-live from the Daraja portal for your Paybill or Till. Safaricom verifies the business and the person who administers the shortcode, then issues production credentials and a passkey. Swap the base URL, the shortcode and the passkey, run a few small real payments, and check each one against your M-Pesa statement before you announce it.</p>
+
+<h2>Do it yourself or hire help?</h2>
+<p>A developer who has done it before can usually add STK Push to an existing site in a few days. Most of that time goes into the parts that protect your money: callbacks, retries, verification and reconciliation. If you'd like it done for you, as part of a new website or added to an existing one, see our <a href="{{/east-africa/}}">work for Kenyan and East African businesses</a> or <a href="{{/contact/}}">send us a brief</a>. Planning a full new site? Our guide to <a href="{{/blog/website-cost-in-kenya/}}">what a website costs in Kenya</a> covers budgets.</p>
+</article></div></section>"""
+
 EAST_AFRICA_BODY = """<section class="band"><div class="wrap"><div class="grid g2" style="gap:48px">
 <div class="prose">
 <h2 style="margin-top:0">A Nairobi team that knows your market</h2>
@@ -617,13 +791,15 @@ EAST_AFRICA_BODY = """<section class="band"><div class="wrap"><div class="grid g
 <h3>Websites that work on East African connections</h3>
 <p>Many of your visitors are on mobile data, so every kilobyte counts. We build lightweight, mobile-first sites that load quickly on 3G and budget phones, rank well on Google and don't drain your customers' bundles.</p>
 <h3>M-Pesa and mobile money integration</h3>
-<p>We integrate M-Pesa through the Daraja API: STK Push checkout, C2B Paybill and Till payments, B2C payouts and automatic reconciliation with your orders or accounting system. For customers in Uganda, Tanzania and Rwanda we also connect Airtel Money and MTN MoMo through regional payment gateways, along with card payments.</p>
+<p>We integrate M-Pesa through the Daraja API: STK Push checkout, C2B Paybill and Till payments, B2C payouts and automatic reconciliation with your orders or accounting system. Our <a href="{{/blog/mpesa-stk-push-integration-guide/}}">M-Pesa STK Push integration guide</a> explains how it works. For customers in Uganda, Tanzania and Rwanda we also connect Airtel Money and MTN MoMo through regional payment gateways, along with card payments.</p>
 <h3>WhatsApp and AI for customer service</h3>
 <p>Your customers already use WhatsApp. We set up WhatsApp Business ordering, automated replies and AI assistants that answer common questions in English or Swahili, take orders and hand over to a person when needed.</p>
 <h3>AI agents already working in Kenya</h3>
 <p>We built an AI agent for a digital lender that took in <strong>KES 5.4M in loan top-up applications in its first week</strong>. Read the <a href="{{/work/#loan-top-up-agent}}">case study</a>, or see our <a href="{{/services/ai-automation/}}">AI and automation services</a>.</p>
 <h3>Local SEO in Nairobi and beyond</h3>
 <p>We optimise your Google Business Profile, local citations and service-area pages so you show up when customers search for "near me" services in Nairobi, Mombasa, Kisumu, Kampala, Dar es Salaam or Kigali.</p>
+<h3>Working with businesses across Nairobi</h3>
+<p>We work remotely and meet clients at their offices, from Westlands, Kilimani and Upper Hill to the CBD, Industrial Area and Karen. Wondering about budget? Read <a href="{{/blog/website-cost-in-kenya/}}">how much a website costs in Kenya in 2026</a>, or see our <a href="{{/pricing/}}">published prices</a>.</p>
 <h3>Business systems</h3>
 <p>We build custom software for how East African businesses run: stock and order systems, SACCO and chama portals, school and clinic management tools, field-sales apps and invoicing that works with KRA eTIMS.</p>
 </div>
@@ -703,7 +879,27 @@ PAGES = [
       eyebrow="Guide", h1="What it costs to outsource web development to Kenya in 2026, and how to do it well",
       lede="Rates, time zone overlap, how Kenya compares with other outsourcing regions, and a vetting checklist.",
       crumbs=[("/blog/", "Blog"), ("/blog/outsourcing-web-development-to-kenya/", "Outsourcing to Kenya")],
-      article={"date": "2026-09-23"}, body=ARTICLE_BODY),
+      article={"date": "2026-09-23", "modified": "2026-10-22"}, body=ARTICLE_BODY),
+ dict(path="blog/website-cost-in-kenya/",
+      title="How Much Does a Website Cost in Kenya? (2026 Prices in KES)",
+      description="Website prices in Kenya for 2026: DIY, freelancer template sites, custom business sites, online shops and web apps in KES, plus the yearly costs after launch.",
+      eyebrow="Guide", h1="How much does a website cost in Kenya in 2026?",
+      lede="What you get at each price level, what you'll pay every year after launch, and how to choose.",
+      crumbs=[("/blog/", "Blog"), ("/blog/website-cost-in-kenya/", "Website cost in Kenya")],
+      article={"date": "2026-10-22"}, body=WEBSITE_COST_KENYA_BODY,
+      faq=[("How much does a basic website cost in Kenya?", "A simple five-page template site from a freelancer typically costs KES 15,000–80,000, plus around KES 2,000–3,000 a year for a .co.ke domain and basic hosting."),
+           ("How much does a custom business website cost in Kenya?", "A custom-designed business website with SEO built in typically starts from about KES 195,000 with an agency. Sahara Nova's Website Launch package starts at $1,500, payable in KES."),
+           ("How much is a .co.ke domain per year?", "Around KES 1,200 a year from most Kenyan registrars. Make sure it is registered in your business's name.")]),
+ dict(path="blog/mpesa-stk-push-integration-guide/",
+      title="M-Pesa STK Push Integration: A Step-by-Step Guide (2026)",
+      description="How to add M-Pesa STK Push checkout to your website with the Daraja API: access tokens, the request, callbacks, result codes, going live and common mistakes.",
+      eyebrow="Guide", h1="M-Pesa STK Push integration: a step-by-step guide",
+      lede="How Lipa na M-Pesa Online works through the Daraja API, what you need first, and how to avoid the mistakes behind most failed integrations.",
+      crumbs=[("/blog/", "Blog"), ("/blog/mpesa-stk-push-integration-guide/", "M-Pesa STK Push guide")],
+      article={"date": "2026-10-22"}, body=MPESA_GUIDE_BODY,
+      faq=[("What is M-Pesa STK Push?", "STK Push, also called Lipa na M-Pesa Online or M-Pesa Express, sends a payment prompt straight to the customer's phone. They enter their M-Pesa PIN to pay, with no need to type a Paybill or account number."),
+           ("Do I need a Paybill or Till number for STK Push?", "You can build and test in the Daraja sandbox without one, but you need a Paybill or Till registered to your business to go live."),
+           ("How long does an M-Pesa integration take?", "An experienced developer can usually add STK Push to an existing website in a few days, including callback handling, verification and reconciliation.")]),
  dict(path="privacy/", title="Privacy Policy | Sahara Nova",
       description="How Sahara Nova collects, uses and protects personal data submitted through this website.",
       eyebrow="Legal", h1="Privacy policy", lede="Short, plain English, and no advertising cookies.",
