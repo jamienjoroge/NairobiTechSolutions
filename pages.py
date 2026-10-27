@@ -373,7 +373,7 @@ AI = service_page(
  """<section class="band"><div class="wrap"><div class="grid g2" style="gap:48px">
 <div class="prose">
 <h2 style="margin-top:0">Automate the busywork, not the judgement</h2>
-<p>Most small businesses lose hours every week to manual tasks: moving leads from forms into a CRM, building the same weekly report, answering the same customer questions. We find those tasks, measure them and automate the ones with a clear payback.</p>
+<p>Most small businesses lose hours every week to manual tasks: moving leads from forms into a CRM, building the same weekly report, answering the same customer questions. We find those tasks, measure them and automate the ones with a clear payback. Our guide to <a href="{{/blog/which-processes-to-automate-with-ai/}}">choosing which processes to automate with AI</a> explains how.</p>
 <h3>Common automations we build</h3>
 <ul>
 <li><strong>Lead handling:</strong> form → CRM → instant personalised reply → sales alert</li>
@@ -382,7 +382,7 @@ AI = service_page(
 <li><strong>Document processing:</strong> invoices, receipts and forms read and filed by AI</li>
 <li><strong>Operations:</strong> onboarding checklists, reminders, approvals and data syncs between tools</li>
 <li><strong>AI agents:</strong> agents that take actions in your systems, like processing orders in your ERP or working leads in your CRM. See <a href="{{/work/}}">our case studies</a></li>
-<li><strong>Lending:</strong> loan top-up offers, WhatsApp application intake and repayment reminders. See <a href="{{/blog/ai-agents-for-lenders-kenya/}}">AI agents for lenders and SACCOs</a></li>
+<li><strong>Lending:</strong> loan top-up offers, application intake and compliant repayment reminders. See <a href="{{/blog/ai-agents-for-lenders-kenya/}}">AI agents for lenders and SACCOs</a></li>
 </ul>
 <h3>Tools</h3>
 <p>We connect AI agents to the systems you already run, including Odoo ERP, HubSpot CRM, email and your website chat. We use Make, Zapier and n8n for fast, maintainable workflows, and write custom code with leading AI model APIs when a no-code tool isn't enough. Every automation ships with documentation and error alerts, so nothing fails silently.</p>
@@ -578,6 +578,7 @@ PRIVACY_BODY = """<section class="band"><div class="wrap"><div class="prose">
 </div></div></section>"""
 
 BLOG_BODY = """<section class="band"><div class="wrap"><div class="sec-head"><p class="label">Latest</p><h2>Latest guides</h2></div><div class="grid g2">
+<a class="post-card" href="{{/blog/which-processes-to-automate-with-ai/}}"><span class="meta">Guide · 27 Oct 2026 · 8 min read</span><h3>Which processes should you automate with AI? A practical audit</h3><p>Map the work, score each candidate, and choose between simple automation, an AI step or an agent, before you spend anything.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/ai-agents-for-lenders-kenya/}}"><span class="meta">Guide · 27 Oct 2026 · 7 min read</span><h3>AI agents for digital lenders and SACCOs in Kenya</h3><p>How a WhatsApp top-up agent took in KES 5.4M in applications in its first week, with a credit analyst still making every decision.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/website-cost-in-kenya/}}"><span class="meta">Guide · 22 Oct 2026 · 7 min read</span><h3>How much does a website cost in Kenya in 2026?</h3><p>What you get at each price level, from KES 15,000 template sites to custom builds, plus the yearly costs after launch.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/mpesa-stk-push-integration-guide/}}"><span class="meta">Guide · 22 Oct 2026 · 9 min read</span><h3>M-Pesa STK Push integration: a step-by-step guide</h3><p>How Daraja STK Push works, what you need before you start, and the mistakes behind most failed integrations.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
@@ -585,7 +586,7 @@ BLOG_BODY = """<section class="band"><div class="wrap"><div class="sec-head"><p 
 </div></div></section>"""
 
 ARTICLE_BODY = """<section class="band"><div class="wrap"><article class="prose">
-<p class="meta">Published 23 September 2026 · By <a href="{{/about/#team}}">James Njoroge</a>, founder · 8 min read</p>
+<p class="meta">Published 23 September 2026 · Updated 27 October 2026 · By <a href="{{/about/#team}}">James Njoroge</a>, founder · 8 min read</p>
 <p>If you run a small or mid-sized business in the UK, Europe or the US, you have probably noticed that agency quotes for a new website or app have climbed steadily. More businesses are looking further afield, and Kenya, Nairobi in particular, has become one of the most talked-about destinations for outsourcing web and software development.</p>
 <p>This guide covers what it costs, how the time zones work, where Kenya fits against other outsourcing regions, and how to pick a partner without getting burned.</p>
 
@@ -607,8 +608,7 @@ ARTICLE_BODY = """<section class="band"><div class="wrap"><article class="prose"
 <tr><td>Kenya</td><td class="num">&lt;$25–$99</td></tr>
 </tbody></table></div>
 <p class="meta">Source: Qubit Labs, "Offshore Software Development Rates by Country", 2026.</p>
-<p>Kenyan agencies listed on Clutch show a wide spread. Some large vendors charge under $25 an hour with $10,000 minimum projects, while premium studios charge $100–$199 an hour. For a small business, the useful middle is a senior team charging roughly $30–$50 an hour with fixed-price packages.</p>
-<p>In project terms, a small business website that costs $6,000–$15,000 from a London agency will often cost $1,500–$5,000 from a good Kenyan team.</p>
+<p>Rates vary widely within Kenya too, from large vendors at the low end of that range to premium studios at the top. Compare like with like: ask who will do the work, how senior they are, and whether the price is fixed. For reference, our own published packages start at <a href="{{/pricing/}}">$1,500 for a small business website</a>.</p>
 
 <h2>Time zones: the underrated advantage</h2>
 <p>With outsourcing, time zone overlap often matters more than the hourly rate. When your developer is asleep during your whole working day, every question costs 24 hours. Kenya doesn't observe daylight saving, so overlap with Europe stays predictable:</p>
@@ -650,24 +650,24 @@ ARTICLE_BODY = """<section class="band"><div class="wrap"><article class="prose"
 BYLINE = '<p class="meta">Published {date} · By <a href="{{{{/about/#team}}}}">James Njoroge</a>, founder · {mins} min read</p>'
 
 WEBSITE_COST_KENYA_BODY = """<section class="band"><div class="wrap"><article class="prose">
-""" + BYLINE.format(date="22 October 2026", mins=7) + """
+""" + BYLINE.format(date="22 October 2026 · Updated 27 October 2026", mins=7) + """
 <p>Ask five web designers in Nairobi what a website costs and you'll get five answers between KES 5,000 and KES 1 million. They're not all wrong. They're quoting for very different things. This guide breaks down what each price level gets you in 2026, what you'll pay every year after launch, and how to tell which one your business needs.</p>
 
 <h2>The short answer</h2>
 <div class="table-wrap"><table><thead><tr><th>Type of website</th><th>Typical cost (KES)</th><th>Good for</th></tr></thead><tbody>
-<tr><td>Do it yourself (WordPress or a site builder)</td><td class="num">About 3,000–5,000 in year one</td><td>Testing an idea, a simple online presence</td></tr>
+<tr><td>Do it yourself (WordPress or a site builder)</td><td class="num">About 3,200 in year one</td><td>Testing an idea, a simple online presence</td></tr>
 <tr><td>Template site from a freelancer (about 5 pages)</td><td class="num">15,000–80,000</td><td>A brochure site that mainly needs to look credible</td></tr>
 <tr><td>Custom business website with SEO</td><td class="num">From about 195,000</td><td>Businesses that want Google enquiries</td></tr>
 <tr><td>Online shop with M-Pesa checkout</td><td class="num">From about 585,000</td><td>Selling products online</td></tr>
 <tr><td>Web app or customer portal</td><td class="num">From about 1,000,000</td><td>Bookings, accounts, dashboards, SaaS</td></tr>
 </tbody></table></div>
-<p class="meta">DIY and freelancer ranges: Hostiko, "How much does a website cost in Kenya", 2026. Custom, shop and web app figures are Sahara Nova's published starting prices ($1,500, $4,500 and $8,000), converted at about KES 130 to the dollar (October 2026).</p>
+<p class="meta">DIY and freelancer ranges, domain and shared hosting prices: Hostiko, "How much does a website cost in Kenya", 2026. Custom, shop and web app figures are Sahara Nova's published starting prices ($1,500, $4,500 and $8,000), converted at about KES 130 to the dollar (October 2026).</p>
 
 <h2>Why the prices are so far apart</h2>
 <p>The gap isn't mostly about design. A KES 30,000 site and a KES 200,000 site can look similar on the day they launch. The difference is in the work you can't see:</p>
 <ul>
 <li><strong>Research before design.</strong> A cheaper site starts from a template. A custom site starts from what your customers search for and what they need to see before they call you.</li>
-<li><strong>Speed on real phones.</strong> Most Kenyan visitors arrive on mobile data and mid-range Android phones. Heavy themes and plugins can take ten seconds or more to load, and people leave.</li>
+<li><strong>Speed on real phones.</strong> Most Kenyan visitors arrive on mobile data and mid-range Android phones. Heavy themes and plugins load slowly on those connections, and visitors give up before the page appears.</li>
 <li><strong>SEO foundations.</strong> Page titles, structured data, a sitemap, internal links and Google Business Profile setup decide whether anyone finds the site at all.</li>
 <li><strong>Content.</strong> Writing that answers real questions takes time. Many cheap quotes assume you'll supply all the text.</li>
 <li><strong>Integrations.</strong> M-Pesa checkout, WhatsApp ordering, a CRM or eTIMS-ready invoicing each add real engineering work.</li>
@@ -676,13 +676,13 @@ WEBSITE_COST_KENYA_BODY = """<section class="band"><div class="wrap"><article cl
 <h2>Costs after launch</h2>
 <p>A website keeps costing money after it goes live. Budget for these every year:</p>
 <ul>
-<li><strong>A .co.ke domain:</strong> around KES 1,200 a year from Kenyan registrars.</li>
-<li><strong>Hosting:</strong> shared hosting can cost under KES 1,000 a year. A busy shop or web app needs more, often a few thousand shillings a month.</li>
-<li><strong>Email:</strong> business email on your domain, free or a few hundred shillings per mailbox each month depending on the provider.</li>
+<li><strong>A .co.ke domain:</strong> around KES 1,200 a year (Hostiko, 2026).</li>
+<li><strong>Hosting:</strong> basic shared hosting can cost under KES 1,000 a year. A busy shop or web app needs more capable hosting, priced by traffic and resources.</li>
+<li><strong>Email:</strong> business email on your domain. Some providers have free plans for very small teams; paid plans charge per mailbox each month.</li>
 <li><strong>Maintenance:</strong> updates, backups, security fixes and small changes. Ours is the Website Care Plan from $150 a month (about KES 19,500).</li>
 <li><strong>Marketing:</strong> SEO content or ads if you want the site to keep bringing in enquiries.</li>
 </ul>
-<div class="callout"><p><strong>Make sure you own your domain.</strong> The most common problem we see is a business whose domain was registered in a former designer's name or account. When it lapses, the website and email go down. Ask for the domain to be registered to your business, with login details you keep.</p></div>
+<div class="callout"><p><strong>Make sure you own your domain.</strong> A common and costly problem is a domain registered in a former designer's name or account. When it lapses, the website and email go down. Ask for the domain to be registered to your business, with login details you keep.</p></div>
 
 <h2>Which one do you need?</h2>
 <p><strong>A template or freelancer site is fine</strong> if most customers find you through referrals or social media, and the website is mainly somewhere to check you're legitimate.</p>
@@ -703,7 +703,7 @@ WEBSITE_COST_KENYA_BODY = """<section class="band"><div class="wrap"><article cl
 </article></div></section>"""
 
 MPESA_GUIDE_BODY = """<section class="band"><div class="wrap"><article class="prose">
-""" + BYLINE.format(date="22 October 2026", mins=9) + """
+""" + BYLINE.format(date="22 October 2026 · Updated 27 October 2026", mins=9) + """
 <p>STK Push, also called Lipa na M-Pesa Online or M-Pesa Express, is the checkout most Kenyan customers now expect. They enter their phone number on your site, a prompt appears on their phone, they type their M-Pesa PIN, and the payment is done. No copying Paybill numbers, no mistyped account references.</p>
 <p>This guide explains how an STK Push integration works through Safaricom's Daraja API, what you need before you start, and the mistakes that cause most failed integrations. It's written for business owners who want to understand the process and for developers doing it for the first time.</p>
 
@@ -755,24 +755,29 @@ Authorization: Bearer ACCESS_TOKEN
 <li><strong>AccountReference and TransactionDesc</strong> are short. Keep them to an order number.</li>
 </ul>
 <p>A successful response includes a <code>CheckoutRequestID</code>. Save it against the order. A response code of 0 here only means Safaricom accepted the request. <strong>It does not mean the customer paid.</strong></p>
+<div class="callout"><p><strong>The prompt expires quickly.</strong> The PIN prompt stays on the customer's phone for well under a minute. Developer guides report anywhere from about 30 to 60 seconds, and it varies with the network. Only send an STK Push when the customer has just pressed "Pay" and is holding their phone. Don't fire one from a reminder, a scheduled job or a chat the customer may not be watching, because it will usually time out unseen.</p></div>
+<p>If the prompt times out, don't resend it automatically. After 30–45 seconds without a result, show a "Resend M-Pesa prompt" button, confirm the previous attempt has failed before sending another, and use a new reference for each attempt. Offer Paybill or Till details as a fallback.</p>
 
 <h2>Step 3: handle the callback</h2>
 <p>When the customer finishes, Safaricom posts a JSON result to your callback URL. Inside <code>Body.stkCallback</code> you'll find the <code>CheckoutRequestID</code>, a <code>ResultCode</code> and, only for successful payments, <code>CallbackMetadata</code> with the amount, the M-Pesa receipt number, the transaction time and the phone number.</p>
 <div class="table-wrap"><table><thead><tr><th>ResultCode</th><th>What it means</th><th>What to do</th></tr></thead><tbody>
 <tr><td class="num">0</td><td>Paid</td><td>Check the amount, save the receipt number, mark the order paid</td></tr>
 <tr><td class="num">1032</td><td>Customer cancelled</td><td>Let them try again</td></tr>
-<tr><td class="num">1037</td><td>Phone unreachable or no response</td><td>Offer a retry or a manual Paybill option</td></tr>
+<tr><td class="num">1037</td><td>Timed out: no response from the customer, or phone unreachable</td><td>Offer a customer-triggered retry or the Paybill/Till details</td></tr>
+<tr><td class="num">2001</td><td>Wrong PIN</td><td>Let them try again</td></tr>
 <tr><td class="num">1</td><td>Insufficient balance</td><td>Tell the customer clearly</td></tr>
 </tbody></table></div>
+<p class="meta">Result codes: Safaricom Daraja; PaybillKE and Mctaba developer guides, 2026. Branch on <code>ResultCode</code>, not the description text, which can change.</p>
 <p>Reply to every callback quickly with an HTTP 200, and do any slow work, such as sending emails, after you respond.</p>
 
 <h2>Step 4: check when no callback arrives</h2>
-<p>Callbacks sometimes arrive late or not at all. Use the STK Push query endpoint (<code>/mpesa/stkpushquery/v1/query</code>) with the <code>CheckoutRequestID</code> to check the status of any order that's still pending after a minute or two. Show the customer a "waiting for payment" screen that polls your own server rather than leaving them guessing.</p>
+<p>Callbacks sometimes arrive late or not at all. Don't count on Safaricom resending one you missed: a developer who tested failed deliveries saw no retry within the following 30–40 minutes. Run a background job that uses the STK Push query endpoint (<code>/mpesa/stkpushquery/v1/query</code>) with the <code>CheckoutRequestID</code> to check any order still pending after two to three minutes.</p>
+<p>Read query results carefully. A "transaction does not exist" response (<code>500.001.1001</code>) has been seen for payments that did exist, and "still under processing" means the payment is in progress, not failed. Treat both as "unknown, check again later", and only show the customer a failure once a query confirms it. Meanwhile, show a "waiting for payment" screen that polls your own server.</p>
 
 <h2>Mistakes that cause most failed integrations</h2>
 <ul>
 <li><strong>Trusting the callback blindly.</strong> Anyone who finds your callback URL could post a fake success. Use a long, unguessable callback path, confirm the <code>CheckoutRequestID</code> matches an order you created, check the amount, and use the query endpoint to confirm high-value payments.</li>
-<li><strong>Processing the same payment twice.</strong> Callbacks can be retried. Make the handler idempotent: if the order is already paid, do nothing.</li>
+<li><strong>Processing or charging twice.</strong> Duplicates happen: double-clicks, your own retries, and occasionally a repeated callback. Store each attempt by <code>CheckoutRequestID</code> with a unique constraint before the callback arrives, ignore callbacks for attempts already marked paid or failed, and block a new STK Push while one is pending for the same order.</li>
 <li><strong>Calling Daraja from the browser.</strong> This exposes your Consumer Secret and passkey. Keep every Daraja call on the server.</li>
 <li><strong>Using a local or HTTP callback URL.</strong> Safaricom needs to reach a public HTTPS address.</li>
 <li><strong>Forgetting go-live differences.</strong> Production uses <code>api.safaricom.co.ke</code>, your own shortcode and a production passkey, not the sandbox values.</li>
@@ -780,52 +785,135 @@ Authorization: Bearer ACCESS_TOKEN
 </ul>
 
 <h2>Going live</h2>
-<p>When everything works in the sandbox, request go-live from the Daraja portal for your Paybill or Till. Safaricom verifies the business and the person who administers the shortcode, then issues production credentials and a passkey. Swap the base URL, the shortcode and the passkey, run a few small real payments, and check each one against your M-Pesa statement before you announce it.</p>
+<p>When everything works in the sandbox, start a Go Live application in the Daraja portal with the same account. You'll need your business registration, KRA PIN, the signatory's ID, an active Paybill or Till, and an authorisation letter if the applicant isn't the owner or a director. Safaricom reviews applications manually. Developer guides report a few business days, sometimes longer. Once approved you receive production credentials: Consumer Key and Secret, shortcode and passkey.</p>
+<p>Swap the base URL, the shortcode and the passkey. Keep credentials in environment variables, not in your code. Run a few small real payments and check each one against your M-Pesa statement before you announce it.</p>
 
 <h2>Do it yourself or hire help?</h2>
-<p>A developer who has done it before can usually add STK Push to an existing site in a few days. Most of that time goes into the parts that protect your money: callbacks, retries, verification and reconciliation. If you'd like it done for you, as part of a new website or added to an existing one, see our <a href="{{/east-africa/}}">work for Kenyan and East African businesses</a> or <a href="{{/contact/}}">send us a brief</a>. Planning a full new site? Our guide to <a href="{{/blog/website-cost-in-kenya/}}">what a website costs in Kenya</a> covers budgets.</p>
+<p>Sending the prompt is the easy part. The work that protects your money is everything around it: timeouts and customer-triggered retries, callbacks you can trust, duplicate protection, status queries and reconciliation. If those aren't in place, you will eventually ship goods for payments that never arrived, or charge someone twice. If you'd like it done for you, as part of a new website or added to an existing one, see our <a href="{{/east-africa/}}">work for Kenyan and East African businesses</a> or <a href="{{/contact/}}">send us a brief</a>. Planning a full new site? Our guide to <a href="{{/blog/website-cost-in-kenya/}}">what a website costs in Kenya</a> covers budgets.</p>
+</article></div></section>"""
+
+AI_AUDIT_BODY = """<section class="band"><div class="wrap"><article class="prose">
+""" + BYLINE.format(date="27 October 2026", mins=8) + """
+<p>Most AI projects that disappoint don't fail because the AI is weak. They fail because someone picked a tool before they understood the process. Gartner predicts that more than 40% of agentic AI projects will be cancelled by the end of 2027 because of escalating costs, unclear business value or inadequate risk controls.</p>
+<p>The fix is unglamorous: audit the work first, then choose the simplest technology that does the job. This is how we approach it before building anything.</p>
+
+<h2>Step 1: map the process as it really runs</h2>
+<p>Write down what actually happens, not what the procedure document says. For each process, record:</p>
+<ul>
+<li><strong>The trigger:</strong> an email arrives, a form is submitted, a payment comes in.</li>
+<li><strong>Every step and who does it,</strong> including the copy-pasting between tools that nobody lists.</li>
+<li><strong>Volume and time:</strong> how often it happens each week and how long each run takes. Measure it rather than guessing.</li>
+<li><strong>Exceptions:</strong> how often a case doesn't fit the normal path, and what people do then.</li>
+<li><strong>Systems and data:</strong> where the inputs live, and whether those tools have an API.</li>
+</ul>
+<p>Sitting with the person who does the work for an hour usually tells you more than a workshop. You'll find the workarounds, the spreadsheet that holds everything together, and the step that only one person knows.</p>
+
+<h2>Step 2: score each candidate</h2>
+<p>A good automation candidate scores well on most of these:</p>
+<div class="table-wrap"><table><thead><tr><th>Question</th><th>Good sign</th><th>Warning sign</th></tr></thead><tbody>
+<tr><td>How often does it happen?</td><td>Daily or many times a week</td><td>A few times a month</td></tr>
+<tr><td>Is it digital end to end?</td><td>Inputs arrive by email, form or system</td><td>Paper, phone calls, in-person checks</td></tr>
+<tr><td>Can the systems be connected?</td><td>Tools have APIs or built-in integrations</td><td>No API, or only screen access</td></tr>
+<tr><td>How stable is the process?</td><td>Same steps every time, agreed by the team</td><td>Changes weekly, or nobody agrees how it works</td></tr>
+<tr><td>What does a mistake cost?</td><td>Easy to spot and reverse</td><td>Money, legal or safety consequences</td></tr>
+<tr><td>Does speed matter?</td><td>Customers wait on it</td><td>Nobody notices a delay</td></tr>
+</tbody></table></div>
+<p>Then estimate the payback: hours saved per month, plus anything speed is worth, against the cost to build and run it. If you can't name the benefit in a sentence, don't automate it yet.</p>
+
+<h2>Step 3: pick the simplest tool that works</h2>
+<p>"AI automation" covers three different things, and most processes only need the first:</p>
+<ul>
+<li><strong>Rule-based automation.</strong> If the inputs are structured, such as a form field or a payment status, a workflow tool like Make, Zapier or n8n, or the automation built into your CRM or ERP, is cheaper, faster and fully predictable. No AI needed.</li>
+<li><strong>An AI step inside a workflow.</strong> Use AI where a person currently has to read something: free-text emails, PDFs, chat messages. The AI turns them into structured data, and ordinary rules take over from there.</li>
+<li><strong>An AI agent.</strong> Use an agent when the work needs a back-and-forth conversation or a choice between several actions, such as qualifying a lead or collecting a complete application. Agents are the most flexible option and need the most guardrails.</li>
+</ul>
+<p>Gartner's own advice runs along the same lines: use agents where decisions are needed, automation for routine workflows, and assistants for simple retrieval.</p>
+
+<h2>Step 4: design the human in the loop</h2>
+<p>Before building, write down three lists:</p>
+<ul>
+<li><strong>What the AI may do on its own:</strong> reply to a lead, create a draft order, log activity.</li>
+<li><strong>What needs approval:</strong> anything involving money, commitments or exceptions.</li>
+<li><strong>When it must hand over:</strong> the customer asks for a person, the request is unusual, or the AI isn't confident.</li>
+</ul>
+<p>Log every action the AI takes, alert someone when a run fails, and review a sample of conversations every week at first. AI models can produce confident, wrong answers, so the design has to assume mistakes will happen and catch them.</p>
+
+<h2>Step 5: measure, pilot one process, then expand</h2>
+<p>Record the baseline before you build: time per run, response time, error rate, volume. Automate one process, run it alongside the old way for a short period if the stakes are high, and compare. Expand only when the numbers hold up.</p>
+
+<h2>What this looks like in practice</h2>
+<ul>
+<li><strong>Emailed orders into Odoo.</strong> Orders arrived as free-text emails that staff re-typed. Reading free text is a genuine AI task, so an <a href="{{/work/#odoo-order-to-cash-agent}}">order-to-cash agent</a> reads each email, matches the customer and products to Odoo records and creates the sales order, and Odoo's own workflow carries it through fulfilment and invoicing.</li>
+<li><strong>Lead replies in HubSpot.</strong> Leads were waiting about five days for a reply, and many inbound enquiries were missed. Speed matters here: a Harvard Business Review study of 1.25 million leads found that companies contacting leads within an hour were seven times as likely to qualify them as those that waited even an hour longer. Our <a href="{{/work/#hubspot-crm-agent}}">HubSpot CRM agent</a> replies instantly and hands over to a person for custom offers and price negotiation.</li>
+<li><strong>Loan top-ups for a lender.</strong> The agent collects complete applications, and a credit analyst makes every decision. The <a href="{{/work/#loan-top-up-agent}}">loan top-up agent</a> took in KES 5.4M in applications in its first week.</li>
+</ul>
+
+<h2>When not to automate yet</h2>
+<ul>
+<li>The process isn't agreed or changes every week. Fix the process first.</li>
+<li>It happens rarely, so the build and maintenance cost more than the time saved.</li>
+<li>A mistake would be costly or hard to reverse and no one can review the output.</li>
+<li>The data lives in tools with no API, so the "automation" would be fragile screen-clicking.</li>
+<li>You can't measure the benefit.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>Map the process, score it honestly, use the simplest tool that does the job, and keep a person responsible for anything that matters. That sequence decides whether automation saves money or becomes another abandoned pilot. If you'd like a second opinion on which of your processes are worth automating, our <a href="{{/services/ai-automation/}}">Automation Sprint</a> starts with exactly this audit, or <a href="{{/contact/}}">send us a short description of the process</a>.</p>
+<p class="meta">Sources: Gartner, "Gartner Predicts Over 40% of Agentic AI Projects Will Be Canceled by End of 2027", 25 June 2025. Oldroyd, McElheran and Elkington, "The Short Life of Online Sales Leads", Harvard Business Review, March 2011.</p>
 </article></div></section>"""
 
 LENDER_AGENTS_BODY = """<section class="band"><div class="wrap"><article class="prose">
 """ + BYLINE.format(date="27 October 2026", mins=7) + """
-<p>Most digital lenders, microfinance banks and SACCOs in Kenya already have the hardest part of lending solved: a book of customers with a repayment history. What they often don't have is the staff time to go back to the good borrowers, offer them more and collect a complete application. This is where an AI agent earns its keep.</p>
+<p>Digital lenders, microfinance banks and SACCOs in Kenya already hold one of their most valuable assets: customers with a repayment history. Going back to the good borrowers, offering them more and collecting a complete application takes staff time. An AI agent can do the repetitive parts of that work, provided it's designed around the rules lenders operate under.</p>
 <p>This guide explains how a top-up agent works, using one we built for a Kenyan digital lender. In its first week live it took in <strong>KES 5.4M in loan top-up applications</strong>.</p>
 
 <h2>The problem: good borrowers nobody has time to call</h2>
-<p>A customer who has repaid on time is the cheapest loan a lender will ever make. But offering top-ups usually means a loan officer working through a list, calling or messaging each customer, asking the same qualifying questions and typing the answers into a system. Officers only get to a fraction of the list, and customers who would have taken a top-up borrow somewhere else instead.</p>
+<p>A customer who has repaid on time is a known risk. But offering top-ups usually means a loan officer working through a list, contacting each customer, asking the same qualifying questions and typing the answers into a system. That limits how many eligible customers ever hear about an offer.</p>
 
 <h2>How a top-up agent works</h2>
 <ol>
 <li><strong>Find eligible customers.</strong> The agent connects to the lender's credit or loan management system and picks out customers who are repaying well, using the lender's own eligibility rules.</li>
-<li><strong>Make the offer by SMS.</strong> Each customer gets a short SMS with a top-up offer and a link that opens a WhatsApp chat with the agent.</li>
+<li><strong>Make the offer by SMS.</strong> Customers who have consented to receive offers get a short SMS with a top-up offer, an opt-out, and a link that opens a WhatsApp chat with the agent.</li>
 <li><strong>Qualify on WhatsApp.</strong> The agent asks the questions the credit team needs, such as the amount, the collateral offered and how the funds will be used, and follows up if an answer is missing or unclear.</li>
 <li><strong>Log a complete application.</strong> Each finished application goes into the CRM in a structured format, ready for review.</li>
 <li><strong>A person decides.</strong> A credit analyst reviews every application and makes the lending decision. The agent never approves a loan.</li>
 </ol>
 
-<h2>Why SMS plus WhatsApp</h2>
-<p>SMS reaches every phone and has very high open rates, which makes it the right channel for the first offer. WhatsApp is better for a conversation: customers can answer questions at their own pace, send photos of documents if needed, and come back to the chat later. Starting by SMS and moving to WhatsApp gets the reach of one and the convenience of the other.</p>
+<h2>Why SMS first, then WhatsApp</h2>
+<p>SMS reaches every phone, including feature phones, without mobile data, so it suits the first offer. WhatsApp suits a conversation: customers answer at their own pace and can come back to the chat later.</p>
+<p>The order also matters for WhatsApp's rules and pricing. A business can only start a WhatsApp conversation with an approved message template, sent to someone who has opted in, and marketing templates are charged per message. When the customer taps the link and messages you first, a 24-hour customer service window opens, and free-form replies inside it are free.</p>
+<div class="callout"><p><strong>Check WhatsApp's lending rules before you build.</strong> Meta's WhatsApp Business Policy prohibits using WhatsApp to buy, sell or promote payday loans, paycheck advances, peer-to-peer lending and debt collection, "irrespective of" any licence the business holds, and Meta applies it at its own discretion. If your product could fall into those categories, run the conversation on a channel you control instead, such as your app, USSD or a web form, and keep the same agent behind it.</p></div>
 
 <h2>Keep a human in the loop</h2>
 <p>For lending, the agent should collect and organise information, not make credit decisions. Keeping an analyst responsible for every approval protects the lender's risk standards, keeps the process explainable to regulators and customers, and means the AI never gives a customer a promise the lender can't keep. The agent should also hand the conversation to a person whenever the customer asks for one.</p>
 
 <h2>Compliance basics</h2>
 <ul>
-<li><strong>Data protection.</strong> Kenya's Data Protection Act 2019 applies to every message and record. Send the AI only the data it needs, document where data is processed, and give customers a clear way to opt out of offers.</li>
-<li><strong>Clear pricing.</strong> Offers should state the cost of credit plainly. The agent should use the lender's approved wording, not improvise terms.</li>
-<li><strong>Licensing.</strong> Digital credit providers are licensed by the Central Bank of Kenya, and SACCOs are supervised by SASRA. The agent works inside the lender's existing approval and disclosure process. It doesn't replace it.</li>
+<li><strong>Consent for offers.</strong> A top-up offer is direct marketing. Under the Data Protection Act 2019 (section 37), using personal data for commercial purposes needs consent unless another law authorises it. The Data Protection (General) Regulations 2021 require a simple, free opt-out in marketing messages. The ODPC has ordered compensation against a digital lender for marketing messages sent without provable consent or a working opt-out.</li>
+<li><strong>Data minimisation.</strong> Send the AI only the data it needs and document where it is processed. Don't ask customers to type full card or bank account numbers into WhatsApp, which Meta's policy also prohibits.</li>
+<li><strong>Full disclosure of terms.</strong> Licensed digital credit providers must give customers the loan terms, including the cost of credit, before a loan is granted. The agent should use the lender's approved wording and never improvise rates or terms.</li>
+<li><strong>Collections conduct.</strong> The CBK Digital Credit Providers Regulations 2022 forbid using a borrower's phone contacts to chase repayments, and forbid threats or shaming. Any reminder agent must stay well inside those lines.</li>
+<li><strong>Who regulates you.</strong> Digital credit providers are licensed by the Central Bank of Kenya. SASRA regulates deposit-taking SACCOs and some non-deposit-taking SACCOs, including larger and digital ones. The agent works inside your existing approval and disclosure process and doesn't replace it.</li>
 </ul>
+<p class="meta">This is a summary, not legal advice. Confirm your obligations with your compliance team or legal adviser. Sources: WhatsApp Business Policy; Data Protection Act 2019; Data Protection (General) Regulations 2021; CBK Digital Credit Providers Regulations 2022; SASRA.</p>
 
 <h2>Other places an agent helps a lender</h2>
 <ul>
-<li><strong>New loan applications:</strong> the same WhatsApp intake for first-time borrowers.</li>
-<li><strong>Repayment reminders:</strong> polite, timed nudges before a due date, with an M-Pesa payment prompt. Our <a href="{{/blog/mpesa-stk-push-integration-guide/}}">M-Pesa STK Push guide</a> explains how that works.</li>
-<li><strong>Member questions:</strong> balances, statements and loan status, answered instantly from your own system, so SACCO members don't need to queue at a branch.</li>
+<li><strong>New loan applications:</strong> the same structured intake for first-time borrowers, on whichever channel your product is allowed to use.</li>
+<li><strong>Repayment reminders:</strong> a polite SMS before the due date with the Paybill and account number. Don't push an M-Pesa prompt with the reminder: an STK Push prompt expires in well under a minute, so it times out unless the customer is holding the phone. Instead, let the customer ask to pay, for example by replying or tapping a link, and send the prompt at that moment. Our <a href="{{/blog/mpesa-stk-push-integration-guide/}}">M-Pesa STK Push guide</a> explains the timing. Keep reminders off WhatsApp, where debt collection is prohibited.</li>
+<li><strong>Member questions:</strong> balances, statements and loan status, answered from your own system after the member is verified. This depends on your core system having an API the agent can safely read from.</li>
 <li><strong>Lead follow-up:</strong> instant replies to enquiries from your website and social pages. A CRM agent we built cut the reply time to new leads <a href="{{/work/#hubspot-crm-agent}}">from about five days to instant</a>.</li>
 </ul>
 
 <h2>What it takes to build one</h2>
-<p>A focused agent like this is usually a matter of weeks, not months. Most of the work goes into the connections, to your credit system, SMS, WhatsApp Business and CRM, and into testing the conversation against real customer answers. Start with one use case, measure applications and approval rates, and expand from there.</p>
+<p>The AI conversation is rarely the hard part. The work goes into:</p>
+<ul>
+<li>connecting your credit system, SMS gateway, the conversation channel and the CRM</li>
+<li>agreeing eligibility rules, approved wording and handoff rules with your credit and compliance teams</li>
+<li>consent records and opt-outs</li>
+<li>testing the conversation against real customer answers</li>
+</ul>
+<p>Start with one use case, measure applications and approval rates, and expand from there.</p>
 <p>Read the full <a href="{{/work/#loan-top-up-agent}}">loan top-up agent case study</a>, see our <a href="{{/services/ai-automation/}}">AI and automation services</a>, or <a href="{{/contact/}}">tell us about your lending process</a>.</p>
 </article></div></section>"""
 
@@ -920,11 +1008,21 @@ PAGES = [
       crumbs=[("/blog/", "Blog")], body=BLOG_BODY),
  dict(path="blog/outsourcing-web-development-to-kenya/",
       title="Cost of Outsourcing Web Development to Kenya (2026 Guide)",
-      description="What it costs to outsource web development to Kenya in 2026: hourly rates by region, typical project prices, time zone overlap and a checklist for vetting an agency.",
+      description="What it costs to outsource web development to Kenya in 2026: hourly rates by region, time zone overlap, how Kenya compares and a checklist for vetting an agency.",
       eyebrow="Guide", h1="What it costs to outsource web development to Kenya in 2026, and how to do it well",
       lede="Rates, time zone overlap, how Kenya compares with other outsourcing regions, and a vetting checklist.",
       crumbs=[("/blog/", "Blog"), ("/blog/outsourcing-web-development-to-kenya/", "Outsourcing to Kenya")],
-      article={"date": "2026-09-23", "modified": "2026-10-22"}, body=ARTICLE_BODY),
+      article={"date": "2026-09-23", "modified": "2026-10-27"}, body=ARTICLE_BODY),
+ dict(path="blog/which-processes-to-automate-with-ai/",
+      title="Which Processes Should You Automate With AI? | Sahara Nova",
+      description="A practical AI automation audit for small businesses: map the process, score candidates, and choose between simple automation, an AI step or an AI agent.",
+      eyebrow="Guide", h1="Which processes should you automate with AI? A practical audit",
+      lede="Most AI projects that disappoint started with the tool instead of the process. Here's how to choose what to automate, and how, before you spend anything.",
+      crumbs=[("/blog/", "Blog"), ("/blog/which-processes-to-automate-with-ai/", "What to automate with AI")],
+      article={"date": "2026-10-27"}, body=AI_AUDIT_BODY,
+      faq=[("Which business processes are best to automate with AI?", "Frequent, digital processes with stable steps, connectable systems and mistakes that are easy to catch. Use AI specifically where a person currently has to read free text, such as emails, documents or chat messages."),
+           ("Do I need AI, or is normal automation enough?", "If the inputs are already structured, such as form fields or payment statuses, a rule-based workflow in Make, Zapier, n8n or your CRM is usually cheaper and more predictable. Add AI only for unstructured inputs or conversations."),
+           ("When should a business not automate a process?", "When the process isn't agreed or keeps changing, happens rarely, has costly mistakes no one reviews, runs on tools without an API, or has no measurable benefit.")]),
  dict(path="blog/ai-agents-for-lenders-kenya/",
       title="AI Agents for Digital Lenders & SACCOs in Kenya | Sahara Nova",
       description="How a WhatsApp AI agent took in KES 5.4M in loan top-up applications in a week: the flow, human-in-the-loop credit decisions and compliance basics.",
@@ -933,16 +1031,16 @@ PAGES = [
       crumbs=[("/blog/", "Blog"), ("/blog/ai-agents-for-lenders-kenya/", "AI agents for lenders")],
       article={"date": "2026-10-27"}, body=LENDER_AGENTS_BODY,
       faq=[("Can an AI agent approve loans?", "It shouldn't. In the agents we build, the AI finds eligible customers, makes the offer and collects a complete application, and a credit analyst makes every lending decision."),
-           ("Why use WhatsApp for loan applications in Kenya?", "Most customers already use WhatsApp daily. They can answer questions at their own pace and return to the chat later, which leads to more completed applications than phone calls or long web forms."),
-           ("How long does it take to build a loan top-up agent?", "A focused agent is usually a matter of weeks. Most of the work is connecting your credit system, SMS, WhatsApp Business and CRM, then testing the conversation with real customer answers.")]),
+           ("Can lenders use WhatsApp for loan applications?", "Check first. Meta's WhatsApp Business Policy prohibits promoting payday loans, paycheck advances, peer-to-peer lending and debt collection on WhatsApp, regardless of licences. If your product could fall into those categories, use your app, USSD or a web form for the conversation instead."),
+           ("Can a repayment reminder include an M-Pesa prompt?", "It's not practical. An STK Push prompt expires in well under a minute, so a prompt sent with a reminder usually times out unseen. Send the reminder with Paybill details, and trigger the prompt only when the customer asks to pay.")]),
  dict(path="blog/website-cost-in-kenya/",
       title="How Much Does a Website Cost in Kenya? (2026 Prices in KES)",
       description="Website prices in Kenya for 2026: DIY, freelancer template sites, custom business sites, online shops and web apps in KES, plus the yearly costs after launch.",
       eyebrow="Guide", h1="How much does a website cost in Kenya in 2026?",
       lede="What you get at each price level, what you'll pay every year after launch, and how to choose.",
       crumbs=[("/blog/", "Blog"), ("/blog/website-cost-in-kenya/", "Website cost in Kenya")],
-      article={"date": "2026-10-22"}, body=WEBSITE_COST_KENYA_BODY,
-      faq=[("How much does a basic website cost in Kenya?", "A simple five-page template site from a freelancer typically costs KES 15,000–80,000, plus around KES 2,000–3,000 a year for a .co.ke domain and basic hosting."),
+      article={"date": "2026-10-22", "modified": "2026-10-27"}, body=WEBSITE_COST_KENYA_BODY,
+      faq=[("How much does a basic website cost in Kenya?", "A simple five-page template site from a freelancer typically costs KES 15,000–80,000, plus around KES 2,100 a year for a .co.ke domain and basic hosting."),
            ("How much does a custom business website cost in Kenya?", "A custom-designed business website with SEO built in typically starts from about KES 195,000 with an agency. Sahara Nova's Website Launch package starts at $1,500, payable in KES."),
            ("How much is a .co.ke domain per year?", "Around KES 1,200 a year from most Kenyan registrars. Make sure it is registered in your business's name.")]),
  dict(path="blog/mpesa-stk-push-integration-guide/",
@@ -951,10 +1049,10 @@ PAGES = [
       eyebrow="Guide", h1="M-Pesa STK Push integration: a step-by-step guide",
       lede="How Lipa na M-Pesa Online works through the Daraja API, what you need first, and how to avoid the mistakes behind most failed integrations.",
       crumbs=[("/blog/", "Blog"), ("/blog/mpesa-stk-push-integration-guide/", "M-Pesa STK Push guide")],
-      article={"date": "2026-10-22"}, body=MPESA_GUIDE_BODY,
+      article={"date": "2026-10-22", "modified": "2026-10-27"}, body=MPESA_GUIDE_BODY,
       faq=[("What is M-Pesa STK Push?", "STK Push, also called Lipa na M-Pesa Online or M-Pesa Express, sends a payment prompt straight to the customer's phone. They enter their M-Pesa PIN to pay, with no need to type a Paybill or account number."),
            ("Do I need a Paybill or Till number for STK Push?", "You can build and test in the Daraja sandbox without one, but you need a Paybill or Till registered to your business to go live."),
-           ("How long does an M-Pesa integration take?", "An experienced developer can usually add STK Push to an existing website in a few days, including callback handling, verification and reconciliation.")]),
+           ("How long does an M-Pesa STK Push prompt last?", "Not long: well under a minute. Developer guides report about 30 to 60 seconds, varying with the network. Only send the prompt when the customer is at checkout and ready to pay, and give them a button to resend it if it times out.")]),
  dict(path="privacy/", title="Privacy Policy | Sahara Nova",
       description="How Sahara Nova collects, uses and protects personal data submitted through this website.",
       eyebrow="Legal", h1="Privacy policy", lede="Short, plain English, and no advertising cookies.",
