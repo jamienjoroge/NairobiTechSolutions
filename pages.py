@@ -66,13 +66,13 @@ def service_cards():
 CASES = [
  dict(id="loan-top-up-agent", industry="Digital lending", tag="Financial services",
       title="AI agent for loan top-up applications",
-      summary="An AI agent that takes in loan top-up applications from existing borrowers, so the lending team gets complete, structured applications instead of chasing details.",
-      challenge="Top-up requests from existing borrowers arrived as conversations that staff had to follow up manually, collecting the amount, the reason and the supporting details before anyone could review the application.",
-      steps=["Engages the borrower in conversation when they ask for a top-up",
-             "Collects the requested amount and the details the lender needs for the application",
-             "Checks the application is complete and asks follow-up questions if anything is missing",
-             "Submits a structured application to the lending team for review and decision"],
-      stack=["AI agent platform", "Large language model", "Lender's application workflow"],
+      summary="An AI agent that finds borrowers who are repaying well, offers them a top-up over SMS and WhatsApp, and takes in complete applications for the credit team to decide on.",
+      challenge="Good borrowers were eligible for top-ups, but reaching them and collecting the details for each application took staff time, so most of that demand went untapped.",
+      steps=["Connects to the lender's credit system to find customers who are repaying well",
+             "Sends each one a top-up offer by SMS, with a link to start a WhatsApp conversation with the agent",
+             "Asks the qualifying questions on WhatsApp, such as the collateral offered and how the funds will be used",
+             "Logs each complete application in the CRM, where a credit analyst reviews it and makes the decision"],
+      stack=["Lender's credit system", "SMS", "WhatsApp", "CRM", "Large language model"],
       results=[("KES 5.4M", "in loan top-up applications taken in during the agent's first week live")]),
  dict(id="odoo-order-to-cash-agent", industry="ERP &amp; operations", tag="Odoo",
       title="Order-to-cash AI agent for an Odoo ERP client",
@@ -86,14 +86,14 @@ CASES = [
       results=[]),
  dict(id="hubspot-crm-agent", industry="Sales &amp; CRM", tag="HubSpot",
       title="HubSpot CRM agent that works your pipeline",
-      summary="An AI agent connected to HubSpot that carries out day-to-day CRM work: reaching out to leads, setting reminders and keeping records up to date.",
-      challenge="Sales follow-up depended on people remembering to log activity, update records and chase leads, so the CRM went out of date and leads went cold.",
-      steps=["Connects to HubSpot and works across contacts, companies and deals",
-             "Reaches out to leads and follows up on schedule",
-             "Creates reminders and follow-up tasks for the team",
-             "Logs activity and keeps records and deal stages up to date, using the actions HubSpot makes available"],
-      stack=["HubSpot CRM", "Email", "Large language model"],
-      results=[]),
+      summary="An AI agent connected to HubSpot that finds and qualifies new leads, replies to them instantly across WhatsApp, email, Instagram and Facebook, and keeps the CRM up to date.",
+      challenge="Leads took about five days to get a reply, and many inbound enquiries were missed altogether. Follow-up depended on people remembering to chase leads and log activity, so the CRM went out of date.",
+      steps=["Sources new prospects from Google Places and qualifies them into HubSpot",
+             "Replies to leads instantly and follows up on WhatsApp, email, Instagram and Facebook",
+             "Creates reminders and tasks, logs activity and keeps deal stages up to date",
+             "Hands the conversation to a person when the lead asks for one, or for custom offers and price negotiation"],
+      stack=["HubSpot CRM", "Google Places", "WhatsApp", "Email", "Instagram", "Facebook", "Large language model"],
+      results=[("~5 days → instant", "average time for a lead to get a reply")]),
  dict(id="support-and-lead-intake-agents", industry="Customer experience", tag="Support &amp; sales",
       title="Customer-facing agents for support and lead intake",
       summary="AI agents that answer customer questions and capture new enquiries around the clock, handing over to a person when needed.",
@@ -106,7 +106,7 @@ CASES = [
       results=[]),
 ]
 
-FLOWS = {"loan-top-up-agent": [["Borrower request", "An existing borrower asks for a top-up in conversation."], ["AI agent", "The agent handles the conversation and collects the amount and the details the lender needs."], ["Completeness check", "Anything missing triggers a follow-up question until the application is complete."], ["Structured application", "A clean, structured application is created, ready for review."], ["Lending team", "Officers review and decide, with no details left to chase."]], "odoo-order-to-cash-agent": [["Email order", "A customer emails an order in free text."], ["AI agent", "The agent reads the email and extracts the customer, products and quantities."], ["Odoo sales order", "A sales order is created in Odoo and matched to existing records."], ["Fulfilment", "Fulfilment is triggered through Odoo's business workflow."], ["Invoice", "The invoice is raised as the order moves through the workflow."], ["Payment", "The order is tracked through to cash received."]], "hubspot-crm-agent": [["New lead", "A lead or contact arrives in HubSpot."], ["AI agent", "The agent reviews the record and decides the next action."], ["Outreach", "It reaches out to the lead and follows up on schedule."], ["Reminders & tasks", "It creates reminders and follow-up tasks for the team."], ["CRM updated", "Activity is logged and deal stages are kept current."]], "support-and-lead-intake-agents": [["Customer message", "A customer or prospect starts a conversation."], ["AI agent", "The agent answers from the business's own information."], ["Lead captured", "New enquiries are qualified with a few short questions."], ["Sales team", "Lead details are passed straight to the team."], ["Human handoff", "Complex or sensitive conversations go to a person."]]}
+FLOWS = {"loan-top-up-agent": [["Credit system", "The agent finds customers who are repaying well."], ["SMS offer", "Each gets a top-up offer by SMS with a link to WhatsApp."], ["WhatsApp agent", "The agent asks the qualifying questions: collateral, use of funds."], ["CRM", "A complete application is logged in the CRM."], ["Credit analyst", "An analyst reviews and decides, as the human in the loop."]], "odoo-order-to-cash-agent": [["Email order", "A customer emails an order in free text."], ["AI agent", "The agent reads the email and extracts the customer, products and quantities."], ["Odoo sales order", "A sales order is created in Odoo and matched to existing records."], ["Fulfilment", "Fulfilment is triggered through Odoo's business workflow."], ["Invoice", "The invoice is raised as the order moves through the workflow."], ["Payment", "The order is tracked through to cash received."]], "hubspot-crm-agent": [["Google Places", "The agent sources new prospects."], ["HubSpot", "Leads are qualified into the CRM."], ["Instant outreach", "Replies and follow-ups go out on WhatsApp, email, Instagram and Facebook."], ["CRM kept current", "Tasks, activity and deal stages are updated automatically."], ["Human handoff", "A person takes over on request, or for custom offers and haggling."]], "support-and-lead-intake-agents": [["Customer message", "A customer or prospect starts a conversation."], ["AI agent", "The agent answers from the business's own information."], ["Lead captured", "New enquiries are qualified with a few short questions."], ["Sales team", "Lead details are passed straight to the team."], ["Human handoff", "Complex or sensitive conversations go to a person."]]}
 
 import html as _h, json as _j, re as _re
 def flow_fig(cid, title=None):
@@ -382,6 +382,7 @@ AI = service_page(
 <li><strong>Document processing:</strong> invoices, receipts and forms read and filed by AI</li>
 <li><strong>Operations:</strong> onboarding checklists, reminders, approvals and data syncs between tools</li>
 <li><strong>AI agents:</strong> agents that take actions in your systems, like processing orders in your ERP or working leads in your CRM. See <a href="{{/work/}}">our case studies</a></li>
+<li><strong>Lending:</strong> loan top-up offers, WhatsApp application intake and repayment reminders. See <a href="{{/blog/ai-agents-for-lenders-kenya/}}">AI agents for lenders and SACCOs</a></li>
 </ul>
 <h3>Tools</h3>
 <p>We connect AI agents to the systems you already run, including Odoo ERP, HubSpot CRM, email and your website chat. We use Make, Zapier and n8n for fast, maintainable workflows, and write custom code with leading AI model APIs when a no-code tool isn't enough. Every automation ships with documentation and error alerts, so nothing fails silently.</p>
@@ -577,6 +578,7 @@ PRIVACY_BODY = """<section class="band"><div class="wrap"><div class="prose">
 </div></div></section>"""
 
 BLOG_BODY = """<section class="band"><div class="wrap"><div class="sec-head"><p class="label">Latest</p><h2>Latest guides</h2></div><div class="grid g2">
+<a class="post-card" href="{{/blog/ai-agents-for-lenders-kenya/}}"><span class="meta">Guide · 27 Oct 2026 · 7 min read</span><h3>AI agents for digital lenders and SACCOs in Kenya</h3><p>How a WhatsApp top-up agent took in KES 5.4M in applications in its first week, with a credit analyst still making every decision.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/website-cost-in-kenya/}}"><span class="meta">Guide · 22 Oct 2026 · 7 min read</span><h3>How much does a website cost in Kenya in 2026?</h3><p>What you get at each price level, from KES 15,000 template sites to custom builds, plus the yearly costs after launch.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/mpesa-stk-push-integration-guide/}}"><span class="meta">Guide · 22 Oct 2026 · 9 min read</span><h3>M-Pesa STK Push integration: a step-by-step guide</h3><p>How Daraja STK Push works, what you need before you start, and the mistakes behind most failed integrations.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/outsourcing-web-development-to-kenya/}}"><span class="meta">Guide · 23 Sep 2026 · 8 min read</span><h3>What it costs to outsource web development to Kenya in 2026, and how to do it well</h3><p>Rates by region, how the EAT time zone overlaps with yours, and a checklist for vetting a Kenyan agency.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
@@ -784,6 +786,49 @@ Authorization: Bearer ACCESS_TOKEN
 <p>A developer who has done it before can usually add STK Push to an existing site in a few days. Most of that time goes into the parts that protect your money: callbacks, retries, verification and reconciliation. If you'd like it done for you, as part of a new website or added to an existing one, see our <a href="{{/east-africa/}}">work for Kenyan and East African businesses</a> or <a href="{{/contact/}}">send us a brief</a>. Planning a full new site? Our guide to <a href="{{/blog/website-cost-in-kenya/}}">what a website costs in Kenya</a> covers budgets.</p>
 </article></div></section>"""
 
+LENDER_AGENTS_BODY = """<section class="band"><div class="wrap"><article class="prose">
+""" + BYLINE.format(date="27 October 2026", mins=7) + """
+<p>Most digital lenders, microfinance banks and SACCOs in Kenya already have the hardest part of lending solved: a book of customers with a repayment history. What they often don't have is the staff time to go back to the good borrowers, offer them more and collect a complete application. This is where an AI agent earns its keep.</p>
+<p>This guide explains how a top-up agent works, using one we built for a Kenyan digital lender. In its first week live it took in <strong>KES 5.4M in loan top-up applications</strong>.</p>
+
+<h2>The problem: good borrowers nobody has time to call</h2>
+<p>A customer who has repaid on time is the cheapest loan a lender will ever make. But offering top-ups usually means a loan officer working through a list, calling or messaging each customer, asking the same qualifying questions and typing the answers into a system. Officers only get to a fraction of the list, and customers who would have taken a top-up borrow somewhere else instead.</p>
+
+<h2>How a top-up agent works</h2>
+<ol>
+<li><strong>Find eligible customers.</strong> The agent connects to the lender's credit or loan management system and picks out customers who are repaying well, using the lender's own eligibility rules.</li>
+<li><strong>Make the offer by SMS.</strong> Each customer gets a short SMS with a top-up offer and a link that opens a WhatsApp chat with the agent.</li>
+<li><strong>Qualify on WhatsApp.</strong> The agent asks the questions the credit team needs, such as the amount, the collateral offered and how the funds will be used, and follows up if an answer is missing or unclear.</li>
+<li><strong>Log a complete application.</strong> Each finished application goes into the CRM in a structured format, ready for review.</li>
+<li><strong>A person decides.</strong> A credit analyst reviews every application and makes the lending decision. The agent never approves a loan.</li>
+</ol>
+
+<h2>Why SMS plus WhatsApp</h2>
+<p>SMS reaches every phone and has very high open rates, which makes it the right channel for the first offer. WhatsApp is better for a conversation: customers can answer questions at their own pace, send photos of documents if needed, and come back to the chat later. Starting by SMS and moving to WhatsApp gets the reach of one and the convenience of the other.</p>
+
+<h2>Keep a human in the loop</h2>
+<p>For lending, the agent should collect and organise information, not make credit decisions. Keeping an analyst responsible for every approval protects the lender's risk standards, keeps the process explainable to regulators and customers, and means the AI never gives a customer a promise the lender can't keep. The agent should also hand the conversation to a person whenever the customer asks for one.</p>
+
+<h2>Compliance basics</h2>
+<ul>
+<li><strong>Data protection.</strong> Kenya's Data Protection Act 2019 applies to every message and record. Send the AI only the data it needs, document where data is processed, and give customers a clear way to opt out of offers.</li>
+<li><strong>Clear pricing.</strong> Offers should state the cost of credit plainly. The agent should use the lender's approved wording, not improvise terms.</li>
+<li><strong>Licensing.</strong> Digital credit providers are licensed by the Central Bank of Kenya, and SACCOs are supervised by SASRA. The agent works inside the lender's existing approval and disclosure process. It doesn't replace it.</li>
+</ul>
+
+<h2>Other places an agent helps a lender</h2>
+<ul>
+<li><strong>New loan applications:</strong> the same WhatsApp intake for first-time borrowers.</li>
+<li><strong>Repayment reminders:</strong> polite, timed nudges before a due date, with an M-Pesa payment prompt. Our <a href="{{/blog/mpesa-stk-push-integration-guide/}}">M-Pesa STK Push guide</a> explains how that works.</li>
+<li><strong>Member questions:</strong> balances, statements and loan status, answered instantly from your own system, so SACCO members don't need to queue at a branch.</li>
+<li><strong>Lead follow-up:</strong> instant replies to enquiries from your website and social pages. A CRM agent we built cut the reply time to new leads <a href="{{/work/#hubspot-crm-agent}}">from about five days to instant</a>.</li>
+</ul>
+
+<h2>What it takes to build one</h2>
+<p>A focused agent like this is usually a matter of weeks, not months. Most of the work goes into the connections, to your credit system, SMS, WhatsApp Business and CRM, and into testing the conversation against real customer answers. Start with one use case, measure applications and approval rates, and expand from there.</p>
+<p>Read the full <a href="{{/work/#loan-top-up-agent}}">loan top-up agent case study</a>, see our <a href="{{/services/ai-automation/}}">AI and automation services</a>, or <a href="{{/contact/}}">tell us about your lending process</a>.</p>
+</article></div></section>"""
+
 EAST_AFRICA_BODY = """<section class="band"><div class="wrap"><div class="grid g2" style="gap:48px">
 <div class="prose">
 <h2 style="margin-top:0">A Nairobi team that knows your market</h2>
@@ -795,7 +840,7 @@ EAST_AFRICA_BODY = """<section class="band"><div class="wrap"><div class="grid g
 <h3>WhatsApp and AI for customer service</h3>
 <p>Your customers already use WhatsApp. We set up WhatsApp Business ordering, automated replies and AI assistants that answer common questions in English or Swahili, take orders and hand over to a person when needed.</p>
 <h3>AI agents already working in Kenya</h3>
-<p>We built an AI agent for a digital lender that took in <strong>KES 5.4M in loan top-up applications in its first week</strong>. Read the <a href="{{/work/#loan-top-up-agent}}">case study</a>, or see our <a href="{{/services/ai-automation/}}">AI and automation services</a>.</p>
+<p>We built an AI agent for a digital lender that took in <strong>KES 5.4M in loan top-up applications in its first week</strong>. Read the <a href="{{/work/#loan-top-up-agent}}">case study</a> and our guide to <a href="{{/blog/ai-agents-for-lenders-kenya/}}">AI agents for lenders and SACCOs</a>, or see our <a href="{{/services/ai-automation/}}">AI and automation services</a>.</p>
 <h3>Local SEO in Nairobi and beyond</h3>
 <p>We optimise your Google Business Profile, local citations and service-area pages so you show up when customers search for "near me" services in Nairobi, Mombasa, Kisumu, Kampala, Dar es Salaam or Kigali.</p>
 <h3>Working with businesses across Nairobi</h3>
@@ -868,7 +913,7 @@ PAGES = [
       eyebrow="Contact", h1="Tell us about your project",
       lede="A few details are enough to start. We reply within one working day.",
       crumbs=[("/contact/", "Contact")], body=CONTACT_BODY, no_cta=True),
- dict(path="blog/", title="Web, SEO & Automation Guides for Small Businesses | Sahara Nova",
+ dict(path="blog/", title="Web, SEO & AI Guides for Small Businesses | Sahara Nova",
       description="Practical guides on websites, SEO, software and AI automation for small business owners, from the Sahara Nova team in Nairobi.",
       eyebrow="Blog", h1="Guides for small business owners",
       lede="Practical, jargon-free advice on websites, SEO, software and automation.",
@@ -880,6 +925,16 @@ PAGES = [
       lede="Rates, time zone overlap, how Kenya compares with other outsourcing regions, and a vetting checklist.",
       crumbs=[("/blog/", "Blog"), ("/blog/outsourcing-web-development-to-kenya/", "Outsourcing to Kenya")],
       article={"date": "2026-09-23", "modified": "2026-10-22"}, body=ARTICLE_BODY),
+ dict(path="blog/ai-agents-for-lenders-kenya/",
+      title="AI Agents for Digital Lenders & SACCOs in Kenya | Sahara Nova",
+      description="How a WhatsApp AI agent took in KES 5.4M in loan top-up applications in a week: the flow, human-in-the-loop credit decisions and compliance basics.",
+      eyebrow="Guide", h1="AI agents for digital lenders and SACCOs in Kenya",
+      lede="How a top-up agent finds good borrowers, qualifies them on WhatsApp and hands complete applications to your credit team.",
+      crumbs=[("/blog/", "Blog"), ("/blog/ai-agents-for-lenders-kenya/", "AI agents for lenders")],
+      article={"date": "2026-10-27"}, body=LENDER_AGENTS_BODY,
+      faq=[("Can an AI agent approve loans?", "It shouldn't. In the agents we build, the AI finds eligible customers, makes the offer and collects a complete application, and a credit analyst makes every lending decision."),
+           ("Why use WhatsApp for loan applications in Kenya?", "Most customers already use WhatsApp daily. They can answer questions at their own pace and return to the chat later, which leads to more completed applications than phone calls or long web forms."),
+           ("How long does it take to build a loan top-up agent?", "A focused agent is usually a matter of weeks. Most of the work is connecting your credit system, SMS, WhatsApp Business and CRM, then testing the conversation with real customer answers.")]),
  dict(path="blog/website-cost-in-kenya/",
       title="How Much Does a Website Cost in Kenya? (2026 Prices in KES)",
       description="Website prices in Kenya for 2026: DIY, freelancer template sites, custom business sites, online shops and web apps in KES, plus the yearly costs after launch.",
