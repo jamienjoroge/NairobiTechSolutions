@@ -202,8 +202,8 @@ def render(p):
 
 CTA = """<section class="band"><div class="wrap"><div class="cta">
 <p class="label" style="color:#F2B544">Start a project</p>
-<h2>Tell us what you need. You'll have a scoped plan and a fixed quote within two working days.</h2>
-<p>No sales scripts. A 30-minute call with the people who will do the work, then a written proposal you can compare with anyone else's.</p>
+<h2>Tell us what you need. You'll have a fixed quote within two working days of our call.</h2>
+<p>No sales scripts. A 30-minute call with the people who will do the work, then a written proposal you can compare with anyone else's. MVPs and custom AI agents start with a paid discovery week.</p>
 <div class="btn-row"><a class="btn" href="{{/contact/}}">Get a quote</a><a class="btn ghost" href="{{/pricing/}}">See pricing</a></div>
 </div></div></section>"""
 
@@ -221,7 +221,7 @@ FOOTER = """<footer class="site-foot"><div class="wrap">
 <li><a href="{{/pricing/}}">Pricing</a></li><li><a href="{{/blog/}}">Blog</a></li>
 <li><a href="{{/contact/}}">Contact</a></li></ul></div>
 <div><h2>Contact</h2><ul>
-<li>""" + SITE["email"] + """</li><li><a href="https://wa.me/""" + SITE["whatsapp"] + """">WhatsApp """ + SITE["phone"] + """</a></li><li>Nairobi, Kenya · EAT (UTC+3)</li><li>M-Pesa accepted</li><li>Mon–Fri, 08:00–18:00 EAT</li></ul>
+<li>""" + SITE["email"] + """</li><li><a href="https://wa.me/""" + SITE["whatsapp"] + """">WhatsApp """ + SITE["phone"] + """</a></li><li>Nairobi, Kenya · EAT (UTC+3)</li><li>Mon–Fri, 08:00–18:00 EAT</li></ul>
 <h2 style="margin-top:22px">Follow us</h2><ul>""" + "".join(
     f'<li><a href="{u}" rel="noopener me" target="_blank">{n}</a></li>' for n, u in SITE.get("social", [])) + """</ul></div>
 </div>

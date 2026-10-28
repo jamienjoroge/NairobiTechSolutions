@@ -155,7 +155,7 @@ def cases_band(label, heading, alt=True):
             '<div class="btn-row"><a class="btn ghost" href="{{/work/}}">See all our work</a></div></div></section>')
 
 WORK_BODY = ('<section class="band"><div class="wrap"><div class="cases">' + "".join(case_full(c) for c in CASES) +
-             '</div><p class="meta" style="margin-top:28px">These agents were designed and built by our founding team for earlier clients. Client names and identifying details are withheld. Want an agent like these? See our <a href="{{/services/ai-automation/}}">AI &amp; automation services</a> or <a href="{{/contact/}}">tell us about your process</a>.</p></div></section>')
+             '</div><p class="meta" style="margin-top:28px">These agents were designed and built by our founder, James, in a previous role as an implementation engineer. Client names and identifying details are withheld. Want an agent like these? See our <a href="{{/services/ai-automation/}}">AI &amp; automation services</a> or <a href="{{/contact/}}">tell us about your process</a>.</p></div></section>')
 
 HOME_HERO = """<header class="hero">
 <svg class="stars" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -184,7 +184,7 @@ HOME_BODY = """<section class="band" style="padding-top:24px"><div class="wrap">
 <div class="grid g4">""" + service_cards() + """</div>
 </div></section>
 
-""" + cases_band("Our team's work", "AI agents our team has built for real businesses") + """
+""" + cases_band("Our work", "AI agents we've built for real businesses") + """
 <section class="band"><div class="wrap">
 <div class="sec-head"><p class="label">Why Sahara Nova</p><h2>Onshore-quality work without the onshore price tag</h2></div>
 <div class="grid g4">
@@ -203,7 +203,7 @@ HOME_BODY = """<section class="band" style="padding-top:24px"><div class="wrap">
 <p class="lede">Our home market has its own needs: M-Pesa checkouts, WhatsApp-first customers, patchy mobile data and Android phones on 3G. We design for all of it, and we can meet you in person in Nairobi.</p>
 <div class="btn-row"><a class="btn" href="{{/east-africa/}}">Work with us in East Africa</a></div></div>
 <div class="grid g2" style="gap:16px">
-<div class="edge"><h3>M-Pesa &amp; mobile money</h3><p>STK Push checkouts, Paybill and Till reconciliation, plus Airtel Money and MTN MoMo.</p></div>
+<div class="edge"><h3>M-Pesa &amp; mobile money</h3><p>STK Push checkouts, Paybill and Till payments, and reconciliation with your orders.</p></div>
 <div class="edge"><h3>WhatsApp-first</h3><p>WhatsApp Business ordering, support bots and automated follow-ups.</p></div>
 <div class="edge"><h3>Light, fast sites</h3><p>Pages built to load on budget Android phones and slow connections.</p></div>
 <div class="edge"><h3>Local search</h3><p>Google Business Profile and "near me" SEO for Nairobi, Kampala, Dar and Kigali.</p></div>
@@ -214,8 +214,8 @@ HOME_BODY = """<section class="band" style="padding-top:24px"><div class="wrap">
 
 HOME_FAQ = [
  ("What does Sahara Nova do?", "We are a Nairobi-based digital agency. We design and build websites, custom software and mobile apps, run SEO and digital marketing, and automate business workflows with AI for small and mid-sized businesses worldwide."),
- ("Where do you work?", "We work with businesses in Kenya and across East Africa, where we can meet in person, and remotely with businesses anywhere in the world, including the UK, Europe, the Middle East and North America. We invoice in USD, GBP or EUR and work on a schedule that overlaps with yours."),
- ("How much does a website cost?", "Our Website Launch package starts from $1,500 for up to six pages with on-page SEO. Larger sites, e-commerce and web apps are quoted at a fixed price after a short discovery call. See our <a href=\"{{/pricing/}}\">pricing page</a>."),
+ ("Where do you work?", "We serve businesses in Kenya and across East Africa, with in-person meetings in Nairobi, and work remotely with businesses anywhere in the world. We invoice in US dollars and work on a schedule that overlaps with yours."),
+ ("How much does a website cost?", "Our Website Launch package starts from $1,500 for up to six pages with on-page SEO. Larger sites and e-commerce get a fixed quote within two working days of a short call. Web apps start with an $800 discovery week, credited to the build. See our <a href=\"{{/pricing/}}\">pricing page</a>."),
  ("How do we communicate?", "You get a named project lead, a shared Slack or Teams channel, a weekly video call and a demo link every week. Most of our day overlaps with UK and European business hours."),
  ("Who owns the code and content?", "You do. Full ownership of code, designs and content transfers to you on final payment. We sign NDAs and data processing agreements on request."),
 ]
@@ -230,7 +230,7 @@ SERVICES_BODY = """<section class="band"><div class="wrap">
 <div class="table-wrap"><table><thead><tr><th>If you need…</th><th>Start with</th><th>Often paired with</th></tr></thead><tbody>
 <tr><td>More enquiries from Google</td><td><a href="{{/services/digital-marketing-seo/}}">SEO Foundation</a></td><td>Website rebuild, content retainer</td></tr>
 <tr><td>A new or better website</td><td><a href="{{/services/web-development/}}">Website Launch</a></td><td>SEO retainer, care plan</td></tr>
-<tr><td>Software that doesn't exist yet</td><td><a href="{{/services/software-development/}}">MVP build</a></td><td>Automation, dedicated team</td></tr>
+<tr><td>Software that doesn't exist yet</td><td><a href="{{/services/software-development/}}">MVP build</a></td><td>Automation, Dedicated Developer</td></tr>
 <tr><td>Fewer hours lost to admin</td><td><a href="{{/services/ai-automation/}}">Automation Sprint</a></td><td>CRM integration, AI assistant</td></tr>
 </tbody></table></div>
 </div></section>"""
@@ -304,14 +304,14 @@ SOFT = service_page(
 <p>Off-the-shelf tools only take you so far. Eventually you need a customer portal, an internal dashboard, or a product of your own. We help small and mid-sized businesses build that software without a full in-house engineering team.</p>
 <h3>What we build</h3>
 <ul>
-<li><strong>MVPs and SaaS products:</strong> from idea to paying users in 6–10 weeks</li>
+<li><strong>MVPs and SaaS products:</strong> from idea to a first version live in 6–10 weeks</li>
 <li><strong>Internal tools:</strong> dashboards, admin panels, quoting and inventory systems</li>
 <li><strong>Customer portals:</strong> bookings, accounts, document sharing, payments</li>
 <li><strong>Mobile apps:</strong> cross-platform iOS and Android with React Native or Flutter</li>
 <li><strong>Integrations:</strong> connecting your CRM, accounting, payments and data sources through APIs</li>
 </ul>
 <h3>How we work</h3>
-<p>Every project starts with a paid discovery week. We map the users, the core workflows and the smallest version worth shipping. After that we build in one-week sprints, and you get a working demo link every Friday. You can change priorities between sprints without renegotiating the whole contract.</p>
+<p>Every project starts with a paid discovery week ($800, credited to the build if you go ahead). We map the users, the core workflows and the smallest version worth shipping. After that we build in one-week sprints, and you get a working demo link every Friday. You can change priorities between sprints without renegotiating the whole contract.</p>
 <h3>Recent work</h3>
 <p>We've built an <a href="{{/work/#odoo-order-to-cash-agent}}">order-to-cash agent for an Odoo ERP client</a> and a <a href="{{/work/#loan-top-up-agent}}">loan top-up agent for a digital lender</a>. If you're weighing up an offshore team, read <a href="{{/why-kenya/}}">why companies hire developers in Kenya</a>.</p>
 <h3>Typical stack</h3>
@@ -319,12 +319,12 @@ SOFT = service_page(
 </div>
 <div class="grid" style="align-content:start">
 <div class="plan feature"><span class="tag">Start here</span><h3>MVP / Web App</h3><div class="price">$8,000 <small>from</small></div>
-<ul><li>1-week discovery &amp; clickable prototype</li><li>Design + build of core features</li><li>Weekly demos, fixed milestones</li><li>Deployment, docs &amp; handover</li></ul><a class="btn" href="{{/contact/}}">Scope my project</a></div>
-<div class="plan"><h3>Dedicated Developer</h3><div class="price">$3,200 <small>/mo per developer, from</small></div><ul><li>Full-time engineer on your hours</li><li>Managed by our tech lead</li><li>Scale up or down monthly</li></ul></div>
+<ul><li>$800 discovery week (credited) &amp; clickable prototype</li><li>Design + build of core features</li><li>Weekly demos, fixed milestones</li><li>Deployment, docs &amp; handover</li></ul><a class="btn" href="{{/contact/}}">Scope my project</a></div>
+<div class="plan"><h3>Dedicated Developer</h3><div class="price">$6,000 <small>/mo per developer, from</small></div><ul><li>Full-time engineer on your hours</li><li>Managed by our tech lead</li><li>Scale up or down monthly</li></ul></div>
 </div>
 </div></div></section>""",
  [("How much does it cost to build an MVP?", "Most MVPs we scope fall between $8,000 and $30,000, depending on the number of user roles, integrations and platforms. A discovery week gives you a fixed, itemised quote."),
-  ("Fixed price or hourly?", "Discovery and well-defined projects are fixed price. Ongoing product work runs as a monthly dedicated team, so you can change priorities freely."),
+  ("Fixed price or hourly?", "Discovery and well-defined projects are fixed price. Ongoing product work runs on a monthly Dedicated Developer plan, so you can change priorities freely."),
   ("Is outsourcing software development to Kenya safe?", "We sign NDAs and IP assignment clauses, use your repositories or give you access to ours from day one, and follow GDPR-aligned data practices. You own all the code."),
   ("Can you take over an existing codebase?", "Yes. We start with a code audit covering architecture, security and test coverage, then propose a plan to stabilise it and keep building.")])
 
@@ -357,8 +357,8 @@ SEO = service_page(
 </div>
 <div class="grid" style="align-content:start">
 <div class="plan feature"><span class="tag">One-off</span><h3>SEO Foundation</h3><div class="price">$900 <small>from</small></div>
-<ul><li>Full technical audit + fixes</li><li>Keyword research &amp; page map</li><li>Google Business Profile &amp; Search Console</li><li>Prioritised 90-day roadmap</li></ul><a class="btn" href="{{/contact/}}">Book an audit</a></div>
-<div class="plan"><h3>SEO &amp; Content Retainer</h3><div class="price">$750 <small>/month, from</small></div><ul><li>2–4 optimised articles a month</li><li>On-page improvements &amp; link building</li><li>Monthly report and strategy call</li></ul></div>
+<ul><li>Full technical audit + fixes that need no developer time</li><li>Keyword research &amp; page map</li><li>Google Business Profile &amp; Search Console</li><li>Prioritised 90-day roadmap</li></ul><a class="btn" href="{{/contact/}}">Book an audit</a></div>
+<div class="plan"><h3>SEO &amp; Content Retainer</h3><div class="price">$750 <small>/month, from</small></div><ul><li>2 optimised articles a month</li><li>On-page improvements &amp; link building</li><li>Monthly report and strategy call</li></ul></div>
 </div>
 </div></div></section>""",
  [("How long does SEO take to work?", "We plan on early movement on long-tail keywords within 3–6 months and competitive terms in 9–18 months, but nobody can promise a timeline. Technical fixes can show results sooner if your site had indexing problems."),
@@ -395,18 +395,19 @@ AI = service_page(
 </div>
 <div class="grid" style="align-content:start">
 <div class="plan feature"><span class="tag">Quick win</span><h3>Automation Sprint</h3><div class="price">$1,200 <small>from</small></div>
-<ul><li>Process audit of one team</li><li>1–3 workflows automated</li><li>Error alerts &amp; documentation</li><li>Delivered in about 2 weeks</li></ul><a class="btn" href="{{/contact/}}">Find my quick wins</a></div>
+<ul><li>Process audit of one team</li><li>1–2 workflows automated</li><li>Error alerts &amp; documentation</li><li>Delivered in about 2 weeks</li></ul><a class="btn" href="{{/contact/}}">Find my quick wins</a></div>
 <div class="plan"><h3>AI Assistant</h3><div class="price">$2,500 <small>from</small></div><ul><li>Website or internal assistant</li><li>Trained on your documents</li><li>Human handoff &amp; analytics</li></ul></div>
 </div>
 </div></div></section>
 <section class="band"><div class="wrap"><div class="sec-head"><p class="label">Watch an agent work</p><h2>From an emailed order to cash in the bank</h2>
 <p class="lede">This is the order-to-cash agent we built for an Odoo ERP client. Each step used to be done by hand. Hover over or tap a step to see what the agent does.</p></div>""" + flow_fig("odoo-order-to-cash-agent") + """
-<div class="btn-row"><a class="btn ghost" href="{{/work/#odoo-order-to-cash-agent}}">Read the case study</a></div></div></section>""" + cases_band("Our team's work", "AI agents our team has built"),
+<div class="btn-row"><a class="btn ghost" href="{{/work/#odoo-order-to-cash-agent}}">Read the case study</a></div></div></section>""" + cases_band("Our work", "AI agents we've built"),
  [("What can a small business automate?", "Good candidates are frequent, rule-based and digital: lead routing, follow-up emails, invoicing reminders, reporting, data entry between tools and first-line support questions."),
   ("Do I need to change my existing software?", "Usually not. We connect the tools you already use, such as Odoo, HubSpot, Pipedrive, Xero, QuickBooks, Google Workspace, Microsoft 365 or Shopify, through their APIs."),
   ("Can you build AI agents for Odoo or HubSpot?", "Yes. We have built an order-to-cash agent that turns emailed orders into Odoo sales orders and runs the workflow through to invoicing, and a HubSpot agent that follows up with leads, sets reminders and keeps the CRM up to date. See our <a href=\"{{/work/}}\">case studies</a>, or our comparison of <a href=\"{{/blog/hubspot-breeze-vs-custom-ai-agent/}}\">HubSpot's own agents vs a custom agent</a>."),
   ("Is our data safe with AI tools?", "We choose business-tier AI services that don't train on your data, minimise what's sent, and document every data flow. We sign a data processing agreement on request."),
-  ("How do you measure ROI?", "Before building, we estimate hours saved per month. After launch, we track runs and time saved so you can see the payback.")])
+  ("How do you measure ROI?", "Before building, we estimate hours saved per month. After launch, we track runs and time saved so you can see the payback."),
+  ("What does it cost to run an AI agent?", "Running costs are billed at cost: AI model usage, WhatsApp message fees and any automation plan such as Make, Zapier or n8n. Our AI Care Plan, from $250 a month, covers monitoring, fixes and updates.")])
 
 WHY_KENYA_BODY = """<section class="band"><div class="wrap"><div class="grid g2" style="gap:48px">
 <div class="prose">
@@ -449,33 +450,36 @@ WHY_KENYA_BODY = """<section class="band"><div class="wrap"><div class="grid g2"
 </div></div></section>"""
 
 PRICING_BODY = """<section class="band"><div class="wrap">
-<div class="sec-head"><p class="label">Projects</p><h2>Fixed-price packages</h2><p class="lede">Every project starts with a free 30-minute call and a written, fixed quote. The prices below are starting points. Your quote depends on scope, content and integrations.</p></div>
+<div class="sec-head"><p class="label">Projects</p><h2>Fixed-price packages</h2><p class="lede">Every project starts with a free 30-minute call. Packages get a written, fixed quote within two working days of it. MVPs and custom AI agents start with an $800 discovery week, credited to the build, which ends in a fixed, itemised quote. The prices below are starting points. Your quote depends on scope, content and integrations.</p></div>
 <div class="grid g4">
 <div class="plan feature"><span class="tag">Most popular</span><h3>Website Launch</h3><div class="price">$1,500 <small>from</small></div><ul><li>Up to 6 pages, custom design</li><li>On-page SEO, schema, sitemap</li><li>Analytics &amp; Search Console</li><li>2–3 weeks</li></ul><a class="btn" href="{{/contact/}}">Get a quote</a></div>
 <div class="plan"><h3>Growth Website</h3><div class="price">$3,500 <small>from</small></div><ul><li>Up to 15 pages + CMS/blog</li><li>Conversion tracking &amp; CRM forms</li><li>Keyword map + 3 articles</li><li>4–6 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Get a quote</a></div>
 <div class="plan"><h3>E-commerce</h3><div class="price">$4,500 <small>from</small></div><ul><li>Shopify or WooCommerce</li><li>Up to 50 products loaded</li><li>Payments, shipping, product SEO</li><li>4–8 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Get a quote</a></div>
-<div class="plan"><h3>MVP / Web App</h3><div class="price">$8,000 <small>from</small></div><ul><li>Discovery week &amp; prototype</li><li>Core features, weekly demos</li><li>Deployment &amp; documentation</li><li>6–10 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Scope my project</a></div>
-<div class="plan"><h3>SEO Foundation</h3><div class="price">$900 <small>from</small></div><ul><li>Technical audit + fixes</li><li>Keyword research &amp; page map</li><li>Google Business Profile</li><li>90-day roadmap</li></ul><a class="btn ghost" href="{{/contact/}}">Book an audit</a></div>
-<div class="plan"><h3>Automation Sprint</h3><div class="price">$1,200 <small>from</small></div><ul><li>Process audit</li><li>1–3 workflows automated</li><li>Error alerts &amp; docs</li><li>About 2 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Find quick wins</a></div>
+<div class="plan"><h3>MVP / Web App</h3><div class="price">$8,000 <small>from</small></div><ul><li>$800 discovery week (credited) &amp; prototype</li><li>Core features, weekly demos</li><li>Deployment &amp; documentation</li><li>6–10 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Scope my project</a></div>
+<div class="plan"><h3>SEO Foundation</h3><div class="price">$900 <small>from</small></div><ul><li>Technical audit + quick fixes</li><li>Keyword research &amp; page map</li><li>Google Business Profile</li><li>90-day roadmap</li></ul><a class="btn ghost" href="{{/contact/}}">Book an audit</a></div>
+<div class="plan"><h3>Automation Sprint</h3><div class="price">$1,200 <small>from</small></div><ul><li>Process audit</li><li>1–2 workflows automated</li><li>Error alerts &amp; docs</li><li>About 2 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Find quick wins</a></div>
 <div class="plan"><h3>AI Assistant</h3><div class="price">$2,500 <small>from</small></div><ul><li>Website or internal assistant</li><li>Trained on your documents</li><li>Human handoff &amp; analytics</li><li>3–4 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Get a quote</a></div>
-<div class="plan"><h3>Custom AI Agent</h3><div class="price">Quote <small>after discovery</small></div><ul><li>Agents that act in your ERP or CRM</li><li>e.g. order-to-cash, lead follow-up</li><li>Human-in-the-loop controls</li><li><a href="{{/work/}}">See examples</a></li></ul><a class="btn ghost" href="{{/contact/}}">Scope my agent</a></div>
-</div></div></section>
+<div class="plan"><h3>Custom AI Agent</h3><div class="price">$3,500 <small>from</small></div><ul><li>Agents that act in your ERP or CRM</li><li>e.g. order-to-cash, lead follow-up</li><li>Human-in-the-loop controls</li><li><a href="{{/work/}}">See examples</a></li></ul><a class="btn ghost" href="{{/contact/}}">Scope my agent</a></div>
+</div>
+<p class="meta" style="margin-top:14px">SEO Foundation fixes cover anything that needs no developer time, such as titles, metadata, Search Console and Google Business Profile; larger fixes are quoted separately. Mobile apps, and M-Pesa integration for an existing site, are quoted after discovery.</p>
+</div></section>
 <section class="band alt"><div class="wrap">
 <div class="sec-head"><p class="label">Ongoing</p><h2>Monthly plans</h2></div>
 <div class="table-wrap"><table><thead><tr><th>Plan</th><th>From</th><th>Includes</th></tr></thead><tbody>
-<tr><td><strong>SEO &amp; Content Retainer</strong></td><td class="num">$750/mo</td><td>2–4 articles, on-page work, link building, monthly report</td></tr>
-<tr><td><strong>Dedicated Developer</strong></td><td class="num">$3,200/mo</td><td>Full-time engineer on your hours, managed by our tech lead</td></tr>
+<tr><td><strong>SEO &amp; Content Retainer</strong></td><td class="num">$750/mo</td><td>2 articles a month, on-page work, link building, monthly report</td></tr>
+<tr><td><strong>Dedicated Developer</strong></td><td class="num">$6,000/mo</td><td>Full-time engineer on your hours, managed by our tech lead</td></tr>
 <tr><td><strong>Website Care Plan</strong></td><td class="num">$150/mo</td><td>Hosting, updates, backups, uptime monitoring, 2 hours of changes</td></tr>
+<tr><td><strong>AI Care Plan</strong></td><td class="num">$250/mo</td><td>Monitoring, error alerts, fixes, prompt and knowledge updates, monthly review (running costs billed at cost)</td></tr>
 <tr><td><strong>Ad Management</strong></td><td class="num">$500/mo</td><td>Google or Meta campaigns, conversion tracking, monthly optimisation (ad spend separate)</td></tr>
 </tbody></table></div>
-<p class="meta" style="margin-top:14px">Prices in USD, excluding any applicable taxes. We also invoice in GBP and EUR. Clients in Kenya and East Africa pay the same prices and can pay in KES by M-Pesa or bank transfer at the day's exchange rate. Projects: 50% to start, 50% on launch. Plans: monthly in advance, cancel with 30 days' notice.</p>
+<p class="meta" style="margin-top:14px">Prices in USD, excluding any applicable taxes, paid by bank transfer. Clients in Kenya pay the same prices and can pay in KES by bank transfer at the day's exchange rate. Projects: 50% to start, 50% on launch. Plans: monthly in advance, cancel with 30 days' notice.</p>
 </div></section>"""
 
 PRICING_FAQ = [
  ("How much does a website cost for a small business?", "A professional small business website with custom design and on-page SEO typically costs $1,500–$5,000 with us. UK agencies typically charge £3,000–£5,000 for a five-page site, and UK freelancers £1,500–£3,000 (Whito, October 2026). E-commerce and web apps cost more because of payments, integrations and custom features."),
  ("Why are your prices lower than UK or US agencies?", "Our team is based in Nairobi, where operating costs are lower. You get the same process and quality standards, with the saving passed on to you."),
- ("Are there hidden costs?", "No. Your quote lists everything, including third-party costs such as hosting, premium plugins, stock images or ad spend. You pay those directly or we pass them through at cost."),
- ("Which currencies and payment methods do you accept?", "We invoice in USD, GBP or EUR and accept bank transfer, Wise and card payments. Clients in Kenya and East Africa can also pay in KES by M-Pesa or bank transfer."),
+ ("Are there hidden costs?", "No. Your quote lists everything, including third-party costs such as hosting, premium plugins, stock images, ad spend, AI model usage, WhatsApp message fees and automation plans such as Make, Zapier or n8n. You pay those directly or we pass them through at cost."),
+ ("Which currencies and payment methods do you accept?", "We invoice in US dollars, paid by bank transfer. Clients in Kenya can also pay the equivalent in Kenyan shillings by bank transfer."),
 ]
 
 TEAM_SECTION = """<section class="band alt" id="team"><div class="wrap">
@@ -512,20 +516,20 @@ ABOUT_BODY = """<section class="band"><div class="wrap"><div class="grid g2" sty
 <div class="grid" style="align-content:start;gap:18px">
 <div class="edge"><span class="fig">Nairobi</span><p>Headquartered in Kenya's tech capital, serving clients worldwide.</p></div>
 <div class="edge"><span class="fig">EAT</span><p>Core hours 08:00–18:00 East Africa Time, Monday to Friday.</p></div>
-<div class="edge"><span class="fig">USD · GBP · EUR</span><p>Invoiced in your currency.</p></div>
+<div class="edge"><span class="fig">USD · KES</span><p>Invoiced in US dollars, or shillings in Kenya.</p></div>
 </div>
 </div></div></section>
 """ + TEAM_SECTION + """<section class="band" id="how-we-work"><div class="wrap">
 <div class="sec-head"><p class="label">How a typical website project runs</p><h2>From first call to launch in about four weeks</h2><p class="lede">Software and AI projects follow the same rhythm: a short discovery, a fixed plan, then weekly demos until launch.</p></div>
 <div class="steps">
-<div class="step" data-w="Day 1"><h3>Discovery call</h3><p>30 minutes on goals, audience and budget. You get a fixed quote within two working days.</p></div>
+<div class="step" data-w="Day 1"><h3>Discovery call</h3><p>30 minutes on goals, audience and budget. You get a fixed quote within two working days of the call.</p></div>
 <div class="step" data-w="Week 1"><h3>Strategy &amp; design</h3><p>Keyword research, sitemap and page designs, all approved before we write any code.</p></div>
 <div class="step" data-w="Weeks 2–3"><h3>Build &amp; content</h3><p>Development with weekly demo links. SEO, analytics and schema are built in from day one.</p></div>
 <div class="step" data-w="Week 4"><h3>Launch &amp; grow</h3><p>Go live, submit to Google, then optional monthly SEO and care plans.</p></div>
 </div>
 </div></section>
 <section class="band"><div class="wrap"><div class="grid g3">
-<a class="service" href="{{/work/}}"><h3>See our work</h3><p>AI agents our team has built for lending, ERP and CRM teams, with real results.</p><span class="more">View case studies →</span></a>
+<a class="service" href="{{/work/}}"><h3>See our work</h3><p>AI agents we've built for lending, ERP and CRM teams, with real results.</p><span class="more">View case studies →</span></a>
 <a class="service" href="{{/why-kenya/}}"><h3>Why a team in Kenya</h3><p>Time zone overlap, English-first communication and fair rates.</p><span class="more">Why Kenya →</span></a>
 <a class="service" href="{{/east-africa/}}"><h3>Based in East Africa?</h3><p>Meet us in Nairobi. We build for M-Pesa, WhatsApp and mobile-first customers.</p><span class="more">Kenya &amp; East Africa →</span></a>
 </div></div></section>"""
@@ -560,7 +564,7 @@ CONTACT_BODY = """<section class="band"><div class="wrap"><div class="grid g2" s
 <div><b>Email</b><span style="user-select:all">""" + SITE["email"] + """</span></div>
 <div><b>WhatsApp</b><a href="https://wa.me/""" + SITE["whatsapp"] + """?text=Hi%20Sahara%20Nova%2C%20I%27d%20like%20to%20ask%20about%20a%20project">""" + SITE["phone"] + """</a> · quickest for a short question</div>
 <div><b>Location</b>Nairobi, Kenya · East Africa Time (UTC+3). In-person meetings available in Nairobi.</div>
-<div><b>Payment</b>USD, GBP, EUR by bank, Wise or card · KES by M-Pesa or bank transfer</div>
+<div><b>Payment</b>USD or KES by bank transfer</div>
 <div><b>Hours</b>Mon–Fri, 08:00–18:00 EAT</div>
 </div>
 </div></div></section>"""
@@ -648,7 +652,7 @@ ARTICLE_BODY = """<section class="band"><div class="wrap"><article class="prose"
 <p>For the wider case beyond cost, including the talent pool, legal system and data protection, see <a href="{{/why-kenya/}}">why companies hire developers in Kenya</a>.</p>
 <h2>The bottom line</h2>
 <p>For small and mid-sized businesses in Europe, the UK and the Middle East, Kenya combines lower cost, English-first communication and real working-hours overlap. The key is choosing a partner that works transparently and that you can hold accountable.</p>
-<p>If you'd like to see how that works in practice, <a href="{{/contact/}}">send us your brief</a> and we'll reply with a fixed quote within two working days, or see our <a href="{{/services/web-development/}}">web development</a> and <a href="{{/pricing/}}">pricing</a> pages.</p>
+<p>If you'd like to see how that works in practice, <a href="{{/contact/}}">send us your brief</a> and after a short call we'll send a fixed quote within two working days, or see our <a href="{{/services/web-development/}}">web development</a> and <a href="{{/pricing/}}">pricing</a> pages.</p>
 </article></div></section>"""
 
 
@@ -704,7 +708,7 @@ WEBSITE_COST_KENYA_BODY = """<section class="band"><div class="wrap"><article cl
 </ol>
 
 <h2>The bottom line</h2>
-<p>Expect to pay KES 15,000–80,000 for a simple five-page site from a freelancer. Our own custom business sites, built to win enquiries from Google, start at about KES 195,000. Online shops and web apps cost more because of payments and custom features. Whatever you choose, keep your domain in your own name. If you'd like a fixed price for your project, see <a href="{{/pricing/}}">our pricing</a> or <a href="{{/contact/}}">send us a short brief</a>. You can pay in KES by M-Pesa or bank transfer. More on how we work with local businesses is on our <a href="{{/east-africa/}}">Kenya and East Africa page</a>.</p>
+<p>Expect to pay KES 15,000–80,000 for a simple five-page site from a freelancer. Our own custom business sites, built to win enquiries from Google, start at about KES 195,000. Online shops and web apps cost more because of payments and custom features. Whatever you choose, keep your domain in your own name. If you'd like a fixed price for your project, see <a href="{{/pricing/}}">our pricing</a> or <a href="{{/contact/}}">send us a short brief</a>. You can pay in KES by bank transfer. More on how we work with local businesses is on our <a href="{{/east-africa/}}">Kenya and East Africa page</a>.</p>
 </article></div></section>"""
 
 MPESA_GUIDE_BODY = """<section class="band"><div class="wrap"><article class="prose">
@@ -988,11 +992,11 @@ LENDER_AGENTS_BODY = """<section class="band"><div class="wrap"><article class="
 EAST_AFRICA_BODY = """<section class="band"><div class="wrap"><div class="grid g2" style="gap:48px">
 <div class="prose">
 <h2 style="margin-top:0">A Nairobi team that knows your market</h2>
-<p>We're based in Nairobi and build for businesses in Kenya, Uganda, Tanzania and Rwanda as well as for clients abroad. Your customers pay by M-Pesa, message you on WhatsApp and browse on mid-range Android phones, and we build for exactly that. You get the same senior team and process we bring to every client, and you can meet us face to face.</p>
+<p>We're based in Nairobi and serve businesses in Kenya, Uganda, Tanzania and Rwanda, as well as clients abroad. Your customers pay by M-Pesa, message you on WhatsApp and browse on mid-range Android phones, and we build for exactly that. You get the same senior team and process we bring to every client, and you can meet us face to face.</p>
 <h3>Websites that work on East African connections</h3>
 <p>Many of your visitors are on mobile data, so every kilobyte counts. We build lightweight, mobile-first sites that load quickly on 3G and budget phones, rank well on Google and don't drain your customers' bundles.</p>
 <h3>M-Pesa and mobile money integration</h3>
-<p>We integrate M-Pesa through the Daraja API: STK Push checkout, C2B Paybill and Till payments, B2C payouts and automatic reconciliation with your orders or accounting system. Our <a href="{{/blog/mpesa-stk-push-integration-guide/}}">M-Pesa STK Push integration guide</a> explains how it works. For customers in Uganda, Tanzania and Rwanda we also connect Airtel Money and MTN MoMo through regional payment gateways, along with card payments.</p>
+<p>We integrate M-Pesa through the Daraja API: STK Push checkout, C2B Paybill and Till payments, B2C payouts and automatic reconciliation with your orders or accounting system. Our <a href="{{/blog/mpesa-stk-push-integration-guide/}}">M-Pesa STK Push integration guide</a> explains how it works.</p>
 <h3>WhatsApp and AI for customer service</h3>
 <p>Your customers already use WhatsApp. We set up WhatsApp Business ordering, automated replies and AI assistants that answer common questions in English or Swahili, take orders and hand over to a person when needed.</p>
 <h3>AI agents already working in Kenya</h3>
@@ -1002,25 +1006,25 @@ EAST_AFRICA_BODY = """<section class="band"><div class="wrap"><div class="grid g
 <h3>Working with businesses across Nairobi</h3>
 <p>We work remotely and meet clients at their offices, from Westlands, Kilimani and Upper Hill to the CBD, Industrial Area and Karen. Wondering about budget? Read <a href="{{/blog/website-cost-in-kenya/}}">how much a website costs in Kenya in 2026</a>, or see our <a href="{{/pricing/}}">published prices</a>.</p>
 <h3>Business systems</h3>
-<p>We build custom software for how East African businesses run: stock and order systems, SACCO and chama portals, school and clinic management tools, field-sales apps and invoicing that works with KRA eTIMS.</p>
+<p>We build custom software for how East African businesses run: stock and order systems, SACCO and chama portals, school and clinic management tools, and field-sales apps.</p>
 </div>
 <div class="grid" style="align-content:start;gap:20px">
 <div class="table-wrap"><table><thead><tr><th>Need</th><th>What we build</th></tr></thead><tbody>
 <tr><td>Sell online</td><td>E-commerce with M-Pesa STK Push, delivery zones and WhatsApp order alerts</td></tr>
 <tr><td>Get found</td><td>Google Business Profile, local SEO, Swahili/English pages</td></tr>
 <tr><td>Serve customers faster</td><td>WhatsApp Business bots and AI assistants</td></tr>
-<tr><td>Run operations</td><td>Inventory, orders, bookings, eTIMS-ready invoicing</td></tr>
+<tr><td>Run operations</td><td>Inventory, orders, bookings and invoicing</td></tr>
 <tr><td>Grow a startup</td><td>MVPs, mobile apps and mobile money payment flows</td></tr>
 </tbody></table></div>
-<div class="plan"><h3>Paying us locally</h3><ul><li>Same published prices as all our clients</li><li>Pay in KES by M-Pesa or bank transfer, at the day's exchange rate</li><li>Meetings at your office in Nairobi, or by video call</li></ul><div class="btn-row" style="margin-top:8px"><a class="btn" href="{{/contact/}}">Book a meeting</a><a class="btn ghost" href="https://wa.me/""" + SITE["whatsapp"] + """?text=Hi%20Sahara%20Nova%2C%20I%27d%20like%20to%20ask%20about%20a%20project">Chat on WhatsApp</a></div></div>
+<div class="plan"><h3>Paying us locally</h3><ul><li>Same published prices as all our clients</li><li>Pay in KES by bank transfer, at the day's exchange rate</li><li>Meetings at your office in Nairobi, or by video call</li></ul><div class="btn-row" style="margin-top:8px"><a class="btn" href="{{/contact/}}">Book a meeting</a><a class="btn ghost" href="https://wa.me/""" + SITE["whatsapp"] + """?text=Hi%20Sahara%20Nova%2C%20I%27d%20like%20to%20ask%20about%20a%20project">Chat on WhatsApp</a></div></div>
 </div>
 </div></div></section>"""
 
 EAST_AFRICA_FAQ = [
  ("Do you build websites for businesses in Nairobi?", "Yes. We're a Nairobi-based agency and build websites, e-commerce stores, software and marketing campaigns for Kenyan businesses, with in-person meetings available."),
- ("Can you integrate M-Pesa into my website or app?", "Yes. We integrate M-Pesa through Safaricom's Daraja API, including STK Push checkout, Paybill and Till payments, B2C payouts and automatic reconciliation."),
- ("Do you work with businesses in Uganda, Tanzania and Rwanda?", "Yes. We serve clients across East Africa remotely and can travel for workshops. We integrate regional payment options such as Airtel Money and MTN MoMo."),
- ("Can I pay in Kenyan shillings?", "Yes. Our prices are published in USD and you can pay the equivalent in KES by M-Pesa or bank transfer at the day's exchange rate."),
+ ("Can you integrate M-Pesa into my website or app?", "Yes. We integrate M-Pesa through Safaricom's Daraja API, including STK Push checkout, Paybill and Till payments, B2C payouts and automatic reconciliation. Adding it to an existing site is quoted after a short discovery."),
+ ("Do you work with businesses in Uganda, Tanzania and Rwanda?", "Yes. We work with businesses across East Africa remotely, by video call."),
+ ("Can I pay in Kenyan shillings?", "Yes. Our prices are published in USD and you can pay the equivalent in KES by bank transfer at the day's exchange rate."),
  ("Can you build a WhatsApp chatbot for my business?", "Yes. We build WhatsApp Business ordering flows, automated replies and AI assistants that answer in English or Swahili and hand over to your team when needed."),
 ]
 
@@ -1031,7 +1035,7 @@ PAGES = [
       description="A digital agency for small businesses, based in Nairobi: websites, custom software, SEO and AI automation for clients worldwide. Your hours, fixed prices.",
       h1="The Nairobi digital agency that works your hours", hero=HOME_HERO, body=HOME_BODY, faq=HOME_FAQ,
       faq_title="Questions small businesses ask us"),
- dict(path="services/", title="Web, Software, SEO & AI for Small Businesses | Sahara Nova",
+ dict(path="services/", updated="2026-10-28", title="Web, Software, SEO & AI for Small Businesses | Sahara Nova",
       description="Web design and development, custom software and apps, SEO and digital marketing, and AI automation for small and mid-sized businesses, from one team in Nairobi.",
       eyebrow="Services", h1="Everything digital, from one team",
       lede="Four disciplines, one project lead, one invoice. Start with the service you need most and add the others when you're ready.",
@@ -1046,9 +1050,9 @@ PAGES = [
            ("What time zone is Kenya in?", "Kenya uses East Africa Time (EAT), UTC+3, all year round with no daylight saving. That is 2–3 hours ahead of the UK and 1–2 hours ahead of central Europe."),
            ("How much do Kenyan developers cost?", "Agency rates in Kenya typically range from under $25 to $99 per hour, depending on seniority and agency size.")]),
  dict(path="work/", title="AI Agent Case Studies: Odoo, HubSpot & Lending | Sahara Nova",
-      description="AI agents our team has built: loan top-up intake for a lender, email-to-Odoo order-to-cash, a HubSpot CRM agent, and customer support and lead intake agents.",
-      eyebrow="Our work", h1="AI agents our team has built",
-      lede="Real agents running inside real businesses: taking in loan applications, processing orders in an ERP, working a CRM pipeline and talking to customers. Built by our founding team; client names are withheld.",
+      description="AI agents we've built: loan top-up intake for a lender, email-to-Odoo order-to-cash, a HubSpot CRM agent, and customer support and lead intake agents.",
+      eyebrow="Our work", h1="AI agents we've built",
+      lede="Real agents running inside real businesses: taking in loan applications, processing orders in an ERP, working a CRM pipeline and talking to customers. Built by our founder, James, in a previous role; client names are withheld.",
       crumbs=[("/work/", "Work")], body=WORK_BODY, cases=True),
  dict(path="east-africa/", title="Web Design & Software Company in Nairobi, Kenya | Sahara Nova",
       description="Nairobi web design, software, SEO and AI for businesses in Kenya and East Africa: M-Pesa integration, WhatsApp bots, fast mobile sites and local SEO.",
@@ -1057,7 +1061,7 @@ PAGES = [
       crumbs=[("/east-africa/", "Kenya & East Africa")], body=EAST_AFRICA_BODY, faq=EAST_AFRICA_FAQ,
       area=["Kenya", "Uganda", "Tanzania", "Rwanda"]),
  dict(path="pricing/", updated="2026-10-28", title="Website & Software Development Pricing | Sahara Nova",
-      description="Transparent pricing for small business websites (from $1,500), e-commerce, MVPs, SEO (from $900) and AI automation. Fixed quotes within two working days.",
+      description="Published prices for small business websites (from $1,500), e-commerce, MVPs, SEO (from $900) and AI agents (from $3,500). Fixed quotes after a free call.",
       eyebrow="Pricing", h1="Transparent pricing, fixed quotes",
       lede="Published starting prices, so you know if we fit your budget before you pick up the phone.",
       crumbs=[("/pricing/", "Pricing")], body=PRICING_BODY, faq=PRICING_FAQ),
