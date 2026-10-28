@@ -400,7 +400,7 @@ AI = service_page(
 <div class="btn-row"><a class="btn ghost" href="{{/work/#odoo-order-to-cash-agent}}">Read the case study</a></div></div></section>""" + cases_band("Our team's work", "AI agents our team has built"),
  [("What can a small business automate?", "Good candidates are frequent, rule-based and digital: lead routing, follow-up emails, invoicing reminders, reporting, data entry between tools and first-line support questions."),
   ("Do I need to change my existing software?", "Usually not. We connect the tools you already use, such as Odoo, HubSpot, Pipedrive, Xero, QuickBooks, Google Workspace, Microsoft 365 or Shopify, through their APIs."),
-  ("Can you build AI agents for Odoo or HubSpot?", "Yes. We have built an order-to-cash agent that turns emailed orders into Odoo sales orders and runs the workflow through to invoicing, and a HubSpot agent that follows up with leads, sets reminders and keeps the CRM up to date. See our <a href=\"{{/work/}}\">case studies</a>."),
+  ("Can you build AI agents for Odoo or HubSpot?", "Yes. We have built an order-to-cash agent that turns emailed orders into Odoo sales orders and runs the workflow through to invoicing, and a HubSpot agent that follows up with leads, sets reminders and keeps the CRM up to date. See our <a href=\"{{/work/}}\">case studies</a>, or our comparison of <a href=\"{{/blog/hubspot-breeze-vs-custom-ai-agent/}}\">HubSpot's own agents vs a custom agent</a>."),
   ("Is our data safe with AI tools?", "We choose business-tier AI services that don't train on your data, minimise what's sent, and document every data flow. We sign a data processing agreement on request."),
   ("How do you measure ROI?", "Before building, we estimate hours saved per month. After launch, we track runs and time saved so you can see the payback.")])
 
@@ -578,6 +578,7 @@ PRIVACY_BODY = """<section class="band"><div class="wrap"><div class="prose">
 </div></div></section>"""
 
 BLOG_BODY = """<section class="band"><div class="wrap"><div class="sec-head"><p class="label">Latest</p><h2>Latest guides</h2></div><div class="grid g2">
+<a class="post-card" href="{{/blog/hubspot-breeze-vs-custom-ai-agent/}}"><span class="meta">Guide · 28 Oct 2026 · 8 min read</span><h3>HubSpot's AI agents vs a custom AI agent: which do you need?</h3><p>What Breeze agents do and cost today, when they're the right choice, and when a custom agent is worth building.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/which-processes-to-automate-with-ai/}}"><span class="meta">Guide · 27 Oct 2026 · 8 min read</span><h3>Which processes should you automate with AI? A practical audit</h3><p>Map the work, score each candidate, and choose between simple automation, an AI step or an agent, before you spend anything.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/ai-agents-for-lenders-kenya/}}"><span class="meta">Guide · 27 Oct 2026 · 7 min read</span><h3>AI agents for digital lenders and SACCOs in Kenya</h3><p>How a WhatsApp top-up agent took in KES 5.4M in applications in its first week, with a credit analyst still making every decision.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/website-cost-in-kenya/}}"><span class="meta">Guide · 22 Oct 2026 · 7 min read</span><h3>How much does a website cost in Kenya in 2026?</h3><p>What you get at each price level, from KES 15,000 template sites to custom builds, plus the yearly costs after launch.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
@@ -790,6 +791,69 @@ Authorization: Bearer ACCESS_TOKEN
 
 <h2>Do it yourself or hire help?</h2>
 <p>Sending the prompt is the easy part. The work that protects your money is everything around it: timeouts and customer-triggered retries, callbacks you can trust, duplicate protection, status queries and reconciliation. If those aren't in place, you will eventually ship goods for payments that never arrived, or charge someone twice. If you'd like it done for you, as part of a new website or added to an existing one, see our <a href="{{/east-africa/}}">work for Kenyan and East African businesses</a> or <a href="{{/contact/}}">send us a brief</a>. Planning a full new site? Our guide to <a href="{{/blog/website-cost-in-kenya/}}">what a website costs in Kenya</a> covers budgets.</p>
+</article></div></section>"""
+
+BREEZE_VS_CUSTOM_BODY = """<section class="band"><div class="wrap"><article class="prose">
+""" + BYLINE.format(date="28 October 2026", mins=8) + """
+<p>If your business runs on HubSpot, you have two ways to add AI agents: switch on HubSpot's own Breeze agents, or build a custom agent around your process. Agencies that build agents, ourselves included, have an obvious bias here, so we'll say it up front: for many HubSpot customers, the built-in agents are the right place to start.</p>
+<p>This guide sets out what HubSpot's agents do today, what they cost, and the specific situations where a custom agent is worth building instead.</p>
+
+<h2>What HubSpot's agents do today</h2>
+<p>HubSpot groups its AI under the Breeze name. The two agents most businesses ask about are:</p>
+<ul>
+<li><strong>Customer agent.</strong> Answers customer questions from your own content, can take actions in your CRM, and hands over to your team with full context. HubSpot lists email, chat, forms, WhatsApp, Facebook Messenger and voice as channels. It requires a Professional or Enterprise edition. HubSpot quotes a 70% average resolution rate.</li>
+<li><strong>Prospecting agent.</strong> Researches leads in your CRM and recommends personalised outreach.</li>
+</ul>
+<p>HubSpot also offers agents for content, data enrichment and deal progression, plus an Agent Builder for creating your own agents inside HubSpot. Those agents can reach outside HubSpot through a set of supported connectors, including Gmail, Google Calendar, Slack, Notion, Asana, Gong and Xero, and through Zapier. You set each tool to "Always allow", "Ask permission" or "Never allow".</p>
+
+<h2>What they cost</h2>
+<p>Agents run on HubSpot Credits, priced at $10 per 1,000 credits ($0.01 each).</p>
+<div class="table-wrap"><table><thead><tr><th>Item</th><th>Credits</th><th>Cost</th></tr></thead><tbody>
+<tr><td>Customer agent: one resolved text conversation</td><td class="num">50</td><td class="num">$0.50</td></tr>
+<tr><td>Customer agent: one minute of voice (beta)</td><td class="num">50</td><td class="num">$0.50</td></tr>
+<tr><td>Prospecting agent: outreach recommended for one lead</td><td class="num">100</td><td class="num">$1.00</td></tr>
+</tbody></table></div>
+<p>The monthly allowance for most Hubs is 500 credits on Starter, 3,000 on Professional and 5,000 on Enterprise.</p>
+<p class="meta">Source: HubSpot Product and Services Catalog and HubSpot's customer agent page, checked 28 October 2026. HubSpot changes pricing often, so confirm current rates before you budget.</p>
+<p>A resolution counts when the agent handles the conversation and it isn't handed to a person within 72 hours. Run the numbers for your own volume. A Professional allowance of 3,000 credits covers 60 resolved conversations a month, and each additional 1,000 resolutions costs $500 in credits. That is often a good price for support work. It's simply a cost to put in the comparison, not a reason to avoid the agent.</p>
+
+<h2>When HubSpot's own agents are the better choice</h2>
+<ul>
+<li><strong>The work lives in HubSpot.</strong> Your knowledge base, tickets, contacts and deals are already there, so the agent has the context it needs.</li>
+<li><strong>You're already on Professional or Enterprise.</strong> You can test the agents without new contracts or a build project.</li>
+<li><strong>The job is standard.</strong> Answering support questions, qualifying inbound leads and recommending outreach are what these agents are designed for.</li>
+<li><strong>You want the vendor to maintain it.</strong> HubSpot handles hosting, model updates and the interface. Your job is content quality and settings.</li>
+</ul>
+<p>If most of those are true, start there. Measure resolution rates and handoffs for a month before deciding you need anything more.</p>
+
+<h2>When a custom agent is worth building</h2>
+<ul>
+<li><strong>The process runs through systems HubSpot can't reach directly.</strong> An ERP like Odoo, a lender's credit system or your own database usually isn't on the supported connector list. Zapier can sometimes bridge the gap, but it adds another dependency, and each Zapier MCP tool call uses two Zapier tasks.</li>
+<li><strong>You need strict control over the steps.</strong> For example: a fixed sequence of qualifying questions, approval before any commitment, or rules about exactly when a person takes over. A custom agent can enforce those in code rather than in prompt instructions.</li>
+<li><strong>One agent has to work across the whole business.</strong> When a single conversation needs to check stock in the ERP, create an order, update the CRM and alert a person in Slack, it can be simpler to build one agent with access to each system than to chain several tools.</li>
+<li><strong>Your edition or setup doesn't fit.</strong> The customer agent needs Professional or Enterprise. If you're on Starter, or your customer data is split between HubSpot and other tools, compare the cost of upgrading with the cost of building.</li>
+</ul>
+
+<h2>The costs of a custom agent, honestly</h2>
+<p>A custom agent isn't automatically cheaper. You pay to design and build it, then for AI model usage, hosting, monitoring and maintenance as APIs and models change. Someone also has to own it when it breaks. Ask any provider, including us, to put the build cost, monthly running cost and maintenance terms in writing, and compare those with your HubSpot credit spend at realistic volumes.</p>
+
+<h2>Often the answer is both</h2>
+<p>The two aren't mutually exclusive. A common, sensible setup is to use HubSpot's customer agent for support questions inside HubSpot, and a custom agent for a cross-system process that writes its results back into HubSpot through its API. HubSpot stays your single record of customers and deals either way.</p>
+
+<h2>An example from our work</h2>
+<p>We built a <a href="{{/work/#hubspot-crm-agent}}">HubSpot CRM agent</a> for a business that was taking about five days to reply to leads and missing many inbound enquiries. The agent sources prospects from Google Places, qualifies them into HubSpot, replies instantly across WhatsApp, email, Instagram and Facebook, and hands over to a person when the lead asks for one or wants a custom offer or a better price. Average reply time went from about five days to instant.</p>
+<p>The lesson wasn't about the platform. The result came from designing the process: which leads to pursue, what to say first, and exactly when a person should step in. Whichever route you take, do that design work first. Our guide to <a href="{{/blog/which-processes-to-automate-with-ai/}}">choosing which processes to automate with AI</a> walks through it.</p>
+
+<h2>A quick decision checklist</h2>
+<ol>
+<li>Is the data the agent needs already in HubSpot? If yes, try HubSpot's agents first.</li>
+<li>Does the process need systems that aren't on HubSpot's connector list? If yes, price a custom agent or a hybrid setup.</li>
+<li>What will it cost at your real monthly volume, in credits on one side and build plus running costs on the other?</li>
+<li>Who maintains it, and how will you know when it gets something wrong?</li>
+<li>What are the handoff rules, and are they enforced or just suggested?</li>
+</ol>
+<p>If you'd like a second opinion on your setup, our <a href="{{/services/ai-automation/}}">AI and automation team</a> can review it and tell you honestly whether HubSpot's own agents will do the job. Or <a href="{{/contact/}}">describe your process</a> and we'll reply within one working day.</p>
+<p class="meta">Sources: HubSpot, AI customer agent product page; HubSpot Product and Services Catalog (HubSpot Credits); HubSpot Knowledge Base, "Connect apps to HubSpot's AI agents" (updated 18 September 2026); Zapier MCP documentation. All checked 28 October 2026.</p>
 </article></div></section>"""
 
 AI_AUDIT_BODY = """<section class="band"><div class="wrap"><article class="prose">
@@ -1008,11 +1072,21 @@ PAGES = [
       crumbs=[("/blog/", "Blog")], body=BLOG_BODY),
  dict(path="blog/outsourcing-web-development-to-kenya/",
       title="Cost of Outsourcing Web Development to Kenya (2026 Guide)",
-      description="What it costs to outsource web development to Kenya in 2026: hourly rates by region, time zone overlap, how Kenya compares and a checklist for vetting an agency.",
+      description="What it costs to outsource web development to Kenya in 2026: hourly rates by region, time zone overlap, how Kenya compares and how to vet an agency.",
       eyebrow="Guide", h1="What it costs to outsource web development to Kenya in 2026, and how to do it well",
       lede="Rates, time zone overlap, how Kenya compares with other outsourcing regions, and a vetting checklist.",
       crumbs=[("/blog/", "Blog"), ("/blog/outsourcing-web-development-to-kenya/", "Outsourcing to Kenya")],
       article={"date": "2026-09-23", "modified": "2026-10-27"}, body=ARTICLE_BODY),
+ dict(path="blog/hubspot-breeze-vs-custom-ai-agent/",
+      title="HubSpot Breeze Agents vs a Custom AI Agent | Sahara Nova",
+      description="HubSpot's Breeze agents or a custom AI agent? What each costs in 2026, when HubSpot's own agents are enough, and when a custom agent pays off.",
+      eyebrow="Guide", h1="HubSpot's AI agents vs a custom AI agent: which do you need?",
+      lede="An honest comparison of what HubSpot's built-in agents do and cost today, and the specific cases where a custom agent is worth building.",
+      crumbs=[("/blog/", "Blog"), ("/blog/hubspot-breeze-vs-custom-ai-agent/", "HubSpot vs custom agent")],
+      article={"date": "2026-10-28"}, body=BREEZE_VS_CUSTOM_BODY,
+      faq=[("How much does HubSpot's customer agent cost?", "It runs on HubSpot Credits: 50 credits ($0.50) per resolved text conversation and 50 credits per minute of voice (beta), on top of a Professional or Enterprise subscription. Each edition includes a monthly credit allowance. Prices checked 28 October 2026."),
+           ("Can HubSpot's AI agents connect to other systems?", "Yes, through a list of supported connectors such as Gmail, Slack, Notion, Asana, Gong and Xero, and through Zapier. Systems outside that list, such as many ERPs or in-house databases, usually need Zapier or a custom integration."),
+           ("When should I build a custom AI agent instead of using HubSpot's?", "When the process depends on systems HubSpot can't reach directly, needs strictly enforced steps and approvals, or spans several business systems in one conversation. Compare build and running costs with your credit spend at real volumes.")]),
  dict(path="blog/which-processes-to-automate-with-ai/",
       title="Which Processes Should You Automate With AI? | Sahara Nova",
       description="A practical AI automation audit for small businesses: map the process, score candidates, and choose between simple automation, an AI step or an AI agent.",
