@@ -221,7 +221,9 @@ FOOTER = """<footer class="site-foot"><div class="wrap">
 <li><a href="{{/pricing/}}">Pricing</a></li><li><a href="{{/blog/}}">Blog</a></li>
 <li><a href="{{/contact/}}">Contact</a></li></ul></div>
 <div><h2>Contact</h2><ul>
-<li>""" + SITE["email"] + """</li><li><a href="https://wa.me/""" + SITE["whatsapp"] + """">WhatsApp """ + SITE["phone"] + """</a></li><li>Nairobi, Kenya · EAT (UTC+3)</li><li>M-Pesa accepted</li><li>Mon–Fri, 08:00–18:00 EAT</li></ul></div>
+<li>""" + SITE["email"] + """</li><li><a href="https://wa.me/""" + SITE["whatsapp"] + """">WhatsApp """ + SITE["phone"] + """</a></li><li>Nairobi, Kenya · EAT (UTC+3)</li><li>M-Pesa accepted</li><li>Mon–Fri, 08:00–18:00 EAT</li></ul>
+<h2 style="margin-top:22px">Follow us</h2><ul>""" + "".join(
+    f'<li><a href="{u}" rel="noopener me" target="_blank">{n}</a></li>' for n, u in SITE.get("social", [])) + """</ul></div>
 </div>
 <div class="foot-base"><span>© __YEAR__ Sahara Nova. All rights reserved.</span><span><a href="{{/privacy/}}">Privacy policy</a>__COOKIE__</span></div>
 </div></footer>"""
