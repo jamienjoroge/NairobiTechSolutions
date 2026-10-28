@@ -173,7 +173,7 @@ HOME_HERO = """<header class="hero">
 <div><b data-tz="Asia/Dubai">--:--</b><span>Dubai</span></div>
 <div><b data-tz="America/New_York">--:--</b><span>New York</span></div>
 </div>
-<p class="clock-note">Our 08:00–18:00 EAT day overlaps 6–8 hours with the UK and Europe, and covers US East Coast mornings.</p>
+<p class="clock-note">Our 08:00–18:00 EAT day overlaps 6–8 hours with the UK and Europe, and the first 1–2 hours of the US East Coast day.</p>
 </div>
 <svg class="dune" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 C 240 10, 420 10, 640 45 S 1100 95, 1440 30 L1440 90 L0 90 Z" style="fill:var(--bg)"/></svg>
 </header>"""
@@ -188,7 +188,7 @@ HOME_BODY = """<section class="band" style="padding-top:24px"><div class="wrap">
 <section class="band"><div class="wrap">
 <div class="sec-head"><p class="label">Why Sahara Nova</p><h2>Onshore-quality work without the onshore price tag</h2></div>
 <div class="grid g4">
-<div class="edge"><span class="fig">40–60%</span><h3>Lower cost</h3><p>Kenyan agency rates sit well below UK, EU and US agencies. We pass that saving on and keep a senior team on your project.</p></div>
+<div class="edge"><span class="fig">40–60%</span><h3>Lower cost</h3><p>Offshore rates can run 40–60% below onshore agencies (Qubit Labs, 2026), and Kenyan rates sit well below UK, EU and US agencies. We pass that saving on and keep a senior team on your project.</p></div>
 <div class="edge"><span class="fig">UTC+3</span><h3>Your working day</h3><p>East Africa Time overlaps most of the European day. Calls happen live, and feedback gets same-day answers.</p></div>
 <div class="edge"><span class="fig">2 days</span><h3>Fast quotes, faster sprints</h3><p>A written proposal within two working days. Weekly demos after that, so you always see progress.</p></div>
 <div class="edge"><span class="fig">1 team</span><h3>Four disciplines</h3><p>Design, engineering, SEO and automation in one team, so your website, software and marketing work together.</p></div>
@@ -255,7 +255,7 @@ WEB = service_page(
  """<section class="band"><div class="wrap"><div class="grid g2" style="gap:48px">
 <div class="prose">
 <h2 style="margin-top:0">A website should bring in customers</h2>
-<p>For most small businesses, the website is the best salesperson they have. Too many sites are slow, hard to update and invisible on Google. We build sites that load in under two seconds, rank for the searches your customers make, and make it obvious what to do next.</p>
+<p>For most small businesses, the website is the best salesperson they have. Too many sites are slow, hard to update and invisible on Google. We build sites to load in under two seconds, rank for the searches your customers make, and make it obvious what to do next.</p>
 <p>When you outsource web development to Sahara Nova you get a designer, a developer and an SEO specialist working as one team. Keyword research shapes the sitemap, the sitemap shapes the design, and the site launches ready to rank.</p>
 <h3>What we build</h3>
 <ul>
@@ -352,8 +352,8 @@ SEO = service_page(
 <h3>SEO built into every website</h3>
 <p>Every site we build ships with the technical foundations already in place. See our <a href="{{/services/web-development/}}">web design and development</a> service, or compare packages on the <a href="{{/pricing/}}">pricing page</a>.</p>
 <h3>Paid media</h3>
-<p>SEO takes months to compound. When you need leads sooner, we run Google Ads and Meta campaigns with proper conversion tracking, so every dollar can be traced to an enquiry.</p>
-<div class="callout"><p><strong>Honest timelines:</strong> long-tail rankings typically appear in 3–6 months and competitive terms take 9–18 months. Anyone promising page one in a few weeks is guessing.</p></div>
+<p>SEO takes months to compound. When you need leads sooner, we run Google Ads and Meta campaigns with proper conversion tracking, so you can see which campaigns bring in enquiries.</p>
+<div class="callout"><p><strong>Honest timelines:</strong> we plan on long-tail rankings in 3–6 months and competitive terms in 9–18 months. Google itself gives no timeline, and anyone promising page one in a few weeks is guessing.</p></div>
 </div>
 <div class="grid" style="align-content:start">
 <div class="plan feature"><span class="tag">One-off</span><h3>SEO Foundation</h3><div class="price">$900 <small>from</small></div>
@@ -361,7 +361,7 @@ SEO = service_page(
 <div class="plan"><h3>SEO &amp; Content Retainer</h3><div class="price">$750 <small>/month, from</small></div><ul><li>2–4 optimised articles a month</li><li>On-page improvements &amp; link building</li><li>Monthly report and strategy call</li></ul></div>
 </div>
 </div></div></section>""",
- [("How long does SEO take to work?", "Expect early movement on long-tail keywords within 3–6 months and competitive terms in 9–18 months. Technical fixes can show results sooner if your site had indexing problems."),
+ [("How long does SEO take to work?", "We plan on early movement on long-tail keywords within 3–6 months and competitive terms in 9–18 months, but nobody can promise a timeline. Technical fixes can show results sooner if your site had indexing problems."),
   ("Do you guarantee first-page rankings?", "No. Nobody controls Google's rankings. We commit to the work, the process and transparent reporting on rankings, traffic and leads."),
   ("Do you offer white-label SEO for agencies?", "Yes. We deliver audits, content and technical fixes under your brand, with your client reporting templates."),
   ("What's included in a monthly SEO report?", "Organic traffic, keyword rankings, Search Console impressions and clicks, conversions from organic search, work completed and next month's priorities.")])
@@ -411,13 +411,13 @@ AI = service_page(
 WHY_KENYA_BODY = """<section class="band"><div class="wrap"><div class="grid g2" style="gap:48px">
 <div class="prose">
 <h2 style="margin-top:0">Africa's tech hub, in Europe's working day</h2>
-<p>Nairobi, nicknamed the "Silicon Savannah", is home to a large and growing community of software engineers, designers and digital marketers. M-Pesa, the mobile money platform that changed payments in Kenya, was built and scaled here, and the city's fintech, e-commerce and startup scene keeps producing experienced tech talent.</p>
+<p>Nairobi, nicknamed the "Silicon Savannah", is home to a large and growing community of software engineers, designers and digital marketers. M-Pesa, the mobile money platform that changed payments in Kenya, launched and scaled here, and the city's fintech, e-commerce and startup scene keeps producing experienced tech talent.</p>
 <h3>1. Time zone overlap</h3>
-<p>Kenya runs on East Africa Time (UTC+3) all year, with no daylight saving. That gives you 6–8 hours of live overlap with the UK and Europe, a same-day working rhythm with the Gulf, and morning calls with the US East Coast. Compared with outsourcing to Asia, questions get answered the same day instead of overnight.</p>
+<p>Kenya runs on East Africa Time (UTC+3) all year, with no daylight saving. That gives you 6–8 hours of live overlap with the UK and Europe, the same time zone as Saudi Arabia and Qatar (one hour behind the UAE), and 1–2 hours at the start of the US East Coast day. That is more overlap with Europe than South Asia offers.</p>
 <h3>2. English-first communication</h3>
 <p>English is an official language of Kenya and the language of business, university and government, so briefs, calls and documentation need no translation.</p>
 <h3>3. Cost</h3>
-<p>Kenyan agency rates generally range from under $25 to $99 an hour, compared with $50–$199 in Western Europe and up to $300 in major US cities. Many businesses save 40–60% against onshore agencies while working with senior people.</p>
+<p>Kenyan agency rates generally range from under $25 to $99 an hour, compared with $50–$199 in Western Europe and up to $300 in major US cities. Qubit Labs estimates that offshore prices can be 40–60% lower than onshore rates.</p>
 <h3>4. Legal and commercial familiarity</h3>
 <p>Kenya's legal system is based on English common law, and its Data Protection Act 2019 closely follows GDPR principles. Contracts, NDAs and data processing agreements will look familiar to UK and EU businesses.</p>
 <h3>What does it cost?</h3>
@@ -444,7 +444,7 @@ WHY_KENYA_BODY = """<section class="band"><div class="wrap"><div class="grid g2"
 <tr><td>Western Europe &amp; UK</td><td class="num">$50–$199/h</td></tr>
 <tr><td>Eastern Europe</td><td class="num">$25–$149/h</td></tr>
 <tr><td>Kenya</td><td class="num">&lt;$25–$99/h</td></tr>
-</tbody></table><p class="meta" style="padding:0 16px 14px">Source: Qubit Labs, Offshore Software Development Rates by Country, 2026.</p></div>
+</tbody></table><p class="meta" style="padding:0 16px 14px">Source: <a href="https://qubit-labs.com/?p=8417">Qubit Labs, Offshore Software Development Rates by Country</a>, updated April 2026.</p></div>
 </div>
 </div></div></section>"""
 
@@ -472,7 +472,7 @@ PRICING_BODY = """<section class="band"><div class="wrap">
 </div></section>"""
 
 PRICING_FAQ = [
- ("How much does a website cost for a small business?", "A professional small business website with custom design and on-page SEO typically costs $1,500–$5,000 with us, compared with $5,000–$20,000+ at many UK and US agencies. E-commerce and web apps cost more because of payments, integrations and custom features."),
+ ("How much does a website cost for a small business?", "A professional small business website with custom design and on-page SEO typically costs $1,500–$5,000 with us. UK agencies typically charge £3,000–£5,000 for a five-page site, and UK freelancers £1,500–£3,000 (Whito, October 2026). E-commerce and web apps cost more because of payments, integrations and custom features."),
  ("Why are your prices lower than UK or US agencies?", "Our team is based in Nairobi, where operating costs are lower. You get the same process and quality standards, with the saving passed on to you."),
  ("Are there hidden costs?", "No. Your quote lists everything, including third-party costs such as hosting, premium plugins, stock images or ad spend. You pay those directly or we pass them through at cost."),
  ("Which currencies and payment methods do you accept?", "We invoice in USD, GBP or EUR and accept bank transfer, Wise and card payments. Clients in Kenya and East Africa can also pay in KES by M-Pesa or bank transfer."),
@@ -500,7 +500,7 @@ ABOUT_BODY = """<section class="band"><div class="wrap"><div class="grid g2" sty
 <h2 style="margin-top:0">Why we started Sahara Nova</h2>
 <p>Small and mid-sized businesses are stuck between two bad options. Onshore agencies charge more than they can afford. Freelance marketplaces leave them managing a string of individuals who don't talk to each other.</p>
 <p>We started Sahara Nova in Nairobi to offer a third option: one small, senior team that covers design, engineering, SEO and automation, works on your hours, and prices fairly.</p>
-<p>The name comes from two ideas. The <em>Sahara</em> stands for where we come from, a continent with one of the youngest and fastest-growing tech workforces in the world. A <em>nova</em> is a star that suddenly shines brighter, which is what we want every client's business to do online.</p>
+<p>The name comes from two ideas. The <em>Sahara</em> stands for where we come from, a young continent, with a median age of about 19. A <em>nova</em> is a star that suddenly shines brighter, which is what we want every client's business to do online.</p>
 <h3>How we work</h3>
 <ul>
 <li><strong>Senior people on every project.</strong> The people you meet on the sales call do the work.</li>
@@ -591,12 +591,12 @@ BLOG_BODY = """<section class="band"><div class="wrap"><div class="sec-head"><p 
 </div></div></section>"""
 
 ARTICLE_BODY = """<section class="band"><div class="wrap"><article class="prose">
-<p class="meta">Published 23 September 2026 · Updated 27 October 2026 · By <a href="{{/about/#team}}">James Njoroge</a>, founder · 8 min read</p>
-<p>If you run a small or mid-sized business in the UK, Europe or the US, you have probably noticed that agency quotes for a new website or app have climbed steadily. More businesses are looking further afield, and Kenya, Nairobi in particular, has become one of the most talked-about destinations for outsourcing web and software development.</p>
+<p class="meta">Published 23 September 2026 · Updated 28 October 2026 · By <a href="{{/about/#team}}">James Njoroge</a>, founder · 8 min read</p>
+<p>If you run a small or mid-sized business in the UK, Europe or the US and are weighing up an offshore team for a new website or app, Kenya, and Nairobi in particular, is worth a close look.</p>
 <p>This guide covers what it costs, how the time zones work, where Kenya fits against other outsourcing regions, and how to pick a partner without getting burned.</p>
 
 <h2>Why Kenya?</h2>
-<p>Nairobi has built a reputation as the "Silicon Savannah". Mobile money platform M-Pesa was built and scaled here, and the city hosts a busy startup scene, international tech companies and a steady stream of computer science graduates. Three practical factors matter most to a small business buyer:</p>
+<p>Nairobi has built a reputation as the "Silicon Savannah". Mobile money platform M-Pesa launched and scaled here, and the city hosts a busy startup scene, international tech companies and a steady stream of computer science graduates. Three practical factors matter most to a small business buyer:</p>
 <ul>
 <li><strong>English as a working language.</strong> English is an official language and the default for business and education.</li>
 <li><strong>A Europe-friendly time zone.</strong> East Africa Time is UTC+3 all year round.</li>
@@ -612,7 +612,7 @@ ARTICLE_BODY = """<section class="band"><div class="wrap"><article class="prose"
 <tr><td>Eastern Europe</td><td class="num">$25–$149</td></tr>
 <tr><td>Kenya</td><td class="num">&lt;$25–$99</td></tr>
 </tbody></table></div>
-<p class="meta">Source: Qubit Labs, "Offshore Software Development Rates by Country", 2026.</p>
+<p class="meta">Source: <a href="https://qubit-labs.com/?p=8417">Qubit Labs, Offshore Software Development Rates by Country</a>, updated April 2026.</p>
 <p>Rates vary widely within Kenya too, from large vendors at the low end of that range to premium studios at the top. Compare like with like: ask who will do the work, how senior they are, and whether the price is fixed. For reference, our own published packages start at <a href="{{/pricing/}}">$1,500 for a small business website</a>.</p>
 
 <h2>Time zones: the underrated advantage</h2>
@@ -620,12 +620,12 @@ ARTICLE_BODY = """<section class="band"><div class="wrap"><article class="prose"
 <ul>
 <li><strong>UK:</strong> 2 hours behind Nairobi in summer, 3 in winter, giving 6–7 hours of shared working time</li>
 <li><strong>Central Europe:</strong> 1–2 hours behind, giving 7–8 hours of overlap</li>
-<li><strong>Gulf:</strong> 1 hour ahead, giving almost a full shared day</li>
-<li><strong>US East Coast:</strong> 7–8 hours behind, so your morning is our late afternoon, with about 2 hours of overlap plus async handoffs</li>
+<li><strong>Gulf:</strong> the same time as Nairobi in Saudi Arabia, Qatar, Kuwait and Bahrain, and 1 hour ahead in the UAE and Oman, giving almost a full shared day</li>
+<li><strong>US East Coast:</strong> 7–8 hours behind, so your morning is our late afternoon, with 1–2 hours of overlap (2 in US summer, 1 in winter) plus async handoffs</li>
 </ul>
 
 <h2>Kenya vs other outsourcing destinations</h2>
-<p><strong>Eastern Europe</strong> offers strong engineering and a good EU time zone, but its rates have risen close to Western levels. <strong>South and Southeast Asia</strong> offer very low rates but little overlap with Europe or the US. <strong>Latin America</strong> is the natural nearshore choice for US companies. Kenya sits in a useful spot: good overlap with Europe and the Middle East, native-level English, and costs well below Eastern Europe.</p>
+<p><strong>Eastern Europe</strong> offers strong engineering and a good EU time zone, at rates between Kenya's and Western Europe's. <strong>South and Southeast Asia</strong> offer low rates but shorter overlap with Europe and almost none with the US East Coast. <strong>Latin America</strong> is the natural nearshore choice for US companies. Kenya sits in a useful spot: good overlap with Europe and the Middle East, English as an official language, and rates similar to or below Eastern Europe's.</p>
 
 <h2>What to watch out for</h2>
 <ul>
@@ -655,18 +655,18 @@ ARTICLE_BODY = """<section class="band"><div class="wrap"><article class="prose"
 BYLINE = '<p class="meta">Published {date} · By <a href="{{{{/about/#team}}}}">James Njoroge</a>, founder · {mins} min read</p>'
 
 WEBSITE_COST_KENYA_BODY = """<section class="band"><div class="wrap"><article class="prose">
-""" + BYLINE.format(date="22 October 2026 · Updated 27 October 2026", mins=7) + """
+""" + BYLINE.format(date="22 October 2026 · Updated 28 October 2026", mins=7) + """
 <p>Ask five web designers in Nairobi what a website costs and you'll get five answers between KES 5,000 and KES 1 million. They're not all wrong. They're quoting for very different things. This guide breaks down what each price level gets you in 2026, what you'll pay every year after launch, and how to tell which one your business needs.</p>
 
 <h2>The short answer</h2>
-<div class="table-wrap"><table><thead><tr><th>Type of website</th><th>Typical cost (KES)</th><th>Good for</th></tr></thead><tbody>
-<tr><td>Do it yourself (WordPress or a site builder)</td><td class="num">About 3,200 in year one</td><td>Testing an idea, a simple online presence</td></tr>
-<tr><td>Template site from a freelancer (about 5 pages)</td><td class="num">15,000–80,000</td><td>A brochure site that mainly needs to look credible</td></tr>
+<div class="table-wrap"><table><thead><tr><th>Type of website</th><th>Cost (KES)</th><th>Good for</th></tr></thead><tbody>
+<tr><td>Do it yourself (WordPress or a site builder)</td><td class="num">About 2,100 a year (domain and hosting)</td><td>Testing an idea, a simple online presence</td></tr>
+<tr><td>5-page site from a freelance web designer</td><td class="num">15,000–80,000</td><td>A brochure site that mainly needs to look credible</td></tr>
 <tr><td>Custom business website with SEO</td><td class="num">From about 195,000</td><td>Businesses that want Google enquiries</td></tr>
 <tr><td>Online shop with M-Pesa checkout</td><td class="num">From about 585,000</td><td>Selling products online</td></tr>
 <tr><td>Web app or customer portal</td><td class="num">From about 1,000,000</td><td>Bookings, accounts, dashboards, SaaS</td></tr>
 </tbody></table></div>
-<p class="meta">DIY and freelancer ranges, domain and shared hosting prices: Hostiko, "How much does a website cost in Kenya", 2026. Custom, shop and web app figures are Sahara Nova's published starting prices ($1,500, $4,500 and $8,000), converted at about KES 130 to the dollar (October 2026).</p>
+<p class="meta">DIY and freelancer ranges, domain and shared hosting prices: <a href="https://hostiko.co.ke/blog/how-much-website-cost-kenya-2026">Hostiko, "How much does a website cost in Kenya"</a>, April 2026. Custom, shop and web app figures are Sahara Nova's published starting prices ($1,500, $4,500 and $8,000), converted at about KES 130 to the dollar (October 2026).</p>
 
 <h2>Why the prices are so far apart</h2>
 <p>The gap isn't mostly about design. A KES 30,000 site and a KES 200,000 site can look similar on the day they launch. The difference is in the work you can't see:</p>
@@ -681,7 +681,7 @@ WEBSITE_COST_KENYA_BODY = """<section class="band"><div class="wrap"><article cl
 <h2>Costs after launch</h2>
 <p>A website keeps costing money after it goes live. Budget for these every year:</p>
 <ul>
-<li><strong>A .co.ke domain:</strong> around KES 1,200 a year (Hostiko, 2026).</li>
+<li><strong>A .co.ke domain:</strong> around KES 1,200 a year (<a href="https://hostiko.co.ke/blog/how-much-website-cost-kenya-2026">Hostiko, 2026</a>).</li>
 <li><strong>Hosting:</strong> basic shared hosting can cost under KES 1,000 a year. A busy shop or web app needs more capable hosting, priced by traffic and resources.</li>
 <li><strong>Email:</strong> business email on your domain. Some providers have free plans for very small teams; paid plans charge per mailbox each month.</li>
 <li><strong>Maintenance:</strong> updates, backups, security fixes and small changes. Ours is the Website Care Plan from $150 a month (about KES 19,500).</li>
@@ -704,7 +704,7 @@ WEBSITE_COST_KENYA_BODY = """<section class="band"><div class="wrap"><article cl
 </ol>
 
 <h2>The bottom line</h2>
-<p>Expect to pay KES 15,000–80,000 for a simple template site and about KES 195,000 upwards for a custom business site built to win enquiries from Google. Online shops and web apps cost more because of payments and custom features. Whatever you choose, keep your domain in your own name. If you'd like a fixed price for your project, see <a href="{{/pricing/}}">our pricing</a> or <a href="{{/contact/}}">send us a short brief</a>. You can pay in KES by M-Pesa or bank transfer. More on how we work with local businesses is on our <a href="{{/east-africa/}}">Kenya and East Africa page</a>.</p>
+<p>Expect to pay KES 15,000–80,000 for a simple five-page site from a freelancer. Our own custom business sites, built to win enquiries from Google, start at about KES 195,000. Online shops and web apps cost more because of payments and custom features. Whatever you choose, keep your domain in your own name. If you'd like a fixed price for your project, see <a href="{{/pricing/}}">our pricing</a> or <a href="{{/contact/}}">send us a short brief</a>. You can pay in KES by M-Pesa or bank transfer. More on how we work with local businesses is on our <a href="{{/east-africa/}}">Kenya and East Africa page</a>.</p>
 </article></div></section>"""
 
 MPESA_GUIDE_BODY = """<section class="band"><div class="wrap"><article class="prose">
@@ -931,7 +931,7 @@ AI_AUDIT_BODY = """<section class="band"><div class="wrap"><article class="prose
 </article></div></section>"""
 
 LENDER_AGENTS_BODY = """<section class="band"><div class="wrap"><article class="prose">
-""" + BYLINE.format(date="27 October 2026", mins=7) + """
+""" + BYLINE.format(date="27 October 2026 · Updated 28 October 2026", mins=7) + """
 <p>Digital lenders, microfinance banks and SACCOs in Kenya already hold one of their most valuable assets: customers with a repayment history. Going back to the good borrowers, offering them more and collecting a complete application takes staff time. An AI agent can do the repetitive parts of that work, provided it's designed around the rules lenders operate under.</p>
 <p>This guide explains how a top-up agent works, using one we built for a Kenyan digital lender. In its first week live it took in <strong>KES 5.4M in loan top-up applications</strong>.</p>
 
@@ -949,7 +949,7 @@ LENDER_AGENTS_BODY = """<section class="band"><div class="wrap"><article class="
 
 <h2>Why SMS first, then WhatsApp</h2>
 <p>SMS reaches every phone, including feature phones, without mobile data, so it suits the first offer. WhatsApp suits a conversation: customers answer at their own pace and can come back to the chat later.</p>
-<p>The order also matters for WhatsApp's rules and pricing. A business can only start a WhatsApp conversation with an approved message template, sent to someone who has opted in, and marketing templates are charged per message. When the customer taps the link and messages you first, a 24-hour customer service window opens, and free-form replies inside it are free.</p>
+<p>The order also matters for WhatsApp's rules and pricing. A business can only start a WhatsApp conversation with an approved message template, sent to someone who has opted in, and marketing templates are charged per message. When the customer taps the link and messages you first, a 24-hour customer service window opens for replies. Since 1 October 2026, only the first 1,000 of those service messages a month on each business number are free; after that, each is charged at <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing">Meta's published rates</a>. Budget for messaging costs at volume.</p>
 <div class="callout"><p><strong>Check WhatsApp's lending rules before you build.</strong> Meta's WhatsApp Business Policy prohibits using WhatsApp to buy, sell or promote payday loans, paycheck advances, peer-to-peer lending and debt collection, "irrespective of" any licence the business holds, and Meta applies it at its own discretion. If your product could fall into those categories, run the conversation on a channel you control instead, such as your app, USSD or a web form, and keep the same agent behind it.</p></div>
 
 <h2>Keep a human in the loop</h2>
@@ -957,13 +957,13 @@ LENDER_AGENTS_BODY = """<section class="band"><div class="wrap"><article class="
 
 <h2>Compliance basics</h2>
 <ul>
-<li><strong>Consent for offers.</strong> A top-up offer is direct marketing. Under the Data Protection Act 2019 (section 37), using personal data for commercial purposes needs consent unless another law authorises it. The Data Protection (General) Regulations 2021 require a simple, free opt-out in marketing messages. The ODPC has ordered compensation against a digital lender for marketing messages sent without provable consent or a working opt-out.</li>
+<li><strong>Consent for offers.</strong> A top-up offer is direct marketing. Under the Data Protection Act 2019 (section 37), using personal data for commercial purposes needs consent unless another law authorises it. The Data Protection (General) Regulations 2021 require a simple, free opt-out in marketing messages. In a case reported in April 2026, the ODPC ordered lender Platinum Credit to pay a customer KES 400,000 for promotional SMS and calls sent without his consent (<a href="https://www.businessdailyafrica.com/bd/corporate/companies/lender-to-pay-phone-user-for-unsolicited-loan-calls-texts-5287150">Business Daily</a>).</li>
 <li><strong>Data minimisation.</strong> Send the AI only the data it needs and document where it is processed. Don't ask customers to type full card or bank account numbers into WhatsApp, which Meta's policy also prohibits.</li>
 <li><strong>Full disclosure of terms.</strong> Licensed digital credit providers must give customers the loan terms, including the cost of credit, before a loan is granted. The agent should use the lender's approved wording and never improvise rates or terms.</li>
 <li><strong>Collections conduct.</strong> The CBK Digital Credit Providers Regulations 2022 forbid using a borrower's phone contacts to chase repayments, and forbid threats or shaming. Any reminder agent must stay well inside those lines.</li>
 <li><strong>Who regulates you.</strong> Digital credit providers are licensed by the Central Bank of Kenya. SASRA regulates deposit-taking SACCOs and some non-deposit-taking SACCOs, including larger and digital ones. The agent works inside your existing approval and disclosure process and doesn't replace it.</li>
 </ul>
-<p class="meta">This is a summary, not legal advice. Confirm your obligations with your compliance team or legal adviser. Sources: WhatsApp Business Policy; Data Protection Act 2019; Data Protection (General) Regulations 2021; CBK Digital Credit Providers Regulations 2022; SASRA.</p>
+<p class="meta">This is a summary, not legal advice. Confirm your obligations with your compliance team or legal adviser. Sources: <a href="https://business.whatsapp.com/policy">WhatsApp Business Messaging Policy</a>; <a href="https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing">WhatsApp Business Platform pricing</a>; Data Protection Act 2019; Data Protection (General) Regulations 2021; CBK Digital Credit Providers Regulations 2022; SASRA.</p>
 
 <h2>Other places an agent helps a lender</h2>
 <ul>
@@ -1024,8 +1024,10 @@ EAST_AFRICA_FAQ = [
  ("Can you build a WhatsApp chatbot for my business?", "Yes. We build WhatsApp Business ordering flows, automated replies and AI assistants that answer in English or Swahili and hand over to your team when needed."),
 ]
 
+WEB["updated"] = SEO["updated"] = "2026-10-28"
+
 PAGES = [
- dict(path="", title="Digital Agency for Small Businesses | Sahara Nova, Nairobi",
+ dict(path="", updated="2026-10-28", title="Digital Agency for Small Businesses | Sahara Nova, Nairobi",
       description="A digital agency for small businesses, based in Nairobi: websites, custom software, SEO and AI automation for clients worldwide. Your hours, fixed prices.",
       h1="The Nairobi digital agency that works your hours", hero=HOME_HERO, body=HOME_BODY, faq=HOME_FAQ,
       faq_title="Questions small businesses ask us"),
@@ -1035,7 +1037,7 @@ PAGES = [
       lede="Four disciplines, one project lead, one invoice. Start with the service you need most and add the others when you're ready.",
       crumbs=[("/services/", "Services")], body=SERVICES_BODY),
  WEB, SOFT, SEO, AI,
- dict(path="why-kenya/", title="Hire Developers in Kenya: Why Teams Choose Nairobi | Sahara Nova",
+ dict(path="why-kenya/", updated="2026-10-28", title="Hire Developers in Kenya: Why Teams Choose Nairobi | Sahara Nova",
       description="Why hire developers in Kenya: 6–8 hours of overlap with Europe, English-first teams, 40–60% lower costs and Nairobi's deep tech talent pool.",
       eyebrow="Why Kenya", h1="Why hire a development team in Kenya?",
       lede="Time zone overlap with Europe, English as a working language, and rates well below onshore agencies. Here is what working with developers in Nairobi looks like in practice.",
@@ -1054,12 +1056,12 @@ PAGES = [
       lede="A Nairobi team building fast websites, M-Pesa-ready apps, WhatsApp automation and local SEO for businesses in Kenya, Uganda, Tanzania and Rwanda.",
       crumbs=[("/east-africa/", "Kenya & East Africa")], body=EAST_AFRICA_BODY, faq=EAST_AFRICA_FAQ,
       area=["Kenya", "Uganda", "Tanzania", "Rwanda"]),
- dict(path="pricing/", title="Website & Software Development Pricing | Sahara Nova",
+ dict(path="pricing/", updated="2026-10-28", title="Website & Software Development Pricing | Sahara Nova",
       description="Transparent pricing for small business websites (from $1,500), e-commerce, MVPs, SEO (from $900) and AI automation. Fixed quotes within two working days.",
       eyebrow="Pricing", h1="Transparent pricing, fixed quotes",
       lede="Published starting prices, so you know if we fit your budget before you pick up the phone.",
       crumbs=[("/pricing/", "Pricing")], body=PRICING_BODY, faq=PRICING_FAQ),
- dict(path="about/", title="About Sahara Nova | Digital Agency in Nairobi, Kenya",
+ dict(path="about/", updated="2026-10-28", title="About Sahara Nova | Digital Agency in Nairobi, Kenya",
       description="Sahara Nova is a small, senior digital team in Nairobi, Kenya, helping small and mid-sized businesses worldwide with websites, software, SEO and automation.",
       eyebrow="About", h1="A small senior team, built for clients anywhere",
       lede="We're a Nairobi-based digital agency that believes small businesses deserve senior, transparent, fairly priced digital work.",
@@ -1080,7 +1082,7 @@ PAGES = [
       eyebrow="Guide", h1="What it costs to outsource web development to Kenya in 2026, and how to do it well",
       lede="Rates, time zone overlap, how Kenya compares with other outsourcing regions, and a vetting checklist.",
       crumbs=[("/blog/", "Blog"), ("/blog/outsourcing-web-development-to-kenya/", "Outsourcing to Kenya")],
-      article={"date": "2026-09-23", "modified": "2026-10-27"}, body=ARTICLE_BODY),
+      article={"date": "2026-09-23", "modified": "2026-10-28"}, body=ARTICLE_BODY),
  dict(path="blog/hubspot-breeze-vs-custom-ai-agent/",
       title="HubSpot Breeze Agents vs a Custom AI Agent | Sahara Nova",
       description="HubSpot's Breeze agents or a custom AI agent? What each costs in 2026, when HubSpot's own agents are enough, and when a custom agent pays off.",
@@ -1107,7 +1109,7 @@ PAGES = [
       eyebrow="Guide", h1="AI agents for digital lenders and SACCOs in Kenya",
       lede="How a top-up agent finds good borrowers, qualifies them on WhatsApp and hands complete applications to your credit team.",
       crumbs=[("/blog/", "Blog"), ("/blog/ai-agents-for-lenders-kenya/", "AI agents for lenders")],
-      article={"date": "2026-10-27"}, body=LENDER_AGENTS_BODY,
+      article={"date": "2026-10-27", "modified": "2026-10-28"}, body=LENDER_AGENTS_BODY,
       faq=[("Can an AI agent approve loans?", "It shouldn't. In the agents we build, the AI finds eligible customers, makes the offer and collects a complete application, and a credit analyst makes every lending decision."),
            ("Can lenders use WhatsApp for loan applications?", "Check first. Meta's WhatsApp Business Policy prohibits promoting payday loans, paycheck advances, peer-to-peer lending and debt collection on WhatsApp, regardless of licences. If your product could fall into those categories, use your app, USSD or a web form for the conversation instead."),
            ("Can a repayment reminder include an M-Pesa prompt?", "It's not practical. An STK Push prompt expires in well under a minute, so a prompt sent with a reminder usually times out unseen. Send the reminder with Paybill details, and trigger the prompt only when the customer asks to pay.")]),
@@ -1117,9 +1119,9 @@ PAGES = [
       eyebrow="Guide", h1="How much does a website cost in Kenya in 2026?",
       lede="What you get at each price level, what you'll pay every year after launch, and how to choose.",
       crumbs=[("/blog/", "Blog"), ("/blog/website-cost-in-kenya/", "Website cost in Kenya")],
-      article={"date": "2026-10-22", "modified": "2026-10-27"}, body=WEBSITE_COST_KENYA_BODY,
-      faq=[("How much does a basic website cost in Kenya?", "A simple five-page template site from a freelancer typically costs KES 15,000–80,000, plus around KES 2,100 a year for a .co.ke domain and basic hosting."),
-           ("How much does a custom business website cost in Kenya?", "A custom-designed business website with SEO built in typically starts from about KES 195,000 with an agency. Sahara Nova's Website Launch package starts at $1,500, payable in KES."),
+      article={"date": "2026-10-22", "modified": "2026-10-28"}, body=WEBSITE_COST_KENYA_BODY,
+      faq=[("How much does a basic website cost in Kenya?", "A five-page site from a freelance web designer typically costs KES 15,000–80,000, plus around KES 2,100 a year for a .co.ke domain and basic hosting."),
+           ("How much does a custom business website cost in Kenya?", "Prices vary widely between agencies. Sahara Nova's Website Launch package, a custom-designed site with SEO built in, starts at $1,500 (about KES 195,000), payable in KES."),
            ("How much is a .co.ke domain per year?", "Around KES 1,200 a year from most Kenyan registrars. Make sure it is registered in your business's name.")]),
  dict(path="blog/mpesa-stk-push-integration-guide/",
       title="M-Pesa STK Push Integration: A Step-by-Step Guide (2026)",
