@@ -805,7 +805,7 @@ BREEZE_VS_CUSTOM_BODY = """<section class="band"><div class="wrap"><article clas
 <h2>What HubSpot's agents do today</h2>
 <p>HubSpot groups its AI under the Breeze name. The two agents most businesses ask about are:</p>
 <ul>
-<li><strong>Customer agent.</strong> Answers customer questions from your own content, can take actions in your CRM, and hands over to your team with full context. HubSpot lists email, chat, forms, WhatsApp, Facebook Messenger and voice as channels. It requires a Professional or Enterprise edition. HubSpot quotes a 70% average resolution rate.</li>
+<li><strong>Customer agent.</strong> Answers customer questions from your own content, can take actions in your CRM, and hands over to your team with full context. HubSpot lists email, chat, forms, WhatsApp, Facebook Messenger and voice as channels. It requires a Professional or Enterprise edition. HubSpot quotes an average resolution rate of 70% on its <a href="https://www.hubspot.com/products/artificial-intelligence/ai-customer-service-agent">customer agent page</a> and 65% in its <a href="https://www.hubspot.com/agent-hub-roi-calculator">ROI calculator</a>.</li>
 <li><strong>Prospecting agent.</strong> Researches leads in your CRM and recommends personalised outreach.</li>
 </ul>
 <p>HubSpot also offers agents for content, data enrichment and deal progression, plus an Agent Builder for creating your own agents inside HubSpot. Those agents can reach outside HubSpot through a set of supported connectors, including Gmail, Google Calendar, Slack, Notion, Asana, Gong and Xero, and through Zapier. You set each tool to "Always allow", "Ask permission" or "Never allow".</p>
@@ -857,7 +857,7 @@ BREEZE_VS_CUSTOM_BODY = """<section class="band"><div class="wrap"><article clas
 <li>What are the handoff rules, and are they enforced or just suggested?</li>
 </ol>
 <p>If you'd like a second opinion on your setup, our <a href="{{/services/ai-automation/}}">AI and automation team</a> can review it and tell you honestly whether HubSpot's own agents will do the job. Or <a href="{{/contact/}}">describe your process</a> and we'll reply within one working day.</p>
-<p class="meta">Sources: HubSpot, AI customer agent product page; HubSpot Product and Services Catalog (HubSpot Credits); HubSpot Knowledge Base, "Connect apps to HubSpot's AI agents" (updated 18 September 2026); Zapier MCP documentation. All checked 28 October 2026.</p>
+<p class="meta">Sources: HubSpot, <a href="https://www.hubspot.com/products/artificial-intelligence/ai-customer-service-agent">AI customer agent product page</a> and <a href="https://www.hubspot.com/agent-hub-roi-calculator">Agent Hub ROI calculator</a>; HubSpot Product and Services Catalog (HubSpot Credits); HubSpot Knowledge Base, "Connect apps to HubSpot's AI agents" (updated 18 September 2026); Zapier MCP documentation. All checked 28 October 2026.</p>
 </article></div></section>"""
 
 AI_AUDIT_BODY = """<section class="band"><div class="wrap"><article class="prose">
