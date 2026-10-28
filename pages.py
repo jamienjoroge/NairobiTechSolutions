@@ -11,7 +11,11 @@ SITE = {
     "ga4_id": "G-3BW6LDSBG4",                                # Google Analytics 4 measurement ID, e.g. "G-ABC123XYZ"; empty = no analytics, no cookie bar
     "gsc_verification": "",                      # Search Console HTML-tag code (only if not verifying by DNS)
     # Official profiles (structured data sameAs). Add the Google Business Profile, Clutch, GoodFirms links as they go live.
-    "same_as": ["https://www.linkedin.com/company/saharanova/"],
+    "same_as": ["https://www.linkedin.com/company/saharanova/",
+                "https://www.facebook.com/profile.php?id=61595593056428"],
+    # Shown in the footer on every page, in this order. Add Instagram, X, YouTube etc. here and to same_as.
+    "social": [("LinkedIn", "https://www.linkedin.com/company/saharanova/"),
+               ("Facebook", "https://www.facebook.com/profile.php?id=61595593056428")],
 }
 
 # Founder: shown on About, credited on blog posts, and published as Person structured data.
