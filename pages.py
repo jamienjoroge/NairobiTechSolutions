@@ -79,14 +79,14 @@ CASES = [
       stack=["Lender's credit system", "SMS", "WhatsApp", "CRM", "Large language model"],
       results=[("KES 5.4M", "in loan top-up applications taken in during the agent's first week live")]),
  dict(id="odoo-order-to-cash-agent", industry="ERP &amp; operations", tag="Odoo",
-      title="Order-to-cash AI agent for an Odoo ERP client",
-      summary="An AI agent that reads customer orders from email and triggers the full order-to-cash workflow in Odoo, with no manual re-keying.",
-      challenge="Customer orders arrived by email in free text. Staff had to read each one, type it into the ERP and then push it through each stage of fulfilment and billing by hand.",
-      steps=["Monitors the orders inbox and reads each incoming order email",
-             "Extracts the customer, products and quantities, and matches them to records in Odoo",
-             "Creates the sales order in Odoo",
-             "Triggers the downstream business workflow: confirmation, fulfilment and invoicing through to payment"],
-      stack=["Odoo ERP", "Email", "Large language model"],
+      title="Email-to-Odoo order agent for an ERP client",
+      summary="An AI agent that reads customer orders from a shared inbox, whether typed in the email, attached as a PDF or sent as a spreadsheet, checks stock and prepares the quotation in Odoo for a person to approve.",
+      challenge="Orders arrived in a shared inbox in every format: typed into the email body, attached as PDFs or sent as Excel sheets. Staff had to read each one, re-key it into Odoo, check stock and chase restocking by hand.",
+      steps=["Watches the shared orders inbox and reads each order, from the email text, a PDF or an Excel attachment",
+             "Matches the customer and products to Odoo records, and hands anything it can't match to a person",
+             "Checks stock and creates a quotation in Odoo, then notifies the approver on WhatsApp to review and confirm",
+             "When stock is short, prepares a purchase request to restock, so Odoo's normal flow can carry the approved order through"],
+      stack=["Odoo ERP", "Email", "PDF and Excel", "WhatsApp", "Large language model"],
       results=[]),
  dict(id="hubspot-crm-agent", industry="Sales &amp; CRM", tag="HubSpot",
       title="HubSpot CRM agent that works your pipeline",
@@ -110,7 +110,7 @@ CASES = [
       results=[]),
 ]
 
-FLOWS = {"loan-top-up-agent": [["Credit system", "The agent finds customers who are repaying well."], ["SMS offer", "Each gets a top-up offer by SMS with a link to WhatsApp."], ["WhatsApp agent", "The agent asks the qualifying questions: collateral, use of funds."], ["CRM", "A complete application is logged in the CRM."], ["Credit analyst", "An analyst reviews and decides, as the human in the loop."]], "odoo-order-to-cash-agent": [["Email order", "A customer emails an order in free text."], ["AI agent", "The agent reads the email and extracts the customer, products and quantities."], ["Odoo sales order", "A sales order is created in Odoo and matched to existing records."], ["Fulfilment", "Fulfilment is triggered through Odoo's business workflow."], ["Invoice", "The invoice is raised as the order moves through the workflow."], ["Payment", "The order is tracked through to cash received."]], "hubspot-crm-agent": [["Google Places", "The agent sources new prospects."], ["HubSpot", "Leads are qualified into the CRM."], ["Instant outreach", "Replies and follow-ups go out on WhatsApp, email, Instagram and Facebook."], ["CRM kept current", "Tasks, activity and deal stages are updated automatically."], ["Human handoff", "A person takes over on request, or for custom offers and haggling."]], "support-and-lead-intake-agents": [["Customer message", "A customer or prospect starts a conversation."], ["AI agent", "The agent answers from the business's own information."], ["Lead captured", "New enquiries are qualified with a few short questions."], ["Sales team", "Lead details are passed straight to the team."], ["Human handoff", "Complex or sensitive conversations go to a person."]]}
+FLOWS = {"loan-top-up-agent": [["Credit system", "The agent finds customers who are repaying well."], ["SMS offer", "Each gets a top-up offer by SMS with a link to WhatsApp."], ["WhatsApp agent", "The agent asks the qualifying questions: collateral, use of funds."], ["CRM", "A complete application is logged in the CRM."], ["Credit analyst", "An analyst reviews and decides, as the human in the loop."]], "odoo-order-to-cash-agent": [["Shared inbox", "An order arrives as email text, a PDF or an Excel sheet."], ["AI agent", "The agent reads the order and matches the customer and products to Odoo."], ["Stock check", "Inventory is checked for every line."], ["Quotation", "A quotation is created in Odoo, ready for review."], ["Approver on WhatsApp", "The approver is notified to review and confirm."], ["Restock", "If stock is short, a purchase request is prepared."]], "hubspot-crm-agent": [["Google Places", "The agent sources new prospects."], ["HubSpot", "Leads are qualified into the CRM."], ["Instant outreach", "Replies and follow-ups go out on WhatsApp, email, Instagram and Facebook."], ["CRM kept current", "Tasks, activity and deal stages are updated automatically."], ["Human handoff", "A person takes over on request, or for custom offers and haggling."]], "support-and-lead-intake-agents": [["Customer message", "A customer or prospect starts a conversation."], ["AI agent", "The agent answers from the business's own information."], ["Lead captured", "New enquiries are qualified with a few short questions."], ["Sales team", "Lead details are passed straight to the team."], ["Human handoff", "Complex or sensitive conversations go to a person."]]}
 
 import html as _h, json as _j, re as _re
 def flow_fig(cid, title=None):
@@ -369,7 +369,7 @@ SEO = service_page(
 AI = service_page(
  "services/ai-automation/", "AI & automation",
  "AI Automation Agency for Small Businesses | Sahara Nova",
- "AI agents and workflow automation for small businesses: order-to-cash in Odoo, HubSpot CRM agents, support bots and lead intake. From $1,200.",
+ "AI agents and workflow automation for small businesses: email orders into Odoo, HubSpot CRM agents, support bots and lead intake. From $1,200.",
  "Service · AI &amp; automation",
  "AI automation for small businesses",
  "Give your team back the hours lost to copy-pasting, chasing and reporting. We automate the repetitive work and add AI where it pays for itself.",
@@ -399,12 +399,12 @@ AI = service_page(
 <div class="plan"><h3>AI Assistant</h3><div class="price">$2,500 <small>from</small></div><ul><li>Website or internal assistant</li><li>Trained on your documents</li><li>Human handoff &amp; analytics</li></ul></div>
 </div>
 </div></div></section>
-<section class="band"><div class="wrap"><div class="sec-head"><p class="label">Watch an agent work</p><h2>From an emailed order to cash in the bank</h2>
-<p class="lede">This is the order-to-cash agent we built for an Odoo ERP client. Each step used to be done by hand. Hover over or tap a step to see what the agent does.</p></div>""" + flow_fig("odoo-order-to-cash-agent") + """
+<section class="band"><div class="wrap"><div class="sec-head"><p class="label">Watch an agent work</p><h2>From an emailed order to an approved quotation</h2>
+<p class="lede">This is the order agent we built for an Odoo ERP client. Each step used to be done by hand. Hover over or tap a step to see what the agent does.</p></div>""" + flow_fig("odoo-order-to-cash-agent") + """
 <div class="btn-row"><a class="btn ghost" href="{{/work/#odoo-order-to-cash-agent}}">Read the case study</a></div></div></section>""" + cases_band("Our work", "AI agents we've built"),
  [("What can a small business automate?", "Good candidates are frequent, rule-based and digital: lead routing, follow-up emails, invoicing reminders, reporting, data entry between tools and first-line support questions."),
   ("Do I need to change my existing software?", "Usually not. We connect the tools you already use, such as Odoo, HubSpot, Pipedrive, Xero, QuickBooks, Google Workspace, Microsoft 365 or Shopify, through their APIs."),
-  ("Can you build AI agents for Odoo or HubSpot?", "Yes. We have built an order-to-cash agent that turns emailed orders into Odoo sales orders and runs the workflow through to invoicing, and a HubSpot agent that follows up with leads, sets reminders and keeps the CRM up to date. See our <a href=\"{{/work/}}\">case studies</a>, or our comparison of <a href=\"{{/blog/hubspot-breeze-vs-custom-ai-agent/}}\">HubSpot's own agents vs a custom agent</a>."),
+  ("Can you build AI agents for Odoo or HubSpot?", "Yes. We have built an agent that reads emailed orders, including PDFs and spreadsheets, checks stock and prepares quotations in Odoo for approval, and a HubSpot agent that follows up with leads, sets reminders and keeps the CRM up to date. See our <a href=\"{{/work/}}\">case studies</a>, our guide to <a href=\"{{/blog/automate-email-orders-into-odoo-with-ai/}}\">automating email orders into Odoo</a>, or our comparison of <a href=\"{{/blog/hubspot-breeze-vs-custom-ai-agent/}}\">HubSpot's own agents vs a custom agent</a>."),
   ("Is our data safe with AI tools?", "We choose business-tier AI services that don't train on your data, minimise what's sent, and document every data flow. We sign a data processing agreement on request."),
   ("How do you measure ROI?", "Before building, we estimate hours saved per month. After launch, we track runs and time saved so you can see the payback."),
   ("What does it cost to run an AI agent?", "Running costs are billed at cost: AI model usage, WhatsApp message fees and any automation plan such as Make, Zapier or n8n. Our AI Care Plan, from $250 a month, covers monitoring, fixes and updates.")])
@@ -459,7 +459,7 @@ PRICING_BODY = """<section class="band"><div class="wrap">
 <div class="plan"><h3>SEO Foundation</h3><div class="price">$900 <small>from</small></div><ul><li>Technical audit + quick fixes</li><li>Keyword research &amp; page map</li><li>Google Business Profile</li><li>90-day roadmap</li></ul><a class="btn ghost" href="{{/contact/}}">Book an audit</a></div>
 <div class="plan"><h3>Automation Sprint</h3><div class="price">$1,200 <small>from</small></div><ul><li>Process audit</li><li>1–2 workflows automated</li><li>Error alerts &amp; docs</li><li>About 2 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Find quick wins</a></div>
 <div class="plan"><h3>AI Assistant</h3><div class="price">$2,500 <small>from</small></div><ul><li>Website or internal assistant</li><li>Trained on your documents</li><li>Human handoff &amp; analytics</li><li>3–4 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Get a quote</a></div>
-<div class="plan"><h3>Custom AI Agent</h3><div class="price">$3,500 <small>from</small></div><ul><li>Agents that act in your ERP or CRM</li><li>e.g. order-to-cash, lead follow-up</li><li>Human-in-the-loop controls</li><li><a href="{{/work/}}">See examples</a></li></ul><a class="btn ghost" href="{{/contact/}}">Scope my agent</a></div>
+<div class="plan"><h3>Custom AI Agent</h3><div class="price">$3,500 <small>from</small></div><ul><li>Agents that act in your ERP or CRM</li><li>e.g. order intake, lead follow-up</li><li>Human-in-the-loop controls</li><li><a href="{{/work/}}">See examples</a></li></ul><a class="btn ghost" href="{{/contact/}}">Scope my agent</a></div>
 </div>
 <p class="meta" style="margin-top:14px">SEO Foundation fixes cover anything that needs no developer time, such as titles, metadata, Search Console and Google Business Profile; larger fixes are quoted separately. Mobile apps, and M-Pesa integration for an existing site, are quoted after discovery.</p>
 </div></section>
@@ -586,6 +586,7 @@ PRIVACY_BODY = """<section class="band"><div class="wrap"><div class="prose">
 </div></div></section>"""
 
 BLOG_BODY = """<section class="band"><div class="wrap"><div class="sec-head"><p class="label">Latest</p><h2>Latest guides</h2></div><div class="grid g2">
+<a class="post-card" href="{{/blog/automate-email-orders-into-odoo-with-ai/}}"><span class="meta">Guide · 30 Oct 2026 · 9 min read</span><h3>How to automate email orders into Odoo with AI</h3><p>Turn order emails, PDFs and spreadsheets into Odoo quotations, with careful matching, human approval and the API changes to plan for.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/hubspot-breeze-vs-custom-ai-agent/}}"><span class="meta">Guide · 28 Oct 2026 · 8 min read</span><h3>HubSpot's AI agents vs a custom AI agent: which do you need?</h3><p>What Breeze agents do and cost today, when they're the right choice, and when a custom agent is worth building.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/which-processes-to-automate-with-ai/}}"><span class="meta">Guide · 27 Oct 2026 · 8 min read</span><h3>Which processes should you automate with AI? A practical audit</h3><p>Map the work, score each candidate, and choose between simple automation, an AI step or an agent, before you spend anything.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/ai-agents-for-lenders-kenya/}}"><span class="meta">Guide · 27 Oct 2026 · 7 min read</span><h3>AI agents for digital lenders and SACCOs in Kenya</h3><p>How a WhatsApp top-up agent took in KES 5.4M in applications in its first week, with a credit analyst still making every decision.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
@@ -801,6 +802,83 @@ Authorization: Bearer ACCESS_TOKEN
 <p>Sending the prompt is the easy part. The work that protects your money is everything around it: timeouts and customer-triggered retries, callbacks you can trust, duplicate protection, status queries and reconciliation. If those aren't in place, you will eventually ship goods for payments that never arrived, or charge someone twice. If you'd like it done for you, as part of a new website or added to an existing one, see our <a href="{{/east-africa/}}">work for Kenyan and East African businesses</a> or <a href="{{/contact/}}">send us a brief</a>. Planning a full new site? Our guide to <a href="{{/blog/website-cost-in-kenya/}}">what a website costs in Kenya</a> covers budgets.</p>
 </article></div></section>"""
 
+ODOO_ORDERS_BODY = """<section class="band"><div class="wrap"><article class="prose">
+""" + BYLINE.format(date="30 October 2026", mins=9) + """
+<p>If your customers order by email, someone on your team spends part of every day reading those emails and typing them into Odoo. The orders arrive in every shape: a few lines typed into the message, a PDF purchase order, a spreadsheet with forty rows. Re-keying them is slow, and the mistakes show up later as wrong deliveries and credit notes.</p>
+<p>AI is now good at the reading part. This guide covers what Odoo does and doesn't do out of the box, the flow we use for an order agent, and the design decisions that separate a reliable setup from one that quietly creates bad orders. It draws on an <a href="{{/work/#odoo-order-to-cash-agent}}">order agent we built for an Odoo client</a>.</p>
+
+<h2>What Odoo does out of the box, and what it doesn't</h2>
+<ul>
+<li><strong>Email aliases</strong> can turn an incoming email into a record in Odoo. That gets the email into the system, but it doesn't read the order lines and build a quotation from them.</li>
+<li><strong>Odoo 19's AI features</strong> include an "Ask AI" assistant, AI fields, configurable AI agents and AI server actions. Odoo's documentation is clear about the limits: Ask AI can open views and reports but can't create or change data, and an AI server action "does not enforce business rules" or "guarantee the correctness of the operation". The business rules still have to come from you.</li>
+<li><strong>Document digitisation (OCR)</strong> is built for supplier bills on the accounting side, not for customer purchase orders.</li>
+<li><strong>Third-party apps</strong> on the Odoo Apps store offer AI order extraction. Some will fit simple cases. Evaluate them against the design points below before relying on one.</li>
+</ul>
+<p>So for most businesses, reading customer orders and turning them into clean quotations needs either a well-chosen app or a custom agent connected to Odoo.</p>
+
+<h2>The flow that works</h2>
+<ol>
+<li><strong>Watch one shared orders inbox.</strong> Ask customers to send orders to a single address, so the agent has one place to look.</li>
+<li><strong>Read the order in whatever format it arrives.</strong> Email text, PDF attachments and Excel sheets each need handling, and scanned PDFs need text recognition first.</li>
+<li><strong>Match the customer and every product to Odoo records.</strong> This is the step that decides accuracy. Anything the agent can't match confidently goes to a person, never to a guess.</li>
+<li><strong>Check stock</strong> for each line before anything is promised.</li>
+<li><strong>Create a quotation, not a confirmed order.</strong> Then notify the approver, who reviews it in Odoo and confirms.</li>
+<li><strong>Prepare a restock request when stock is short,</strong> for a person to approve before anything goes to a supplier.</li>
+</ol>
+<p>Once a person confirms the quotation, Odoo's normal process takes over: delivery, invoicing and payment follow the workflow you already use.</p>
+
+<h2>Design decisions that matter</h2>
+<h3>Start with quotations and a human approver</h3>
+<p>Confirming a quotation in Odoo commits you to the order and starts the rest of your workflow, such as delivery orders when Inventory is installed. Keep a person approving every quotation until you have weeks of evidence that the agent's quotations need no edits. Track how often the approver changes something. That number tells you whether more autonomy is safe.</p>
+
+<h3>Matching is the hard part</h3>
+<p>Customers rarely use your product names. They use their own codes, old descriptions, or "the same as last time". Build the matching around your real data: internal references, any customer-specific codes you keep, and past orders from the same customer. Set a clear rule: if a line can't be matched with confidence, the agent flags it for a person rather than picking the closest product.</p>
+
+<h3>Take prices from Odoo, not from the email</h3>
+<p>Use your Odoo pricelists to price the quotation. If the customer's PO states a different price, flag the difference for the approver instead of copying it.</p>
+
+<h3>Catch duplicates</h3>
+<p>Customers resend orders, forward them with "please confirm", or send an amended version. Check each new email against recent quotations, for example by the customer's PO number and the email thread, before creating anything.</p>
+
+<h3>Don't fight your replenishment settings</h3>
+<p>If you already use Odoo's reordering rules or make-to-order routes, they may create purchase requests on their own. Decide which mechanism owns restocking so you don't get two requests for the same shortfall.</p>
+
+<h3>Notifications: WhatsApp rules apply</h3>
+<p>Notifying the approver on WhatsApp works well because people see it quickly. A message your business starts on WhatsApp must use an approved template and go to someone who has opted in, and template messages are charged per message. Keep the message short (customer, order value, a link to the quotation) and leave the details in Odoo.</p>
+
+<h3>Leave an audit trail</h3>
+<p>Log on each quotation what the agent did and which email it came from, so anyone can trace an order back to its source.</p>
+
+<h2>Technical prerequisites</h2>
+<ul>
+<li><strong>API access.</strong> On Odoo Online, the external API is only available on the Custom plan, not on One App Free or Standard. Odoo.sh and on-premise installations can use it.</li>
+<li><strong>Use the JSON-2 API.</strong> Odoo's new JSON-2 API is available from Odoo 19 (and Odoo Online 18.4). The older XML-RPC and JSON-RPC endpoints are deprecated, with removal scheduled for Odoo Online 21.1 (winter 2027) and Odoo 22 (autumn 2028). Don't build a new integration on them.</li>
+<li><strong>A dedicated integration user</strong> with only the access rights the agent needs, using an API key you rotate, rather than a staff member's login.</li>
+<li><strong>Real samples to test with.</strong> Collect a few weeks of actual order emails, including the messy ones, before building. They are your test set.</li>
+</ul>
+
+<h2>How to measure it</h2>
+<p>Before you switch it on, record the current time per order and how often orders are entered wrongly. Afterwards, track:</p>
+<ul>
+<li>the share of orders matched completely without help</li>
+<li>how often the approver edits a quotation</li>
+<li>the time from email to approved quotation</li>
+<li>errors that reach the customer</li>
+</ul>
+<p>Widen what the agent does on its own only when those numbers support it.</p>
+
+<h2>When not to do this</h2>
+<ul>
+<li>You receive only a handful of email orders a week.</li>
+<li>Most customers could use a portal or online shop instead, which gives you structured orders without AI.</li>
+<li>Your product data in Odoo is incomplete or duplicated. Clean it first, or the agent will match against bad records.</li>
+</ul>
+
+<h2>The bottom line</h2>
+<p>An order agent removes the re-keying, but the value comes from the design: one inbox, careful matching, quotations a person approves, prices from Odoo and a clear handoff for anything uncertain. If you'd like help deciding whether your order volume justifies it, see our <a href="{{/services/ai-automation/}}">AI and automation services</a>, read <a href="{{/blog/which-processes-to-automate-with-ai/}}">how to choose which processes to automate</a>, or <a href="{{/contact/}}">send us a few sample orders</a>, with personal details removed.</p>
+<p class="meta">Sources: Odoo documentation on AI features and inbound email, as summarised by Carly (July 2026); Apideck, "How to integrate with the Odoo API" (updated 27 October 2026); Xyphen IT, "Odoo 19 and the end of XML-RPC" (May 2026); WhatsApp Business Policy and pricing. Checked 30 October 2026.</p>
+</article></div></section>"""
+
 BREEZE_VS_CUSTOM_BODY = """<section class="band"><div class="wrap"><article class="prose">
 """ + BYLINE.format(date="28 October 2026", mins=8) + """
 <p>If your business runs on HubSpot, you have two ways to add AI agents: switch on HubSpot's own Breeze agents, or build a custom agent around your process. Agencies that build agents, ourselves included, have an obvious bias here, so we'll say it up front: for many HubSpot customers, the built-in agents are the right place to start.</p>
@@ -915,7 +993,7 @@ AI_AUDIT_BODY = """<section class="band"><div class="wrap"><article class="prose
 
 <h2>What this looks like in practice</h2>
 <ul>
-<li><strong>Emailed orders into Odoo.</strong> Orders arrived as free-text emails that staff re-typed. Reading free text is a genuine AI task, so an <a href="{{/work/#odoo-order-to-cash-agent}}">order-to-cash agent</a> reads each email, matches the customer and products to Odoo records and creates the sales order, and Odoo's own workflow carries it through fulfilment and invoicing.</li>
+<li><strong>Emailed orders into Odoo.</strong> Orders arrived as email text, PDFs and spreadsheets that staff re-keyed. Reading those is a genuine AI task, so an <a href="{{/work/#odoo-order-to-cash-agent}}">order agent</a> reads each one, matches the customer and products to Odoo records, checks stock and creates a quotation for a person to approve. Once approved, Odoo's own workflow takes over.</li>
 <li><strong>Lead replies in HubSpot.</strong> Leads were waiting about five days for a reply, and many inbound enquiries were missed. Speed matters here: a Harvard Business Review study of 1.25 million leads found that companies contacting leads within an hour were seven times as likely to qualify them as those that waited even an hour longer. Our <a href="{{/work/#hubspot-crm-agent}}">HubSpot CRM agent</a> replies instantly and hands over to a person for custom offers and price negotiation.</li>
 <li><strong>Loan top-ups for a lender.</strong> The agent collects complete applications, and a credit analyst makes every decision. The <a href="{{/work/#loan-top-up-agent}}">loan top-up agent</a> took in KES 5.4M in applications in its first week.</li>
 </ul>
@@ -1050,7 +1128,7 @@ PAGES = [
            ("What time zone is Kenya in?", "Kenya uses East Africa Time (EAT), UTC+3, all year round with no daylight saving. That is 2–3 hours ahead of the UK and 1–2 hours ahead of central Europe."),
            ("How much do Kenyan developers cost?", "Agency rates in Kenya typically range from under $25 to $99 per hour, depending on seniority and agency size.")]),
  dict(path="work/", title="AI Agent Case Studies: Odoo, HubSpot & Lending | Sahara Nova",
-      description="AI agents we've built: loan top-up intake for a lender, email-to-Odoo order-to-cash, a HubSpot CRM agent, and customer support and lead intake agents.",
+      description="AI agents we've built: loan top-up intake for a lender, email-to-Odoo order processing, a HubSpot CRM agent, and support and lead intake agents.",
       eyebrow="Our work", h1="AI agents we've built",
       lede="Real agents running inside real businesses: taking in loan applications, processing orders in an ERP, working a CRM pipeline and talking to customers. Built by our founder, James, in a previous role; client names are withheld.",
       crumbs=[("/work/", "Work")], body=WORK_BODY, cases=True),
@@ -1087,6 +1165,16 @@ PAGES = [
       lede="Rates, time zone overlap, how Kenya compares with other outsourcing regions, and a vetting checklist.",
       crumbs=[("/blog/", "Blog"), ("/blog/outsourcing-web-development-to-kenya/", "Outsourcing to Kenya")],
       article={"date": "2026-09-23", "modified": "2026-10-28"}, body=ARTICLE_BODY),
+ dict(path="blog/automate-email-orders-into-odoo-with-ai/",
+      title="How to Automate Email Orders Into Odoo With AI | Sahara Nova",
+      description="Turn order emails, PDFs and spreadsheets into Odoo quotations with AI: what Odoo does natively, the flow that works, matching, approvals and API changes.",
+      eyebrow="Guide", h1="How to automate email orders into Odoo with AI",
+      lede="What Odoo handles on its own, the flow we use for an order agent, and the design decisions that keep bad orders out of your system.",
+      crumbs=[("/blog/", "Blog"), ("/blog/automate-email-orders-into-odoo-with-ai/", "Email orders into Odoo")],
+      article={"date": "2026-10-30"}, body=ODOO_ORDERS_BODY,
+      faq=[("Can Odoo create sales orders from emails automatically?", "An email alias can turn an incoming email into a record, but it won't read the order lines and build a quotation. For that you need a third-party app or a custom AI agent connected to Odoo's API."),
+           ("Should an AI agent confirm orders in Odoo on its own?", "Not at first. Have the agent create quotations and a person approve them. Confirming starts your delivery and invoicing workflow, so widen the agent's autonomy only when approvers rarely need to edit its quotations."),
+           ("Which Odoo plan do I need to connect an AI agent?", "On Odoo Online, external API access requires the Custom plan; it isn't available on One App Free or Standard. Odoo.sh and on-premise installations can use the API. New integrations should use the JSON-2 API.")]),
  dict(path="blog/hubspot-breeze-vs-custom-ai-agent/",
       title="HubSpot Breeze Agents vs a Custom AI Agent | Sahara Nova",
       description="HubSpot's Breeze agents or a custom AI agent? What each costs in 2026, when HubSpot's own agents are enough, and when a custom agent pays off.",
