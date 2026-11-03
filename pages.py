@@ -382,7 +382,7 @@ AI = service_page(
 <ul>
 <li><strong>Lead handling:</strong> form → CRM → instant personalised reply → sales alert</li>
 <li><strong>Reporting:</strong> weekly dashboards assembled automatically from ads, CRM and accounting</li>
-<li><strong>Customer support:</strong> AI assistants trained on your own documents, with human handoff</li>
+<li><strong>Customer support:</strong> AI assistants trained on your own documents, on your website or WhatsApp, with human handoff. See <a href="{{/blog/whatsapp-ai-chatbot-rules-and-costs-2026/}}">WhatsApp chatbot rules and costs</a></li>
 <li><strong>Document processing:</strong> invoices, receipts and forms read and filed by AI</li>
 <li><strong>Operations:</strong> onboarding checklists, reminders, approvals and data syncs between tools</li>
 <li><strong>AI agents:</strong> agents that take actions in your systems, like processing orders in your ERP or working leads in your CRM. See <a href="{{/work/}}">our case studies</a></li>
@@ -586,6 +586,7 @@ PRIVACY_BODY = """<section class="band"><div class="wrap"><div class="prose">
 </div></div></section>"""
 
 BLOG_BODY = """<section class="band"><div class="wrap"><div class="sec-head"><p class="label">Latest</p><h2>Latest guides</h2></div><div class="grid g2">
+<a class="post-card" href="{{/blog/whatsapp-ai-chatbot-rules-and-costs-2026/}}"><span class="meta">Guide · 3 Nov 2026 · 9 min read</span><h3>WhatsApp AI chatbots in 2026: rules, costs and what's not allowed</h3><p>Meta's AI-provider rules, the October 2026 pricing change, messaging limits, and how to design a bot that stays compliant.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/automate-email-orders-into-odoo-with-ai/}}"><span class="meta">Guide · 30 Oct 2026 · 9 min read</span><h3>How to automate email orders into Odoo with AI</h3><p>Turn order emails, PDFs and spreadsheets into Odoo quotations, with careful matching, human approval and the API changes to plan for.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/hubspot-breeze-vs-custom-ai-agent/}}"><span class="meta">Guide · 28 Oct 2026 · 8 min read</span><h3>HubSpot's AI agents vs a custom AI agent: which do you need?</h3><p>What Breeze agents do and cost today, when they're the right choice, and when a custom agent is worth building.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/which-processes-to-automate-with-ai/}}"><span class="meta">Guide · 27 Oct 2026 · 8 min read</span><h3>Which processes should you automate with AI? A practical audit</h3><p>Map the work, score each candidate, and choose between simple automation, an AI step or an agent, before you spend anything.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
@@ -800,6 +801,68 @@ Authorization: Bearer ACCESS_TOKEN
 
 <h2>Do it yourself or hire help?</h2>
 <p>Sending the prompt is the easy part. The work that protects your money is everything around it: timeouts and customer-triggered retries, callbacks you can trust, duplicate protection, status queries and reconciliation. If those aren't in place, you will eventually ship goods for payments that never arrived, or charge someone twice. If you'd like it done for you, as part of a new website or added to an existing one, see our <a href="{{/east-africa/}}">work for Kenyan and East African businesses</a> or <a href="{{/contact/}}">send us a brief</a>. Planning a full new site? Our guide to <a href="{{/blog/website-cost-in-kenya/}}">what a website costs in Kenya</a> covers budgets.</p>
+</article></div></section>"""
+
+WHATSAPP_BOTS_BODY = """<section class="band"><div class="wrap"><article class="prose">
+""" + BYLINE.format(date="3 November 2026", mins=9) + """
+<p>WhatsApp is where many customers already are, which makes it an obvious place for an AI chatbot that answers questions, takes orders or qualifies leads. In the last year Meta has changed both the rules and the prices. AI providers are now restricted, and since 1 October 2026 service replies are no longer free beyond a monthly allowance. This guide sets out what's allowed, what it costs and how to design a bot that stays on the right side of both.</p>
+
+<h2>First: the WhatsApp Business app won't run an AI chatbot</h2>
+<p>There are two products. The free <strong>WhatsApp Business app</strong> is for people replying by hand, with simple greetings, away messages and quick replies. To connect an AI chatbot, you need the <strong>WhatsApp Business Platform</strong>, the API, either directly through Meta's Cloud API or through a Business Solution Provider (BSP) such as a messaging platform. The new charges below apply to the Platform. The Business app isn't affected by them.</p>
+
+<h2>What kind of chatbot is allowed</h2>
+<p>Since 15 January 2026, WhatsApp's Business Solution Terms bar "providers and developers of artificial intelligence or machine learning technologies", including large language models and general-purpose assistants, from using the Platform when that technology is "the primary (rather than incidental or ancillary) functionality". In plain terms, you can't offer a ChatGPT-style assistant on WhatsApp where the AI itself is the product.</p>
+<p>Business chatbots are a different matter. A bot that answers questions about your products, takes orders, books appointments, updates customers on deliveries or qualifies leads is supporting your business, not selling AI, and that is the use the Platform is built for.</p>
+<p class="meta">Regulators have challenged the AI-provider restriction in Europe. Italy's competition authority ordered Meta to suspend it in December 2025, and the European Commission has since taken over the investigation. If you serve users in the EU, check the current position.</p>
+
+<h2>Business categories WhatsApp restricts</h2>
+<p>Separately from AI, WhatsApp's Business Policy prohibits using the Platform to buy, sell or promote certain goods and services, whatever licence your business holds. The list includes payday loans, paycheck advances, peer-to-peer lending and debt collection. It also prohibits asking people to share full card or bank account numbers in chat. Check your product against the policy before you build. We cover the lending side in detail in <a href="{{/blog/ai-agents-for-lenders-kenya/}}">AI agents for lenders and SACCOs</a>.</p>
+
+<h2>Who can start a conversation</h2>
+<ul>
+<li><strong>When a customer messages you,</strong> a 24-hour customer service window opens. Inside it, your bot can reply freely with ordinary messages.</li>
+<li><strong>When you message first,</strong> or the window has closed, you must use a message template Meta has approved, and only to people who have opted in to hear from you. Templates fall into three categories: marketing, utility (such as order updates) and authentication (such as one-time codes).</li>
+<li><strong>Messaging limits</strong> cap how many different customers you can start conversations with in 24 hours. New businesses start at 250. The limit rises automatically as you use it and keep a good quality rating, and it applies across your whole business portfolio, not per number. Conversations customers start themselves aren't capped.</li>
+</ul>
+
+<h2>What it costs since 1 October 2026</h2>
+<ul>
+<li><strong>Customer messages to you:</strong> free.</li>
+<li><strong>Your replies inside the 24-hour window (service messages):</strong> the first 1,000 per phone number each month are free, then each one is charged.</li>
+<li><strong>Marketing, utility and authentication templates:</strong> charged per delivered message, by category and the recipient's country.</li>
+<li><strong>Utility templates sent inside the 24-hour window:</strong> charged since 1 October 2026. They used to be free.</li>
+<li><strong>Conversations started from a qualifying Click-to-WhatsApp ad:</strong> exempt from delivery charges for a limited period.</li>
+</ul>
+<p>Paid service replies are priced at the same rate as utility messages in the recipient's market. For Kenya that's under half a US cent per reply: published reports put it at $0.0040–$0.0044. So a bot that sends 10,000 replies a month from one number pays for 9,000 of them, roughly $36–$40, before any fees your BSP adds and before the cost of the AI model itself.</p>
+<p class="meta">Sources: Meta pricing updates as reported by Tech-ish (1 October 2026) and Techpoint Africa (2026); MediaNama (30 September 2026). Rates vary by country and change regularly, so check Meta's current rate card before budgeting.</p>
+<p>Two practical consequences: a chatty bot that splits one answer into five messages costs five times as much, and an account with no payment method stops delivering service replies once the free 1,000 run out.</p>
+
+<h2>Designing a bot that works and stays compliant</h2>
+<ul>
+<li><strong>Keep it in scope.</strong> Answer from your own products, policies and order data, and decline anything else. That keeps the bot useful, and clearly a business bot rather than a general assistant.</li>
+<li><strong>Never let it invent prices, stock or terms.</strong> Pull them from your systems at the moment of the reply. If the data isn't there, the bot says so and hands over.</li>
+<li><strong>Make the handover to a person easy.</strong> Customers should be able to ask for a human at any point, and the bot should hand over automatically for complaints, custom deals or anything it isn't sure about, passing the conversation history along.</li>
+<li><strong>Say it's automated.</strong> People are more forgiving of a bot that's honest about being one.</li>
+<li><strong>Write in fewer, fuller messages.</strong> It reads better and, since October, it costs less.</li>
+<li><strong>Respect opt-outs immediately.</strong> In Kenya, the Data Protection Act 2019 and its 2021 regulations require consent and a free, simple opt-out for marketing messages. Other countries have their own equivalents.</li>
+<li><strong>Take payments at the right moment.</strong> If the customer pays by M-Pesa, send the STK Push prompt only when they've just asked to pay and are in the chat. The prompt expires within about a minute. See our <a href="{{/blog/mpesa-stk-push-integration-guide/}}">M-Pesa STK Push guide</a>.</li>
+<li><strong>Log and review conversations,</strong> especially in the first weeks, and fix the answers that go wrong.</li>
+</ul>
+
+<h2>Where a WhatsApp agent earns its keep</h2>
+<p>The strongest cases are where speed decides the sale. In a <a href="{{/work/#hubspot-crm-agent}}">CRM agent we built</a>, leads had been waiting about five days for a reply. The agent now replies instantly on WhatsApp and other channels, and hands over to a person for custom offers and price negotiation. Order intake, booking and delivery updates are also good fits. A bot that only repeats your FAQ page is rarely worth the setup.</p>
+
+<h2>Quick checklist</h2>
+<ol>
+<li>Are you on the WhatsApp Business Platform, directly or through a BSP?</li>
+<li>Is the bot clearly supporting your business, not offering AI as the product?</li>
+<li>Is your product outside WhatsApp's restricted categories?</li>
+<li>Do you have opt-in for every number you'll message first, and approved templates?</li>
+<li>Have you estimated monthly replies and templates at your country's rates, plus BSP and AI model costs?</li>
+<li>Is there a clear handover to a person, and a working opt-out?</li>
+</ol>
+<p>If you'd like a WhatsApp agent built around your business, see our <a href="{{/services/ai-automation/}}">AI and automation services</a> or <a href="{{/contact/}}">tell us what you'd like it to handle</a>. Not sure it's worth automating yet? Start with <a href="{{/blog/which-processes-to-automate-with-ai/}}">how to choose which processes to automate</a>.</p>
+<p class="meta">Sources: WhatsApp Business Solution Terms (as quoted by PPC Land); WhatsApp Business Policy; Tech-ish, "WhatsApp Business Platform charges start today, but the first 1,000 replies are free" (1 October 2026); Techpoint Africa, WhatsApp per-message charges guide (2026); respond.io, WhatsApp messaging limits (22 October 2026); Global Banking &amp; Finance Review / Reuters on the EU and Italian investigations (8 June 2026). Checked 3 November 2026.</p>
 </article></div></section>"""
 
 ODOO_ORDERS_BODY = """<section class="band"><div class="wrap"><article class="prose">
@@ -1076,7 +1139,7 @@ EAST_AFRICA_BODY = """<section class="band"><div class="wrap"><div class="grid g
 <h3>M-Pesa and mobile money integration</h3>
 <p>We integrate M-Pesa through the Daraja API: STK Push checkout, C2B Paybill and Till payments, B2C payouts and automatic reconciliation with your orders or accounting system. Our <a href="{{/blog/mpesa-stk-push-integration-guide/}}">M-Pesa STK Push integration guide</a> explains how it works.</p>
 <h3>WhatsApp and AI for customer service</h3>
-<p>Your customers already use WhatsApp. We set up WhatsApp Business ordering, automated replies and AI assistants that answer common questions in English or Swahili, take orders and hand over to a person when needed.</p>
+<p>Your customers already use WhatsApp. We set up WhatsApp Business ordering, automated replies and AI assistants that answer common questions in English or Swahili, take orders and hand over to a person when needed. Read <a href="{{/blog/whatsapp-ai-chatbot-rules-and-costs-2026/}}">what WhatsApp chatbots are allowed to do and what they cost in 2026</a>.</p>
 <h3>AI agents already working in Kenya</h3>
 <p>We built an AI agent for a digital lender that took in <strong>KES 5.4M in loan top-up applications in its first week</strong>. Read the <a href="{{/work/#loan-top-up-agent}}">case study</a> and our guide to <a href="{{/blog/ai-agents-for-lenders-kenya/}}">AI agents for lenders and SACCOs</a>, or see our <a href="{{/services/ai-automation/}}">AI and automation services</a>.</p>
 <h3>Local SEO in Nairobi and beyond</h3>
@@ -1165,6 +1228,16 @@ PAGES = [
       lede="Rates, time zone overlap, how Kenya compares with other outsourcing regions, and a vetting checklist.",
       crumbs=[("/blog/", "Blog"), ("/blog/outsourcing-web-development-to-kenya/", "Outsourcing to Kenya")],
       article={"date": "2026-09-23", "modified": "2026-10-28"}, body=ARTICLE_BODY),
+ dict(path="blog/whatsapp-ai-chatbot-rules-and-costs-2026/",
+      title="WhatsApp AI Chatbots in 2026: Rules and Costs | Sahara Nova",
+      description="What's allowed for WhatsApp AI chatbots in 2026, what they cost since October's pricing change, messaging limits, and how to design a compliant bot.",
+      eyebrow="Guide", h1="WhatsApp AI chatbots in 2026: rules, costs and what's not allowed",
+      lede="Meta has changed both the rules and the prices for WhatsApp bots. Here's what's allowed, what it costs and how to build one that stays compliant.",
+      crumbs=[("/blog/", "Blog"), ("/blog/whatsapp-ai-chatbot-rules-and-costs-2026/", "WhatsApp AI chatbots 2026")],
+      article={"date": "2026-11-03"}, body=WHATSAPP_BOTS_BODY,
+      faq=[("Are AI chatbots banned on WhatsApp?", "General-purpose AI assistants, where the AI itself is the product, have been barred from the WhatsApp Business Platform since 15 January 2026. Business chatbots that support your own products and customers, such as order, booking, support and lead-qualification bots, are still allowed."),
+           ("How much does a WhatsApp chatbot cost to run?", "Since 1 October 2026, each phone number gets 1,000 free service replies a month, then each reply is charged at the local utility rate, under half a US cent in Kenya. Template messages are charged per message by category and country. Add your provider's fees and the AI model's cost."),
+           ("Can I use the free WhatsApp Business app for an AI chatbot?", "No. The Business app is for manual replies with simple automations. An AI chatbot needs the WhatsApp Business Platform (API), through Meta's Cloud API or a Business Solution Provider.")]),
  dict(path="blog/automate-email-orders-into-odoo-with-ai/",
       title="How to Automate Email Orders Into Odoo With AI | Sahara Nova",
       description="Turn order emails, PDFs and spreadsheets into Odoo quotations with AI: what Odoo does natively, the flow that works, matching, approvals and API changes.",
