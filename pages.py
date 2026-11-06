@@ -586,6 +586,7 @@ PRIVACY_BODY = """<section class="band"><div class="wrap"><div class="prose">
 </div></div></section>"""
 
 BLOG_BODY = """<section class="band"><div class="wrap"><div class="sec-head"><p class="label">Latest</p><h2>Latest guides</h2></div><div class="grid g2">
+<a class="post-card" href="{{/blog/ai-agents-east-african-businesses/}}"><span class="meta">Guide · 6 Nov 2026 · 8 min read</span><h3>AI agents for East African businesses: real examples in CRM, lending and bookings</h3><p>Three agents deployed in East African businesses, what each one does, and the lessons for yours.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/whatsapp-ai-chatbot-rules-and-costs-2026/}}"><span class="meta">Guide · 3 Nov 2026 · 9 min read</span><h3>WhatsApp AI chatbots in 2026: rules, costs and what's not allowed</h3><p>Meta's AI-provider rules, the October 2026 pricing change, messaging limits, and how to design a bot that stays compliant.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/automate-email-orders-into-odoo-with-ai/}}"><span class="meta">Guide · 30 Oct 2026 · 9 min read</span><h3>How to automate email orders into Odoo with AI</h3><p>Turn order emails, PDFs and spreadsheets into Odoo quotations, with careful matching, human approval and the API changes to plan for.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/hubspot-breeze-vs-custom-ai-agent/}}"><span class="meta">Guide · 28 Oct 2026 · 8 min read</span><h3>HubSpot's AI agents vs a custom AI agent: which do you need?</h3><p>What Breeze agents do and cost today, when they're the right choice, and when a custom agent is worth building.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
@@ -801,6 +802,60 @@ Authorization: Bearer ACCESS_TOKEN
 
 <h2>Do it yourself or hire help?</h2>
 <p>Sending the prompt is the easy part. The work that protects your money is everything around it: timeouts and customer-triggered retries, callbacks you can trust, duplicate protection, status queries and reconciliation. If those aren't in place, you will eventually ship goods for payments that never arrived, or charge someone twice. If you'd like it done for you, as part of a new website or added to an existing one, see our <a href="{{/east-africa/}}">work for Kenyan and East African businesses</a> or <a href="{{/contact/}}">send us a brief</a>. Planning a full new site? Our guide to <a href="{{/blog/website-cost-in-kenya/}}">what a website costs in Kenya</a> covers budgets.</p>
+</article></div></section>"""
+
+EA_AGENTS_BODY = """<section class="band"><div class="wrap"><article class="prose">
+""" + BYLINE.format(date="6 November 2026", mins=8) + """
+<p>Most writing about AI agents in Africa is about what agents <em>could</em> do. This post is about three that have been deployed in East African businesses: one working a sales pipeline in a CRM, one taking in loan applications for a lender, and one taking bookings for a storage business in Nairobi. Our founder, James, designed and built all three in a previous role as an implementation engineer. We don't name the clients.</p>
+<p>For each one, we cover what the agent does and the lesson that applies to other businesses in the region.</p>
+
+<h2>Why agents fit East African businesses</h2>
+<p>Two things about the region make agents practical sooner here than in many markets:</p>
+<ul>
+<li><strong>Customers already transact on their phones.</strong> East Africa processed $806 billion in mobile money transactions in 2025, the most of any African region, and accounted for almost half of the world's new active mobile money accounts that year (GSMA, 2026). An agent can take a customer from question to payment without leaving the phone.</li>
+<li><strong>Conversations happen on messaging apps.</strong> Many businesses already handle customers on WhatsApp by hand. An agent can take over the repetitive part of those conversations and hand the rest to staff.</li>
+</ul>
+
+<h2>1. A CRM agent that replies to every lead in seconds</h2>
+<p><strong>The problem:</strong> the business took about five days to reply to new leads, and many inbound enquiries were missed entirely.</p>
+<p><strong>What the agent does:</strong> it sources prospects from Google Places, qualifies them into HubSpot, replies instantly and follows up across WhatsApp, email, Instagram and Facebook, and keeps the CRM up to date. It hands the conversation to a person when the lead asks for one, or when they want a custom offer or to negotiate the price.</p>
+<p><strong>Result:</strong> average reply time to new leads went from about five days to instant.</p>
+<p><strong>The lesson:</strong> speed is often the cheapest win available. A Harvard Business Review study of 1.25 million leads found that companies contacting leads within an hour were seven times as likely to qualify them as those that waited even an hour longer. Just as important is knowing where the agent stops: price negotiation and custom deals go to a person. <a href="{{/work/#hubspot-crm-agent}}">Read the case study</a>, or our comparison of <a href="{{/blog/hubspot-breeze-vs-custom-ai-agent/}}">HubSpot's own agents vs a custom agent</a>.</p>
+
+<h2>2. A lending agent that brings good borrowers back</h2>
+<p><strong>The problem:</strong> a Kenyan digital lender had many customers repaying well who were eligible for a top-up, but contacting each one and collecting the details took staff time.</p>
+<p><strong>What the agent does:</strong> it connects to the lender's credit system to find customers who are repaying well, sends each one a top-up offer by SMS with a link to a WhatsApp conversation, asks the qualifying questions, such as the collateral offered and how the funds will be used, and logs the complete application in the CRM. A credit analyst reviews every application and makes the decision.</p>
+<p><strong>Result:</strong> KES 5.4M in top-up applications in the agent's first week live.</p>
+<p><strong>The lesson:</strong> in regulated work, the agent should gather and organise, not decide. Lending in Kenya also comes with specific rules on consent, disclosure and collections, and WhatsApp restricts some lending products. We cover those in <a href="{{/blog/ai-agents-for-lenders-kenya/}}">AI agents for lenders and SACCOs</a>.</p>
+
+<h2>3. A booking agent for a Nairobi storage business</h2>
+<p><strong>What it does:</strong> it's a customer-facing agent that handles booking requests from the customers of a storage business in Nairobi.</p>
+<p><strong>The lesson:</strong> bookings are a good first agent for service businesses because the conversation is predictable. The details decide whether it works, though. Whatever you book, whether storage units, appointments, rooms or tours, an agent needs to get these right:</p>
+<ul>
+<li><strong>Real availability.</strong> The agent must check availability in your system at the moment of booking, not from a list someone updated last week. Otherwise it will double-book.</li>
+<li><strong>The questions that set the price.</strong> For storage, that might be unit size, start date and duration. Ask them in a fixed order and confirm the answers back to the customer.</li>
+<li><strong>Deposits at the right moment.</strong> If you take an M-Pesa deposit, send the STK Push prompt only when the customer is in the chat and ready to pay. The prompt expires within about a minute. See our <a href="{{/blog/mpesa-stk-push-integration-guide/}}">M-Pesa STK Push guide</a>.</li>
+<li><strong>Confirmations and reminders.</strong> A reminder sent on WhatsApp after the 24-hour window needs an approved template and costs money per message. See <a href="{{/blog/whatsapp-ai-chatbot-rules-and-costs-2026/}}">WhatsApp chatbot rules and costs</a>.</li>
+<li><strong>A clear handover</strong> for unusual requests, complaints and anything the agent isn't sure about.</li>
+</ul>
+
+<h2>What the three have in common</h2>
+<ul>
+<li><strong>Each started with one process,</strong> not a vague goal to "use AI".</li>
+<li><strong>Each works inside systems the business already has:</strong> a CRM, a credit system, a booking process. The agent connects them rather than replacing them.</li>
+<li><strong>Each has a defined point where a person takes over:</strong> negotiation, credit decisions, unusual requests.</li>
+<li><strong>Each meets customers on the channels they already use,</strong> mainly WhatsApp and SMS.</li>
+</ul>
+
+<h2>Is your business ready for an agent?</h2>
+<ol>
+<li>Is there one process where customers wait, or staff repeat the same conversation many times a day?</li>
+<li>Is the information the agent needs (prices, stock, availability, customer records) in a system it can read?</li>
+<li>Can you say exactly when a person should take over?</li>
+<li>Do you know what the process costs today, in time, missed leads or delays, so you can measure the result?</li>
+</ol>
+<p>If you can answer yes to most of these, an agent is worth scoping. Our guide to <a href="{{/blog/which-processes-to-automate-with-ai/}}">choosing which processes to automate</a> goes deeper. To talk it through, see our <a href="{{/services/ai-automation/}}">AI and automation services</a> or <a href="{{/contact/}}">tell us about your process</a>. We work with businesses in Kenya, Uganda, Tanzania and Rwanda, and further afield.</p>
+<p class="meta">Sources: GSMA, State of the Industry Report on Mobile Money 2026, as reported by Connecting Africa (26 March 2026); Oldroyd, McElheran and Elkington, "The Short Life of Online Sales Leads", Harvard Business Review (March 2011). Agent results are from the deployments described.</p>
 </article></div></section>"""
 
 WHATSAPP_BOTS_BODY = """<section class="band"><div class="wrap"><article class="prose">
@@ -1141,7 +1196,7 @@ EAST_AFRICA_BODY = """<section class="band"><div class="wrap"><div class="grid g
 <h3>WhatsApp and AI for customer service</h3>
 <p>Your customers already use WhatsApp. We set up WhatsApp Business ordering, automated replies and AI assistants that answer common questions in English or Swahili, take orders and hand over to a person when needed. Read <a href="{{/blog/whatsapp-ai-chatbot-rules-and-costs-2026/}}">what WhatsApp chatbots are allowed to do and what they cost in 2026</a>.</p>
 <h3>AI agents already working in Kenya</h3>
-<p>We built an AI agent for a digital lender that took in <strong>KES 5.4M in loan top-up applications in its first week</strong>. Read the <a href="{{/work/#loan-top-up-agent}}">case study</a> and our guide to <a href="{{/blog/ai-agents-for-lenders-kenya/}}">AI agents for lenders and SACCOs</a>, or see our <a href="{{/services/ai-automation/}}">AI and automation services</a>.</p>
+<p>We built an AI agent for a digital lender that took in <strong>KES 5.4M in loan top-up applications in its first week</strong>. Read the <a href="{{/work/#loan-top-up-agent}}">case study</a> our guide to <a href="{{/blog/ai-agents-for-lenders-kenya/}}">AI agents for lenders and SACCOs</a> and <a href="{{/blog/ai-agents-east-african-businesses/}}">real examples of AI agents in East African businesses</a>, or see our <a href="{{/services/ai-automation/}}">AI and automation services</a>.</p>
 <h3>Local SEO in Nairobi and beyond</h3>
 <p>We optimise your Google Business Profile, local citations and service-area pages so you show up when customers search for "near me" services in Nairobi, Mombasa, Kisumu, Kampala, Dar es Salaam or Kigali.</p>
 <h3>Working with businesses across Nairobi</h3>
@@ -1228,6 +1283,16 @@ PAGES = [
       lede="Rates, time zone overlap, how Kenya compares with other outsourcing regions, and a vetting checklist.",
       crumbs=[("/blog/", "Blog"), ("/blog/outsourcing-web-development-to-kenya/", "Outsourcing to Kenya")],
       article={"date": "2026-09-23", "modified": "2026-10-28"}, body=ARTICLE_BODY),
+ dict(path="blog/ai-agents-east-african-businesses/",
+      title="AI Agents for East African Businesses: Real Examples",
+      description="Three AI agents deployed in East African businesses, in CRM, lending and bookings: what each does, the results, and the lessons for your business.",
+      eyebrow="Guide", h1="AI agents for East African businesses: real examples in CRM, lending and bookings",
+      lede="Not what agents could do, but three that have been deployed: a CRM agent, a lending agent and a booking agent, and what other businesses in the region can learn from them.",
+      crumbs=[("/blog/", "Blog"), ("/blog/ai-agents-east-african-businesses/", "AI agents in East Africa")],
+      article={"date": "2026-11-06"}, body=EA_AGENTS_BODY,
+      faq=[("What can AI agents do for East African businesses?", "Common, proven uses are replying to and qualifying leads, taking in applications, taking bookings and answering customer questions on WhatsApp and SMS, connected to the business's CRM or other systems, with a person taking over for decisions and unusual requests."),
+           ("Do AI agents work with M-Pesa?", "Yes. An agent can trigger an M-Pesa STK Push payment prompt, but only at the moment the customer is ready to pay, because the prompt expires within about a minute."),
+           ("Which businesses in East Africa are ready for an AI agent?", "Ones with a single, repetitive process where customers wait or staff repeat the same conversation, where the information the agent needs is in a system it can read, and where it's clear when a person should take over.")]),
  dict(path="blog/whatsapp-ai-chatbot-rules-and-costs-2026/",
       title="WhatsApp AI Chatbots in 2026: Rules and Costs | Sahara Nova",
       description="What's allowed for WhatsApp AI chatbots in 2026, what they cost since October's pricing change, messaging limits, and how to design a compliant bot.",
