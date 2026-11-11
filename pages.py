@@ -228,7 +228,7 @@ SERVICES_BODY = """<section class="band"><div class="wrap">
 <div class="sec-head"><p class="label">How the services connect</p><h2>Built to work together</h2>
 <p class="lede">A new website ships with SEO already in place. A web app includes the automations that feed your CRM. Marketing reports come from data we set up correctly at launch. Hiring one team for all of it means nothing gets lost in the handoffs.</p></div>
 <div class="table-wrap"><table><thead><tr><th>If you need…</th><th>Start with</th><th>Often paired with</th></tr></thead><tbody>
-<tr><td>More enquiries from Google</td><td><a href="{{/services/digital-marketing-seo/}}">SEO Foundation</a></td><td>Website rebuild, content retainer</td></tr>
+<tr><td>More enquiries from Google and AI search</td><td><a href="{{/services/digital-marketing-seo/}}">SEO &amp; AEO Foundation</a></td><td>Website rebuild, content retainer</td></tr>
 <tr><td>A new or better website</td><td><a href="{{/services/web-development/}}">Website Launch</a></td><td>SEO retainer, care plan</td></tr>
 <tr><td>Software that doesn't exist yet</td><td><a href="{{/services/software-development/}}">MVP build</a></td><td>Automation, Dedicated Developer</td></tr>
 <tr><td>Fewer hours lost to admin</td><td><a href="{{/services/ai-automation/}}">Automation Sprint</a></td><td>CRM integration, AI assistant</td></tr>
@@ -331,11 +331,11 @@ SOFT = service_page(
 SEO = service_page(
  "services/digital-marketing-seo/", "Digital marketing & SEO",
  "SEO Services for Small Businesses | Sahara Nova",
- "Affordable SEO services for small businesses: technical SEO audits, keyword strategy, content and link building, plus Google Ads. SEO Foundation from $900.",
+ "Affordable SEO services for small businesses: technical SEO and AEO for AI search, keyword strategy, content and link building, plus Google Ads. From $900.",
  "Service · Digital marketing &amp; SEO",
  "SEO services for small businesses",
  "Technical SEO, content and paid campaigns that compound into a steady flow of inbound leads, reported in plain English every month.",
- {"name": "SEO and digital marketing", "type": "Search engine optimisation", "from": "900"},
+ {"name": "SEO, AEO and digital marketing", "type": "Search engine optimisation", "from": "900"},
  """<section class="band"><div class="wrap"><div class="grid g2" style="gap:48px">
 <div class="prose">
 <h2 style="margin-top:0">Be found by customers who are already searching</h2>
@@ -351,17 +351,20 @@ SEO = service_page(
 </ol>
 <h3>SEO built into every website</h3>
 <p>Every site we build ships with the technical foundations already in place. See our <a href="{{/services/web-development/}}">web design and development</a> service, or compare packages on the <a href="{{/pricing/}}">pricing page</a>.</p>
+<h3>AEO: being the answer in AI search</h3>
+<p>Answer engine optimisation (AEO) is SEO for the answers people now get from Google's AI Overviews, ChatGPT, Perplexity and similar tools. These systems summarise the web and cite sources, so the aim is to be one of the sources they cite. In practice that means content that answers specific questions clearly, accurate structured data, consistent business details across the web, and making sure the crawlers these tools use can reach your site. Good SEO and AEO overlap heavily, so both are built into our SEO packages. No one controls what an AI tool cites, so we report what we see rather than promise placements.</p>
 <h3>Paid media</h3>
 <p>SEO takes months to compound. When you need leads sooner, we run Google Ads and Meta campaigns with proper conversion tracking, so you can see which campaigns bring in enquiries.</p>
 <div class="callout"><p><strong>Honest timelines:</strong> we plan on long-tail rankings in 3–6 months and competitive terms in 9–18 months. Google itself gives no timeline, and anyone promising page one in a few weeks is guessing.</p></div>
 </div>
 <div class="grid" style="align-content:start">
-<div class="plan feature"><span class="tag">One-off</span><h3>SEO Foundation</h3><div class="price">$900 <small>from</small></div>
-<ul><li>Full technical audit + fixes that need no developer time</li><li>Keyword research &amp; page map</li><li>Google Business Profile &amp; Search Console</li><li>Prioritised 90-day roadmap</li></ul><a class="btn" href="{{/contact/}}">Book an audit</a></div>
-<div class="plan"><h3>SEO &amp; Content Retainer</h3><div class="price">$750 <small>/month, from</small></div><ul><li>2 optimised articles a month</li><li>On-page improvements &amp; link building</li><li>Monthly report and strategy call</li></ul></div>
+<div class="plan feature"><span class="tag">One-off</span><h3>SEO &amp; AEO Foundation</h3><div class="price">$900 <small>from</small></div>
+<ul><li>Full technical audit + fixes that need no developer time</li><li>Keyword research &amp; page map</li><li>AEO setup: structured data, FAQ markup and AI-crawler access</li><li>Google Business Profile &amp; Search Console</li><li>Prioritised 90-day roadmap</li></ul><a class="btn" href="{{/contact/}}">Book an audit</a></div>
+<div class="plan"><h3>SEO, AEO &amp; Content Retainer</h3><div class="price">$750 <small>/month, from</small></div><ul><li>2 optimised articles a month, written to answer real questions</li><li>On-page improvements &amp; link building</li><li>AI-answer visibility checks for your key questions</li><li>Monthly report and strategy call</li></ul></div>
 </div>
 </div></div></section>""",
- [("How long does SEO take to work?", "We plan on early movement on long-tail keywords within 3–6 months and competitive terms in 9–18 months, but nobody can promise a timeline. Technical fixes can show results sooner if your site had indexing problems."),
+ [("What is AEO, and is it different from SEO?", "AEO (answer engine optimisation) aims to make your business one of the sources AI tools such as Google's AI Overviews, ChatGPT and Perplexity cite in their answers. It builds on SEO: clear answers to real questions, accurate structured data, consistent business details and crawler access. We include both in our SEO packages, and we report what AI tools cite rather than promise placements."),
+  ("How long does SEO take to work?", "We plan on early movement on long-tail keywords within 3–6 months and competitive terms in 9–18 months, but nobody can promise a timeline. Technical fixes can show results sooner if your site had indexing problems."),
   ("Do you guarantee first-page rankings?", "No. Nobody controls Google's rankings. We commit to the work, the process and transparent reporting on rankings, traffic and leads."),
   ("Do you offer white-label SEO for agencies?", "Yes. We deliver audits, content and technical fixes under your brand, with your client reporting templates."),
   ("What's included in a monthly SEO report?", "Organic traffic, keyword rankings, Search Console impressions and clicks, conversions from organic search, work completed and next month's priorities.")])
@@ -456,17 +459,17 @@ PRICING_BODY = """<section class="band"><div class="wrap">
 <div class="plan"><h3>Growth Website</h3><div class="price">$3,500 <small>from</small></div><ul><li>Up to 15 pages + CMS/blog</li><li>Conversion tracking &amp; CRM forms</li><li>Keyword map + 3 articles</li><li>4–6 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Get a quote</a></div>
 <div class="plan"><h3>E-commerce</h3><div class="price">$4,500 <small>from</small></div><ul><li>Shopify or WooCommerce</li><li>Up to 50 products loaded</li><li>Payments, shipping, product SEO</li><li>4–8 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Get a quote</a></div>
 <div class="plan"><h3>MVP / Web App</h3><div class="price">$8,000 <small>from</small></div><ul><li>$800 discovery week (credited) &amp; prototype</li><li>Core features, weekly demos</li><li>Deployment &amp; documentation</li><li>6–10 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Scope my project</a></div>
-<div class="plan"><h3>SEO Foundation</h3><div class="price">$900 <small>from</small></div><ul><li>Technical audit + quick fixes</li><li>Keyword research &amp; page map</li><li>Google Business Profile</li><li>90-day roadmap</li></ul><a class="btn ghost" href="{{/contact/}}">Book an audit</a></div>
+<div class="plan"><h3>SEO &amp; AEO Foundation</h3><div class="price">$900 <small>from</small></div><ul><li>Technical audit + quick fixes</li><li>Keyword research &amp; page map</li><li>AEO setup for AI search</li><li>Google Business Profile</li><li>90-day roadmap</li></ul><a class="btn ghost" href="{{/contact/}}">Book an audit</a></div>
 <div class="plan"><h3>Automation Sprint</h3><div class="price">$1,200 <small>from</small></div><ul><li>Process audit</li><li>1–2 workflows automated</li><li>Error alerts &amp; docs</li><li>About 2 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Find quick wins</a></div>
 <div class="plan"><h3>AI Assistant</h3><div class="price">$2,500 <small>from</small></div><ul><li>Website or internal assistant</li><li>Trained on your documents</li><li>Human handoff &amp; analytics</li><li>3–4 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Get a quote</a></div>
 <div class="plan"><h3>Custom AI Agent</h3><div class="price">$3,500 <small>from</small></div><ul><li>Agents that act in your ERP or CRM</li><li>e.g. order intake, lead follow-up</li><li>Human-in-the-loop controls</li><li><a href="{{/work/}}">See examples</a></li></ul><a class="btn ghost" href="{{/contact/}}">Scope my agent</a></div>
 </div>
-<p class="meta" style="margin-top:14px">SEO Foundation fixes cover anything that needs no developer time, such as titles, metadata, Search Console and Google Business Profile; larger fixes are quoted separately. Mobile apps, and M-Pesa integration for an existing site, are quoted after discovery.</p>
+<p class="meta" style="margin-top:14px">SEO &amp; AEO Foundation fixes cover anything that needs no developer time, such as titles, metadata, Search Console and Google Business Profile; larger fixes are quoted separately. Mobile apps, and M-Pesa integration for an existing site, are quoted after discovery.</p>
 </div></section>
 <section class="band alt"><div class="wrap">
 <div class="sec-head"><p class="label">Ongoing</p><h2>Monthly plans</h2></div>
 <div class="table-wrap"><table><thead><tr><th>Plan</th><th>From</th><th>Includes</th></tr></thead><tbody>
-<tr><td><strong>SEO &amp; Content Retainer</strong></td><td class="num">$750/mo</td><td>2 articles a month, on-page work, link building, monthly report</td></tr>
+<tr><td><strong>SEO, AEO &amp; Content Retainer</strong></td><td class="num">$750/mo</td><td>2 articles a month, on-page work, link building, AI-answer visibility checks, monthly report</td></tr>
 <tr><td><strong>Dedicated Developer</strong></td><td class="num">$6,000/mo</td><td>Full-time engineer on your hours, managed by our tech lead</td></tr>
 <tr><td><strong>Website Care Plan</strong></td><td class="num">$150/mo</td><td>Hosting, updates, backups, uptime monitoring, 2 hours of changes</td></tr>
 <tr><td><strong>AI Care Plan</strong></td><td class="num">$250/mo</td><td>Monitoring, error alerts, fixes, prompt and knowledge updates, monthly review (running costs billed at cost)</td></tr>
