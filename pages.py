@@ -274,7 +274,7 @@ WEB = service_page(
 <div class="plan feature"><span class="tag">Most popular</span><h3>Website Launch</h3><div class="price">$1,500 <small>from, fixed price</small></div>
 <ul><li>Up to 6 pages, custom design</li><li>Mobile-first, Core Web Vitals optimised</li><li>On-page SEO, schema &amp; sitemap</li><li>Analytics &amp; Search Console setup</li><li>Live in 2–3 weeks</li></ul><a class="btn" href="{{/contact/}}">Get a quote</a></div>
 <div class="plan"><h3>Growth Website</h3><div class="price">$3,500 <small>from</small></div><ul><li>Up to 15 pages + blog/CMS</li><li>Conversion tracking &amp; CRM forms</li><li>Keyword map &amp; 3 launch articles</li></ul></div>
-<div class="plan"><h3>E-commerce</h3><div class="price">$4,500 <small>from</small></div><ul><li>Shopify or WooCommerce</li><li>Up to 50 products loaded</li><li>Payments, shipping, product schema</li></ul></div>
+<div class="plan"><h3>E-commerce Website</h3><div class="price">$4,500 <small>from</small></div><ul><li>Shopify or WooCommerce</li><li>Up to 50 products loaded</li><li>Payments, shipping, product schema</li></ul></div>
 </div>
 </div></div></section>
 <section class="band alt"><div class="wrap"><div class="sec-head"><p class="label">Included in every build</p><h2>The details that make a site rank and convert</h2></div>""" +
@@ -457,7 +457,7 @@ PRICING_BODY = """<section class="band"><div class="wrap">
 <div class="grid g4">
 <div class="plan feature"><span class="tag">Most popular</span><h3>Website Launch</h3><div class="price">$1,500 <small>from</small></div><ul><li>Up to 6 pages, custom design</li><li>On-page SEO, schema, sitemap</li><li>Analytics &amp; Search Console</li><li>2–3 weeks</li></ul><a class="btn" href="{{/contact/}}">Get a quote</a></div>
 <div class="plan"><h3>Growth Website</h3><div class="price">$3,500 <small>from</small></div><ul><li>Up to 15 pages + CMS/blog</li><li>Conversion tracking &amp; CRM forms</li><li>Keyword map + 3 articles</li><li>4–6 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Get a quote</a></div>
-<div class="plan"><h3>E-commerce</h3><div class="price">$4,500 <small>from</small></div><ul><li>Shopify or WooCommerce</li><li>Up to 50 products loaded</li><li>Payments, shipping, product SEO</li><li>4–8 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Get a quote</a></div>
+<div class="plan"><h3>E-commerce Website</h3><div class="price">$4,500 <small>from</small></div><ul><li>Shopify or WooCommerce</li><li>Up to 50 products loaded</li><li>Payments, shipping, product SEO</li><li>4–8 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Get a quote</a></div>
 <div class="plan"><h3>MVP / Web App</h3><div class="price">$8,000 <small>from</small></div><ul><li>$800 discovery week (credited) &amp; prototype</li><li>Core features, weekly demos</li><li>Deployment &amp; documentation</li><li>6–10 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Scope my project</a></div>
 <div class="plan"><h3>SEO &amp; AEO Foundation</h3><div class="price">$900 <small>from</small></div><ul><li>Technical audit + quick fixes</li><li>Keyword research &amp; page map</li><li>AEO setup for AI search</li><li>Google Business Profile</li><li>90-day roadmap</li></ul><a class="btn ghost" href="{{/contact/}}">Book an audit</a></div>
 <div class="plan"><h3>Automation Sprint</h3><div class="price">$1,200 <small>from</small></div><ul><li>Process audit</li><li>1–2 workflows automated</li><li>Error alerts &amp; docs</li><li>About 2 weeks</li></ul><a class="btn ghost" href="{{/contact/}}">Find quick wins</a></div>
