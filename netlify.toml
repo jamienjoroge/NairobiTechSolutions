@@ -2,6 +2,10 @@
   command = "python3 build.py"
   publish = "dist"
 
+[functions]
+  # submission-created.mjs sends contact form leads to Odoo CRM
+  directory = "netlify/functions"
+
 [[headers]]
   for = "/*"
   [headers.values]
