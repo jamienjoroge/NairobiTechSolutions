@@ -410,7 +410,7 @@ AI = service_page(
   ("Can you build AI agents for Odoo or HubSpot?", "Yes. We have built an agent that reads emailed orders, including PDFs and spreadsheets, checks stock and prepares quotations in Odoo for approval, and a HubSpot agent that follows up with leads, sets reminders and keeps the CRM up to date. See our <a href=\"{{/work/}}\">case studies</a>, our guide to <a href=\"{{/blog/automate-email-orders-into-odoo-with-ai/}}\">automating email orders into Odoo</a>, or our comparison of <a href=\"{{/blog/hubspot-breeze-vs-custom-ai-agent/}}\">HubSpot's own agents vs a custom agent</a>, or our <a href=\"{{/blog/hubspot-agent-builder/}}\">guide to HubSpot Agent Builder</a>."),
   ("Is our data safe with AI tools?", "We choose business-tier AI services that don't train on your data, minimise what's sent, and document every data flow. We sign a data processing agreement on request."),
   ("How do you measure ROI?", "Before building, we estimate hours saved per month. After launch, we track runs and time saved so you can see the payback."),
-  ("What does it cost to run an AI agent?", "Running costs are billed at cost: AI model usage, WhatsApp message fees and any automation plan such as Make, Zapier or n8n. Our AI Care Plan, from $250 a month, covers monitoring, fixes and updates.")])
+  ("What does it cost to run an AI agent?", "Running costs are billed at cost: AI model usage, WhatsApp message fees and any automation plan such as Make, Zapier or n8n. Our AI Care Plan, from $250 a month, covers monitoring, fixes and updates. Our guide to <a href=\"{{/blog/ai-automation-cost-kenya/}}\">AI automation costs in Kenya</a> breaks down all three cost layers.")])
 
 WHY_KENYA_BODY = """<section class="band"><div class="wrap"><div class="grid g2" style="gap:48px">
 <div class="prose">
@@ -589,6 +589,7 @@ PRIVACY_BODY = """<section class="band"><div class="wrap"><div class="prose">
 </div></div></section>"""
 
 BLOG_BODY = """<section class="band"><div class="wrap"><div class="sec-head"><p class="label">Latest</p><h2>Latest guides</h2></div><div class="grid g2">
+<a class="post-card" href="{{/blog/ai-automation-cost-kenya/}}"><span class="meta">Guide · 16 Nov 2026 · 8 min read</span><h3>AI automation for businesses in Kenya: what it costs and how to choose</h3><p>The three layers of cost, the Kenya-specific checks, and seven questions that separate a serious provider from a demo.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/hubspot-agent-builder/}}"><span class="meta">Guide · 16 Nov 2026 · 7 min read</span><h3>HubSpot Agent Builder: what it can and can&rsquo;t do</h3><p>What agents built inside HubSpot can reach, what they cost in credits, and the point where a custom agent makes more sense.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/whatsapp-ai-chatbot-rules-and-costs-2026/}}"><span class="meta">Guide · 3 Nov 2026 · 9 min read</span><h3>WhatsApp AI chatbots in 2026: rules, costs and what's not allowed</h3><p>Meta's AI-provider rules, the October 2026 pricing change, messaging limits, and how to design a bot that stays compliant.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
 <a class="post-card" href="{{/blog/automate-email-orders-into-odoo-with-ai/}}"><span class="meta">Guide · 30 Oct 2026 · 9 min read</span><h3>How to automate email orders into Odoo with AI</h3><p>Turn order emails, PDFs and spreadsheets into Odoo quotations, with careful matching, human approval and the API changes to plan for.</p><span class="more" style="color:var(--accent-ink);font-weight:600">Read the guide →</span></a>
@@ -946,6 +947,62 @@ ODOO_ORDERS_BODY = """<section class="band"><div class="wrap"><article class="pr
 <p class="meta">Sources: Odoo documentation on AI features and inbound email, as summarised by Carly (July 2026); Apideck, "How to integrate with the Odoo API" (updated 27 October 2026); Xyphen IT, "Odoo 19 and the end of XML-RPC" (May 2026); WhatsApp Business Policy and pricing. Checked 30 October 2026.</p>
 </article></div></section>"""
 
+AI_COST_KENYA_BODY = """<section class="band"><div class="wrap"><article class="prose">
+""" + BYLINE.format(date="16 November 2026", mins=8) + """
+<div class="callout"><p><strong>Short answer:</strong> in Kenya, AI automation has three costs: the one-off build, the monthly running costs, and maintenance. As a benchmark from our own published prices, a simple workflow automation starts at $1,200, an AI assistant at $2,500 and a custom AI agent that acts in your ERP or CRM at $3,500, with running costs billed at cost and maintenance from $250 a month. Prices are in USD; Kenyan businesses can pay in KES. Choose a provider on process fit, system reach, human approval points and written maintenance terms, not on the demo.</p></div>
+
+<p>&ldquo;What does AI automation cost?&rdquo; is usually the first question we get from Kenyan business owners, and most providers answer it with &ldquo;it depends&rdquo;. It does depend, but you can still put real numbers on it. This guide breaks the cost into its three layers, shows what moves each one up or down, and gives you the questions that separate a serious provider from a demo.</p>
+
+<h2>First: automation, assistant or agent?</h2>
+<p>The word &ldquo;AI&rdquo; covers three different purchases, and the price differences follow from what each one does:</p>
+<ul>
+<li><strong>Workflow automation.</strong> Rules move structured data between systems: a form submission becomes a CRM lead, an invoice triggers a WhatsApp reminder. Often no AI is needed at all, which makes this the cheapest and most predictable option.</li>
+<li><strong>AI assistant.</strong> Answers questions from your own content, on your website or internally, and hands over to a person when it is out of its depth.</li>
+<li><strong>AI agent.</strong> Does multi-step work in your real systems: reads an emailed order, checks stock in the ERP, prepares the quotation, asks a person to approve. This is the most powerful and the most expensive, because it has to be designed around your process.</li>
+</ul>
+<p>If you are not sure which you need, start with our <a href="{{/blog/which-processes-to-automate-with-ai/}}">practical audit of what to automate with AI</a>. The honest answer is sometimes that a rule-based workflow in Make, Zapier or n8n covers it, with no AI bill at all.</p>
+
+<h2>The three layers of cost</h2>
+<p>Whoever you hire, insist on seeing all three layers in writing. The build quote gets the attention; the other two decide what the system really costs over a year.</p>
+<h3>1. The build (one-off)</h3>
+<p>As a benchmark, these are our own published prices, in USD, payable in KES by Kenyan businesses:</p>
+<div class="table-wrap"><table><thead><tr><th>Project</th><th>From</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Automation Sprint (1&ndash;2 workflows)</td><td class="num">$1,200</td><td>Process audit included, about 2 weeks</td></tr>
+<tr><td>AI assistant</td><td class="num">$2,500</td><td>Trained on your documents, human handoff</td></tr>
+<tr><td>Custom AI agent</td><td class="num">$3,500</td><td>Starts with an $800 discovery week, credited to the build</td></tr>
+</tbody></table></div>
+<p class="meta">Source: <a href="{{/pricing/}}">our published pricing</a>. Other agencies price differently; use these as a sanity check, not a market survey.</p>
+<p>What moves a build up from the &ldquo;from&rdquo; price: the number of systems the agent must work in, approval steps and compliance requirements, extra channels (adding voice or Instagram to a WhatsApp agent), and messy data that needs cleaning before anything can be automated.</p>
+<h3>2. Running costs (monthly, usage-based)</h3>
+<p>These are not the agency&rsquo;s fees; they are bills from the platforms the automation runs on, and a fair provider passes them through at cost: AI model usage, WhatsApp message fees, and any automation plan such as Make, Zapier or n8n. For a WhatsApp-heavy assistant, the message fees can be the largest line, and Meta changed its pricing model this year, so read our <a href="{{/blog/whatsapp-ai-chatbot-rules-and-costs-2026/}}">guide to WhatsApp chatbot rules and costs in 2026</a> before you budget.</p>
+<h3>3. Maintenance (monthly)</h3>
+<p>Models change, APIs change, and your business changes. Someone has to notice when the agent starts failing and fix it. Our <a href="{{/pricing/}}">AI Care Plan</a> is from $250 a month for monitoring, error alerts, fixes and knowledge updates. If a provider has no maintenance offer, ask who you call six months after launch.</p>
+
+<h2>What results look like when it works</h2>
+<p>Two results from our own projects, both with the client&rsquo;s numbers rather than projections: a loan top-up agent for a Kenyan digital lender took in <strong>KES 5.4M in applications in its first week</strong> (<a href="{{/work/#loan-top-up-agent}}">case study</a>, and a full guide to <a href="{{/blog/ai-agents-for-lenders-kenya/}}">AI agents for lenders and SACCOs</a>), and a CRM sales agent cut a client&rsquo;s average reply time to new leads <strong>from about five days to instant</strong> (<a href="{{/work/#hubspot-crm-agent}}">case study</a>). Ask any provider you talk to for equivalent, specific results.</p>
+
+<h2>Kenya-specific checks before you build</h2>
+<ul>
+<li><strong>WhatsApp policy.</strong> Meta restricts what some businesses, including some lending products, may do on WhatsApp regardless of how good the bot is. Check the policy before you design around the channel.</li>
+<li><strong>M-Pesa behaviour.</strong> An STK Push prompt expires in well under a minute, so &ldquo;send a payment prompt with the reminder&rdquo; fails in practice. Trigger prompts only when the customer has just asked to pay; our <a href="{{/blog/mpesa-stk-push-integration-guide/}}">M-Pesa integration guide</a> covers the details.</li>
+<li><strong>Data protection.</strong> Automated outreach and customer data fall under the Data Protection Act 2019, including consent and opt-out duties, and your business may need to be registered with the ODPC. Confirm your obligations with your own legal or compliance adviser before an agent starts messaging customers.</li>
+</ul>
+
+<h2>Seven questions that separate providers</h2>
+<ol>
+<li><strong>Will you give me a fixed, itemised quote?</strong> &ldquo;It depends&rdquo; is fine before discovery, not after it.</li>
+<li><strong>What happens before you build?</strong> A provider who starts building before mapping your process is guessing at your expense. (Ours is a paid discovery week, credited to the build.)</li>
+<li><strong>Which of my systems can the agent actually work in?</strong> Get the list in writing: ERP, CRM, WhatsApp, M-Pesa, your own database.</li>
+<li><strong>Where exactly does a person approve or take over?</strong> If the answer is &ldquo;the AI handles everything&rdquo;, walk away. Every agent we build hands decisions to a person at defined points.</li>
+<li><strong>What are the running costs at my volumes?</strong> Ask for the model, message and platform fees estimated at your real numbers, billed at cost.</li>
+<li><strong>Who maintains it, and what does that cost?</strong> Get the monthly figure and what it covers in writing.</li>
+<li><strong>Can you show a specific, verifiable result?</strong> Numbers and a named system beat a slick demo.</li>
+</ol>
+
+<p>If you want the same questions answered about your own processes, our <a href="{{/services/ai-automation/}}">AI and automation service</a> starts with exactly that audit, and our <a href="{{/pricing/}}">prices are published</a> so you can sanity-check any quote, including ours.</p>
+</article></div></section>
+"""
+
 AGENT_BUILDER_BODY = """<section class="band"><div class="wrap"><article class="prose">
 """ + BYLINE.format(date="16 November 2026", mins=7) + """
 <div class="callout"><p><strong>Short answer:</strong> Agent Builder is HubSpot&rsquo;s no-code tool for creating your own AI agents inside HubSpot. It comes with Professional and Enterprise editions, reaches tools outside HubSpot through a fixed list of connectors plus Zapier, and runs on HubSpot Credits at $10 per 1,000. It&rsquo;s a good fit when the whole job lives in HubSpot and those connectors. When the process depends on an ERP, a credit system or an in-house database, or needs strictly enforced steps and approvals, a custom agent is usually the better build.</p></div>
@@ -1207,7 +1264,7 @@ EAST_AFRICA_BODY = """<section class="band"><div class="wrap"><div class="grid g
 <h3>WhatsApp and AI for customer service</h3>
 <p>Your customers already use WhatsApp. We set up WhatsApp Business ordering, automated replies and AI assistants that answer common questions in English or Swahili, take orders and hand over to a person when needed. Read <a href="{{/blog/whatsapp-ai-chatbot-rules-and-costs-2026/}}">what WhatsApp chatbots are allowed to do and what they cost in 2026</a>.</p>
 <h3>AI agents already working in Kenya</h3>
-<p>We built an AI agent for a digital lender that took in <strong>KES 5.4M in loan top-up applications in its first week</strong>. Read the <a href="{{/work/#loan-top-up-agent}}">case study</a> and our guide to <a href="{{/blog/ai-agents-for-lenders-kenya/}}">AI agents for lenders and SACCOs</a>, or see our <a href="{{/services/ai-automation/}}">AI and automation services</a>.</p>
+<p>We built an AI agent for a digital lender that took in <strong>KES 5.4M in loan top-up applications in its first week</strong>. Read the <a href="{{/work/#loan-top-up-agent}}">case study</a> and our guide to <a href="{{/blog/ai-agents-for-lenders-kenya/}}">AI agents for lenders and SACCOs</a>, or see our <a href="{{/services/ai-automation/}}">AI and automation services</a>. New to budgeting for this? Start with <a href="{{/blog/ai-automation-cost-kenya/}}">what AI automation costs in Kenya</a>.</p>
 <h3>Local SEO in Nairobi and beyond</h3>
 <p>We optimise your Google Business Profile, local citations and service-area pages so you show up when customers search for "near me" services in Nairobi, Mombasa, Kisumu, Kampala, Dar es Salaam or Kigali.</p>
 <h3>Working with businesses across Nairobi</h3>
@@ -1314,6 +1371,17 @@ PAGES = [
       faq=[("Can Odoo create sales orders from emails automatically?", "An email alias can turn an incoming email into a record, but it won't read the order lines and build a quotation. For that you need a third-party app or a custom AI agent connected to Odoo's API."),
            ("Should an AI agent confirm orders in Odoo on its own?", "Not at first. Have the agent create quotations and a person approve them. Confirming starts your delivery and invoicing workflow, so widen the agent's autonomy only when approvers rarely need to edit its quotations."),
            ("Which Odoo plan do I need to connect an AI agent?", "On Odoo Online, external API access requires the Custom plan; it isn't available on One App Free or Standard. Odoo.sh and on-premise installations can use the API. New integrations should use the JSON-2 API.")]),
+ dict(path="blog/ai-automation-cost-kenya/",
+      title="AI Automation for Businesses in Kenya: Costs & How to Choose",
+      description="What AI automation costs for Kenyan businesses in 2026: build prices, running costs and maintenance, plus seven questions to ask before choosing a provider.",
+      eyebrow="Guide", h1="AI automation for businesses in Kenya: what it costs and how to choose",
+      lede="The three layers of cost, what moves each one up, the Kenya-specific checks, and the questions that separate a serious provider from a demo.",
+      crumbs=[("/blog/", "Blog"), ("/blog/ai-automation-cost-kenya/", "AI automation cost in Kenya")],
+      article={"date": "2026-11-16"}, body=AI_COST_KENYA_BODY,
+      faq=[("How much does AI automation cost in Kenya?", "As a benchmark from Sahara Nova&rsquo;s published prices: a simple workflow automation from $1,200, an AI assistant from $2,500, and a custom AI agent that acts in your ERP or CRM from $3,500, which starts with an $800 discovery week credited to the build. Running costs such as AI model usage and WhatsApp fees are billed at cost, and maintenance starts at $250 a month. Other agencies price differently."),
+           ("Can I pay for AI automation in Kenyan shillings?", "Our prices are set in USD, and Kenyan businesses can pay the equivalent in KES by bank transfer."),
+           ("Do I need AI, or is normal automation enough?", "If the inputs are structured, such as form fields or payment statuses, a rule-based workflow in Make, Zapier or n8n is usually cheaper and more predictable. Use AI where a person currently has to read free text, such as emails, documents or chat messages, or where multi-step work spans several systems."),
+           ("What results have AI agents produced for Kenyan businesses?", "Two confirmed results from our own projects: a loan top-up agent for a digital lender took in KES 5.4M in applications in its first week, and a CRM sales agent cut average reply time to new leads from about five days to instant.")]),
  dict(path="blog/hubspot-agent-builder/",
       title="HubSpot Agent Builder: What It Can and Can't Do (2026)",
       description="What HubSpot's Agent Builder can and can't do in 2026: connectors, credit costs, editions, and when a custom AI agent is the better build.",
