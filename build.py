@@ -258,8 +258,35 @@ def main():
             sm.append(f"  <url><loc>{SITE['url']}/{p['path']}</loc><lastmod>{lastmod}</lastmod></url>")
         sm.append("</urlset>")
         open(os.path.join(OUT, "sitemap.xml"), "w").write("\n".join(sm) + "\n")
-        open(os.path.join(OUT, "robots.txt"), "w").write(
-            "User-agent: *\nDisallow: /\n" if STAGING else f"User-agent: *\nAllow: /\n\nSitemap: {SITE['url']}/sitemap.xml\n")
+        if STAGING:
+            robots = "User-agent: *\nDisallow: /\n"
+        else:
+            ai_bots = "".join(f"User-agent: {b}\nAllow: /\n\n" for b in (
+                "GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot",
+                "PerplexityBot", "Perplexity-User", "Google-Extended", "Applebot-Extended", "cohere-ai"))
+            robots = ("User-agent: *\nAllow: /\n\n"
+                      "# AI assistants and answer engines are welcome to read and cite this site.\n"
+                      + ai_bots + f"Sitemap: {SITE['url']}/sitemap.xml\n")
+        open(os.path.join(OUT, "robots.txt"), "w").write(robots)
+        if not STAGING:
+            llms = [f"# {SITE['name']}", "", f"> {SITE['description']}", "",
+                    f"Based in Nairobi, Kenya. Contact: {SITE['email']} · WhatsApp {SITE['phone']} · {SITE['url']}/contact/", ""]
+            servs = [p for p in PAGES if p["path"].startswith("services/") and not p.get("noindex")]
+            if servs:
+                llms += ["## Services", ""]
+                llms += [f"- [{p.get('h1', p['title'])}]({SITE['url']}/{p['path']}): {p['description']}" for p in servs]
+                llms.append("")
+            arts = sorted((p for p in PAGES if p.get("article") and not p.get("noindex")),
+                          key=lambda p: p["article"].get("modified", p["article"]["date"]), reverse=True)
+            if arts:
+                llms += ["## Guides", ""]
+                llms += [f"- [{p.get('h1', p['title'])}]({SITE['url']}/{p['path']}) "
+                         f"(updated {p['article'].get('modified', p['article']['date'])}): {p['description']}" for p in arts]
+                llms.append("")
+            work = next((p for p in PAGES if p["path"] == "work/"), None)
+            if work:
+                llms += ["## Case studies", "", f"- [{work.get('h1', work['title'])}]({SITE['url']}/work/): {work['description']}", ""]
+            open(os.path.join(OUT, "llms.txt"), "w").write("\n".join(llms))
         open(os.path.join(OUT, "netlify.toml"), "w").write(NETLIFY.replace('    X-Frame-Options = "DENY"', '    X-Frame-Options = "DENY"\n    X-Robots-Tag = "noindex, nofollow"') if STAGING else NETLIFY)
     print("built", len(PAGES), "pages ->", OUT)
 
